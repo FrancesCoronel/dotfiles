@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
-[ -n "$PS1" ] && source $HOME/.bash_profile;
+[ -n "$PS1" ] && source ~/.bash_profile;

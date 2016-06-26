@@ -16,24 +16,21 @@ fi
 
 # Open Terminal Settings
 echo ""
-echo "Install Default Theme"
+echo "Install FVCproductions Theme"
 open "$DOT/bin/shell/fvcproductions.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 
 # Set Terminal Custom Theme
 echo ""
-echo "Setting default.terminal as the default theme."
+echo "Setting fvcproductions.terminal as the default theme."
 defaults write com.apple.terminal "Default Window Settings" -string "fvcproductions.terminal"
 defaults write com.apple.terminal "Startup Window Settings" -string "fvcproductions.terminal"
 
 # Link .zshrc
 echo ""
-echo "Install Default zsh-theme"
+echo "Install FVCproductions zsh-theme"
 cp -RfXv "$DOT/bin/shell/fvcproductions.zsh-theme" "$HOME/.oh-my-zsh/themes/fvcproductions.zsh-theme"
 cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc" && source $HOME/.zshrc
-
-# Set all sessions to zsh from here moving forward
-chsh -s /bin/zsh
 
 sleep 1
 killall Terminal

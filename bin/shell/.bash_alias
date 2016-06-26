@@ -13,3 +13,4 @@ alias gdrive = "cd $HOME/Google\ Drive/"
 
 # Projects Directory
 alias github="$HOME/Google\ Drive/GitHub"
+

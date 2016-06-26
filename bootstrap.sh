@@ -71,7 +71,7 @@ install_formula () {
   # echo ""
   # echo "  ➜ python"
   # brew install python
-  
+
   echo ""
   echo "  ➜ zsh"
   brew install zsh
