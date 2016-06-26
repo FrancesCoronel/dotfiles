@@ -1,0 +1,109 @@
+#!/usr/bin/env bash
+
+SSHCONFIG="$HOME/.ssh/config"
+
+# Add SSH Config file
+echo ""
+echo "Adding config file for ssh-keys"
+mkdir -p $HOME/.ssh/
+
+cat <<EOM >$SSHCONFIG
+Host bitbucket.org
+  Hostname bitbucket.org
+  IdentityFile $HOME/.ssh/bitbucket_rsa
+
+Host github.com
+  Hostname github.com
+  IdentityFile $HOME/.ssh/github_rsa
+EOM
+
+echo "Please select which task you would like to perform"
+echo ""
+echo "[1] Configure Global Git Settings"
+echo "[2] Generate Github SSH Key"
+echo "[3] Generate Bitbucket SSH Key"
+echo "[4] All of the above"
+echo "[Q/q] Quit"
+echo ""
+
+function gitconfig () {
+  read -p "Please enter your Git Author Name: " GIT_AUTHOR_NAME
+  git config --global user.name "$GIT_AUTHOR_NAME"
+
+  read -p "Please enter your Git Author Email: " GIT_AUTHOR_EMAIL
+  git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+  git config --global push.default simple
+  git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+}
+
+function github_sshkey () {
+  echo ""
+  read -p "Please enter your github email: " GITHUB_EMAIL
+  read -p "Please add a title to your key: " GITHUB_TITLE
+  echo -n "Please enter a new Passphrase:  "
+  read -s PASSPHRASE
+  ssh-keygen -t rsa -C $GITHUB_EMAIL -f $HOME/.ssh/github_rsa -P $PASSPHRASE
+  ssh-add $HOME/.ssh/github_rsa && pbcopy < $HOME/.ssh/github_rsa.pub
+
+  GITHUB_KEY=`pbpaste`
+  GITHUB_PAYLOAD="{ \"title\": \"$GITHUB_TITLE\", \"key\": \"$GITHUB_KEY\" }"
+
+  echo "Login to your github account"
+  read -p "Github Username: " GH_USERNAME
+  echo -n "Github Password: "
+  read -s GH_PASSWORD
+
+  echo ""
+  echo "Saving SSH-Key to Github: "
+  curl --user "$GH_USERNAME:$GH_PASSWORD" -X POST --data "$GITHUB_PAYLOAD" https://api.github.com/user/keys -#o /dev/null
+  echo "Done!"
+
+  echo ""
+  echo "Github SSH-Key Verification: "
+  ssh -T git@github.com
+}
+
+function bitbucket_sshkey () {
+  echo ""
+  read -p "Please enter your Bitbucket Username: " BITBUCKET_USERNAME
+  echo -n "Please enter your Bitbucket Password: "
+  read -s BITBUCKET_PASSWORD
+
+  read -p "Please add a title to your key: " BITBUCKET_TITLE
+  echo -n "Please enter a new Passphrase:  "
+  read -s PASSPHRASE
+  ssh-keygen -f $HOME/.ssh/bitbucket_rsa -P $PASSPHRASE && pbcopy < $HOME/.ssh/bitbucket_rsa.pub
+
+  BITBUCKET_KEY=`pbpaste`
+  BITBUCKET_PAYLOAD="{ \"label\": \"$BITBUCKET_TITLE\", \"key\": \"$BITBUCKET_KEY\" }"
+
+  echo ""
+  echo "Saving SSH-Key to Bitbucket: "
+  curl --user "$BITBUCKET_USERNAME:$BITBUCKET_PASSWORD" -X POST --data "$BITBUCKET_PAYLOAD" "https://bitbucket.org/api/1.0/users/$BITBUCKET_USERNAME/ssh-keys/" -H "Content-Type: application/json" -#o /dev/null
+  echo "Done!"
+
+  echo ""
+  echo "Bitbucket SSH-Key Verification: "
+  ssh -T git@bitbucket.org
+}
+
+function exec_all () {
+  gitconfig;
+  sleep 5
+  github_sshkey;
+  sleep 5
+  bitbucket_sshkey;
+}
+
+while true; do
+  read -p "Select an answer and press return " ANSWER
+  case $ANSWER in
+    [1]*) gitconfig; break;;
+    [2]*) github_sshkey; break;;
+    [3]*) bitbucket_sshkey; break;;
+    [4]*) exec_all; break;;
+    [Q/q]*) exit;;
+    *) echo "Please select from the options above"
+  esac
+done

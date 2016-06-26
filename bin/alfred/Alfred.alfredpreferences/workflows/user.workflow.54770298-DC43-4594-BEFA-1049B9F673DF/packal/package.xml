@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Mail.app Search</name>
+  <version>1.0</version>
+  <bundle>com.alfredapp.vero.mailsearch</bundle>
+  <updated>1438160752</updated>
+  <file>mail.app_search.alfredworkflow</file>
+</workflow>

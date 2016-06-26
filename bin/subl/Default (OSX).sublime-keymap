@@ -1,0 +1,18 @@
+[
+  { 
+    "keys":    ["alt+s"], 
+    "command": "toggle_side_bar" 
+  },
+  { 
+    "keys":    ["alt+r"], 
+    "command": "reindent" 
+  },
+  { 
+    "keys": ["command+y"], 
+    "command": "show_overlay", 
+    "args": { 
+      "overlay": "command_palette", 
+      "text":    "Snippet: "
+    }
+  }
+]

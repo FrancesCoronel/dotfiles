@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+brew cask install font-source-code-pro
+brew cask install font-open-sans
+brew cask install font-roboto
+brew cask install font-hack

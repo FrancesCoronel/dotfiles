@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+function cask() {
+  if brew cask info "${@}" | grep "Not installed" > /dev/null; then
+    brew cask install "${@}"
+  else
+    echo "${@} is already installed."
+  fi
+}
+
+echo ""
+echo "Installing 1Password"
+cask 1password
+
+echo ""
+echo "Installing cDock"
+cask cdock
+
+echo ""
+echo "Installing Dropbox"
+cask dropbox
+
+echo ""
+echo "Installing Google Chrome"
+cask google-chrome
+
+echo ""
+echo "Installing Heroku Toolbelt"
+cask heroku-toolbelt
+
+echo ""
+echo "Installing Image2icon"
+cask image2icon
+
+echo ""
+echo "Installing Skype"
+cask skype
+
+echo ""
+echo "Installing The Unarchiver"
+cask the-unarchiver
+
+echo ""
+echo "Installing VLC"
+cask vlc
+
+echo ""
+echo "Cleaning up installation files..."
+brew cask cleanup
