@@ -4,7 +4,7 @@ This sets up my dev environment to be very Material Design friendly.
 
 > [@fvcproductions](http://twitter.com/fvcproductions)
 
-### Requirements
+## Requirements
 
 **[Xcode](https://developer.apple.com/xcode/)** &amp; **[Command Line Tools](https://developer.apple.com/downloads)**
 
@@ -22,7 +22,7 @@ unzip 2.0.zip && mv dotfiles-2.0 ~/.dotfiles
 sh ~/.dotfiles/bootstrap.sh
 ```
 
-### Initialize Dotfiles
+## Initialize Dotfiles
 
 ```bash
 # Install `npm` and packages [bower, express, grunt-cli, jshint, less]
@@ -53,15 +53,14 @@ $ ./.dotfiles/init/.osx
 $ ./.dotfiles/init/.fonts
 ```
 
-### Sublime, Vim, ZShell
+## Sublime, Vim, ZShell
 
 Modified version of [spacegray](http://github.com/kkga/spacegray.git)
 
 ![Spacegray](http://i.imgur.com/ejGME1z.png)
 
-### Terminal and Zshell Theme
+## Terminal and Zshell Theme
 
-> #### HEADS UP!
 > Once the theme has loaded, you might want to replace the shell's startup command
 > from `login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
 > from Preferences, under Profiles > Shell tab
@@ -75,18 +74,22 @@ Modified version of [spacegray](http://github.com/kkga/spacegray.git)
 - Install Material Icon Design Font
     + Link: https://materialdesignicons.com/getting-started
 
-### Theming
+## Theming
 
 Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](https://github.com/equinusocio/material-theme):
 
 - Lime: #7CB342
 - Purple: #AB47BC
 - Red: #E57373
+- Red Orange: #F74A50
 - Orange: #FF7042
 - Yellow: #FFA000
 - Indigo: #5C6BC0
+- Pink: #FF4081
+- Blue: #2979FF
+- Cyan: #00BCD4
 
-#### Acknowledgments
+### Acknowledgments
 
 Inspiration and code:
 

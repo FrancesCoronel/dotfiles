@@ -14,7 +14,7 @@
         "font" : "Roboto",
         "color" : "#00BCD3FF"
       },
-      "backgroundSelected" : "#ECEFF200",
+      "backgroundSelected" : "#ECEFF23F",
       "text" : {
         "size" : 20,
         "colorSelected" : "#FEFFFFFF",
@@ -38,7 +38,7 @@
       "backgroundSelected" : "#B2D7FFFF"
     },
     "window" : {
-      "color" : "#263239BF",
+      "color" : "#263239FF",
       "paddingHorizontal" : 10,
       "width" : 560,
       "borderPadding" : 10,

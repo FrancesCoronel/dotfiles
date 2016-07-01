@@ -5,18 +5,27 @@ ST3="$HOME/Library/Application Support/Sublime Text 3"
 PKG="https://packagecontrol.io/Package%20Control.sublime-package"
 
 function install_preferences () {
-  echo "Preferences.sublime-settings"
-  cp -f "$DOT/bin/subl/Preferences.sublime-settings" "$ST3/Packages/User/Preferences.sublime-settings"
+  # echo "Preferences.sublime-settings"
+  # cp -f "$DOT/bin/subl/Preferences.sublime-settings" "$ST3/Packages/User/Preferences.sublime-settings"
 
-  echo ""
-  echo "Install Sublime Text 3 Keymaps:"
-  echo "Default (OSX).sublime-keymap"
-  cp -f "$DOT/bin/subl/Default (OSX).sublime-keymap" "$ST3/Packages/User/Default (OSX).sublime-keymap"
+  # echo ""
+  # echo "Install Sublime Text 3 Keymaps:"
+  # echo "Default (OSX).sublime-keymap"
+  # cp -f "$DOT/bin/subl/Default (OSX).sublime-keymap" "$ST3/Packages/User/Default (OSX).sublime-keymap"
 
-  echo ""
-  echo "Install Sublime Text 3 Packages:"
-  echo "Package Control.sublime-settings"
-  cp -f "$DOT/bin/subl/Package Control.sublime-settings" "$ST3/Packages/User/Package Control.sublime-settings"
+  # echo ""
+  # echo "Install Sublime Text 3 Packages:"
+  # echo "Package Control.sublime-settings"
+  # cp -f "$DOT/bin/subl/Package Control.sublime-settings" "$ST3/Packages/User/Package Control.sublime-settings"
+
+  # find ST3 packages
+  cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+
+  # remove User folder
+  rm -r User
+
+  # create alias with existing User folder
+  ln -s /Users/fvcproductions/Dropbox/GitHub/dotfiles/bin/subl/User
 
   echo ""
   brew cask cleanup
