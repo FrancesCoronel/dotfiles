@@ -1,5 +1,7 @@
 # Dotfiles
 
+This sets up my dev environment to be very Material Design friendly.
+
 > [@fvcproductions](http://twitter.com/fvcproductions)
 
 ### Requirements
@@ -19,7 +21,6 @@ unzip 2.0.zip && mv dotfiles-2.0 ~/.dotfiles
 # run bootstrap!
 sh ~/.dotfiles/bootstrap.sh
 ```
-
 
 ### Initialize Dotfiles
 
@@ -62,16 +63,30 @@ Modified version of [spacegray](http://github.com/kkga/spacegray.git)
 
 > #### HEADS UP!
 > Once the theme has loaded, you might want to replace the shell's startup command
-> from `login -fpql pongstr /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
+> from `login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
 > from Preferences, under Profiles > Shell tab
 
 ![Terminal and Zshell Theme](http://i.imgur.com/Wc9hZiw.png)
 
-Vim Base-16 Color scheme
+## To-Do
 
-![Vim Base-16 Color scheme](http://i.imgur.com/ZORdYxI.png)
+- Download latest release of WakaTime Plugins
+    + Sketch: https://github.com/wakatime/sketch-wakatime/releases/latest
+- Install Material Icon Design Font
+    + Link: https://materialdesignicons.com/getting-started
 
-#### Acknowledgements
+### Theming
+
+Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](https://github.com/equinusocio/material-theme):
+
+- Lime: #7CB342
+- Purple: #AB47BC
+- Red: #E57373
+- Orange: #FF7042
+- Yellow: #FFA000
+- Indigo: #5C6BC0
+
+#### Acknowledgments
 
 Inspiration and code:
 

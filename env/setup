@@ -6,10 +6,10 @@ sudo -v
 
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-mkdir -p $HOME/Projects/.env
+mkdir -p $HOME/Dropbox/GitHub/.env
 
 # Create Nginx Paths
-nginx_root=$HOME/Projects/.env/nginx
+nginx_root=$HOME/Dropbox/GitHub/.env/nginx
 nginx_path=(
   $nginx_root/cache
   $nginx_root/config
@@ -23,7 +23,7 @@ mkdir -p ${nginx_path[@]}
 yes | cp -rf $DOTFILE/env/nginx/nodejs.conf $nginx_root/config/
 
 # Create MongoDB Paths
-mongodb_root=$HOME/Projects/.env/mongodb
+mongodb_root=$HOME/Dropbox/GitHub/.env/mongodb
 mongodb_path=(
   $mongodb_root/logs
   $mongodb_root/data

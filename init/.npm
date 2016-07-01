@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# List Packages that will be installed
+# list Packages that will be installed
 node_modules=(
   bower
   express
@@ -12,5 +12,5 @@ node_modules=(
   nodemon
 )
 
-# Install Node Packages
+# install Node Packages
 npm install -g  ${node_modules[@]}

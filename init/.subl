@@ -42,12 +42,6 @@ else
   curl -o "$ST3/Installed Packages/Package Control.sublime-package" "$PKG"
 fi
 
-if [ ! -d "$ST3/Packages/Theme - Spacegray" ]; then
-  echo ""
-  echo "Installing Customized Spacegray"
-  git clone https://github.com/pongstr/spacegray.git "$ST3/Packages/Theme - Spacegray"
-fi
-
 if [ ! -d "$ST3/Packages/User" ]; then
   echo "Creating Packages/User directory"
   mkdir -p "$ST3/Packages/User"

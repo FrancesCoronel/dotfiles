@@ -1,0 +1,26 @@
+{
+	"javatar_gp": 0,
+	"jdk_version":
+	{
+		"JDK1.8.0u73":
+		{
+			"path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/bin",
+			"update": "73",
+			"version": "1.8.0"
+		},
+		"use": ""
+	},
+	"message_id": 20,
+	"project_data":
+	{
+		"2":
+		{
+			"folders":
+			[
+				{
+					"path": "/Users/fvcproductions/Google Drive/School/4LEAF CO/Iteration 4/Code"
+				}
+			]
+		}
+	}
+}

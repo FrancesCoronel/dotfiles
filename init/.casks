@@ -13,12 +13,24 @@ echo "Installing 1Password"
 cask 1password
 
 echo ""
+echo "Installing Alfred"
+cask alfred
+
+echo ""
+echo "Installing Bartender"
+cask bartender
+
+echo ""
 echo "Installing cDock"
 cask cdock
 
 echo ""
 echo "Installing Dropbox"
 cask dropbox
+
+echo ""
+echo "Installing Flux"
+cask flux
 
 echo ""
 echo "Installing Google Chrome"
@@ -43,6 +55,10 @@ cask the-unarchiver
 echo ""
 echo "Installing VLC"
 cask vlc
+
+echo ""
+echo "Installing Quick Look Plugins"
+cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
 
 echo ""
 echo "Cleaning up installation files..."

@@ -1,64 +1,51 @@
 #!/usr/bin/env bash
 
+echo " _______           _______
+(  ____ \|\     /|(  ____ \
+| (    \/| )   ( || (    \/
+| (__    | |   | || |
+|  __)   ( (   ) )| |
+| (       \ \_/ / | |
+| )        \   /  | (____/\
+|/          \_/   (_______/
+"
 echo ""
-echo "      ___       ___          ___          ___                   ___      "
-echo "     /  /\     /__/\        /  /\        /  /\         ___     /  /\     "
-echo "    /  /::\    \  \:\      /  /:/_      /  /:/_       /  /\   /  /::\    "
-echo "   /  /:/\:\    \  \:\    /  /:/ /\    /  /:/ /\     /  /:/  /  /:/\:\   "
-echo "  /  /:/~/:/_____\__\:\  /  /:/_/::\  /  /:/ /::\   /  /:/  /  /:/~/:/   "
-echo " /__/:/ /://__/::::::::\/__/:/__\/\:\/__/:/ /:/\:\ /  /::\ /__/:/ /:/___ "
-echo " \  \:\/:/ \  \:\~~\~~\/\  \:\ /~~/:/\  \:\/:/~/://__/:/\:\\  \:\/:::::/ "
-echo "  \  \::/   \  \:\  ~~~  \  \:\  /:/  \  \::/ /:/ \__\/  \:\\  \::/~~~~  "
-echo "   \  \:\    \  \:\       \  \:\/:/    \__\/ /:/       \  \:\\  \:\      "
-echo "    \  \:\    \  \:\       \  \::/       /__/:/         \__\/ \  \:\     "
-echo "     \__\/     \__\/        \__\/        \__\/                 \__\/     "
-echo ""
-echo "        ..........................................................       "
-echo "        . Dotfiles 0.1.15 (Pongstr) for setting up OSX Workspace .       "
-echo "        .      https://github.com/pongstr/dotfiles.git           .       "
-echo "        ..........................................................       "
+echo "  ..................................................  "
+echo "  .     Dotfiles for setting up OSX Workspace      .  "
+echo "  . https://github.com/fvcproductions/dotfiles.git .  "
+echo "  ..................................................  "
 echo ""
 
-# To run this, you must download & install the latest Xcode and Commandline Tools
-# https://developer.apple.com/xcode/
-# https://developer.apple.com/downloads/
-
+# downloading Apple Dev Tools
 echo ""
-echo "  To run this, you must download & install the latest Xcode and Commandline Tools"
+echo "  To run this, you must download & install the latest Xcode and Command Line Tools"
 echo "    > https://developer.apple.com/xcode/"
 echo "    > https://developer.apple.com/downloads/"
+
 xcode-select --install
 
-# Function to check if a package exists
+# function to check if a package exists
 check () { type -t "${@}" > /dev/null 2>&1; }
 
-# Function to install Homebrew Formulas:
+# function to install Homebrew Formulas
 install_formula () {
   DOTFILE=$(pwd)
 
   echo ""
   echo "Installing Homebrew Packages:"
 
-  # echo ""
-  # echo "  ➜ dnsmasq"
-  # brew install dnsmasq
-
   echo ""
   echo "  ➜ git"
   brew install git
 
-  # echo ""
-  # echo "  ➜ libyaml"
-  # brew install libyaml
+  echo ""
+  echo "  ➜ mongodb"
+  brew install mongo
+  mkdir $HOME/.mongodb-data
 
-  # echo ""
-  # echo "  ➜ mongodb"
-  # brew install mongo
-  # mkdir $HOME/.mongodb-data
-
-  # echo ""
-  # echo "  ➜ nginx"
-  # brew install nginx
+  echo ""
+  echo "  ➜ nginx"
+  brew install nginx
 
   echo ""
   echo "  ➜ node"
@@ -68,15 +55,15 @@ install_formula () {
   echo "  ➜ openssl"
   brew install openssl
 
-  # echo ""
-  # echo "  ➜ python"
-  # brew install python
+  echo ""
+  echo "  ➜ python"
+  brew install python
 
   echo ""
   echo "  ➜ zsh"
   brew install zsh
 
-  # Cleanup
+  # cleanup
   echo ""
   echo "Cleaning up Homebrew installation..."
   brew cleanup
@@ -91,7 +78,7 @@ install_formula () {
   brew tap caskroom/versions
   brew tap caskroom/fonts
 
-  # Make /Applications the default location of apps
+  # Make /Applications the default location of installed Homebrew casks
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
   echo ""
@@ -103,17 +90,17 @@ install_formula () {
 }
 
 
-# Install Hushlogin
+# install Hushlogin
 echo ""
 echo "Install hushlogin"
 echo "  - Disable the system copyright notice, the date and time of the last login."
 echo "    more info at @mathiasbynens/dotfiles http://goo.gl/wZBM80"
 echo ""
 yes | cp -rf "$DOTFILE/.hushlogin" $HOME/.hushlogin
+touch .hushlogin
 
 
-# Install Homebrew
-# ---------------------------------------------------------------------------
+# install Homebrew
 echo ""
 echo "Checking if Homebrew is installed..."
 
@@ -129,11 +116,11 @@ if ! check brew; then
   echo ""
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-  # Run Brew doctor before anything else
+  # run Brew doctor before anything else
   brew doctor
 fi
 
-# Install Homebrew Formulas
+# install Homebrew Formulas
 while true; do
   read -p "Would you like to install Homebrew formulas? [y/n] " answer
   echo ""
@@ -144,7 +131,7 @@ while true; do
   esac
 done
 
-# Restart Terminal for RVM to take effect
+# restart terminal to apply changes
 echo ""
 echo "bootstrapping complete! quitting terminal..."
 killall Terminal

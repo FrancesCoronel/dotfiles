@@ -36,10 +36,6 @@ sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 echo ""
-echo "Increasing the window resize speed for Cocoa applications"
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-
-echo ""
 echo "Expanding the save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
@@ -50,20 +46,8 @@ echo "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 echo ""
-echo "Disabling system-wide resume"
-defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
-
-echo ""
-echo "Saving to disk (not to iCloud) by default"
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-echo ""
 echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-echo ""
-echo "Never go into computer sleep mode"
-systemsetup -setcomputersleep Off > /dev/null
 
 echo ""
 echo "Check for software updates daily, not just once per week"
@@ -128,10 +112,6 @@ echo "Setting a blazingly fast keyboard repeat rate (ain't nobody got time fo sp
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 echo ""
-echo "Disabling auto-correct"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-echo ""
 echo "Enabling tap to click for this user and for the login screen"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -145,10 +125,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClic
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 echo ""
-echo "Enable Apple Magic Mouse two-button"
-defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
-
-echo ""
 echo "Setting scroll gesture with the Ctrl (^) modifier key to zoom"
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
@@ -156,14 +132,6 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 echo ""
 echo "Setting to follow the keyboard focus while zoomed in"
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
-echo ""
-echo "Set keyboard illumination when computer is not use for 5 minutes"
-defaults write com.apple.BezelServices kDimTime -int 300
-
-echo ""
-echo "Setting the timezone to Asia/Manila"
-systemsetup -settimezone "Asia/Manila" > /dev/null
 
 echo ""
 echo "Setting default language to (US) English, currency to Philippine Peso and metric unit to inches"
@@ -175,19 +143,6 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Screen
 # ---------------------------------------------------------------------------
-
-echo ""
-echo "Requiring password immediately after sleep or screen saver begins"
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Save Screenies to Desktop
-
-echo "Save screenshot to ~/Desktop"
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
-
-echo "Set screenshot format to PNG"
-defaults write com.apple.screencapture type -string "png"
 
 echo "Enabling subpixel foznt rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2

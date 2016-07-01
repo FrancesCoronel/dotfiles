@@ -1,0 +1,11 @@
+{
+  "save_first": true,
+  "auto_minify_on_save": false,
+  "open_file": false,
+  "allowed_file_types": [
+    "css",
+    "js",
+    "json",
+    "svg"
+  ]
+}
