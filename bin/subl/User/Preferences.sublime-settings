@@ -74,10 +74,11 @@
 	"caret_extra_top": 3,
 	"caret_extra_width": 2,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "LF",
 	"detect_indentation": true,
+	"dpi_scale": 1.3,
 	"draw_indent_guides": true,
 	"draw_minimap_border": false,
 	"draw_white_space": "selection",
@@ -127,7 +128,7 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 16,
+	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
