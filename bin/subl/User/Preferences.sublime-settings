@@ -74,7 +74,7 @@
 	"caret_extra_top": 3,
 	"caret_extra_width": 2,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "LF",
 	"detect_indentation": true,
@@ -121,7 +121,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Hack",
+	"font_face": "Roboto Mono",
 	"font_options":
 	[
 		"no_bold",

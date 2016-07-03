@@ -4,6 +4,12 @@ This sets up my dev environment to be very Material Design friendly.
 
 > [@fvcproductions](http://twitter.com/fvcproductions)
 
+---
+
+![ADD GIF](#)
+
+---
+
 ## Requirements
 
 **[Xcode](https://developer.apple.com/xcode/)** &amp; **[Command Line Tools](https://developer.apple.com/downloads)**
@@ -53,19 +59,21 @@ $ ./.dotfiles/init/.osx
 $ ./.dotfiles/init/.fonts
 ```
 
-## Sublime, Vim, ZShell
+## Alfred 3
 
-Modified version of [spacegray](http://github.com/kkga/spacegray.git)
+![ADD SCREENSHOT](#)
 
-![Spacegray](http://i.imgur.com/ejGME1z.png)
+## Sublime Text 3
 
-## Terminal and Zshell Theme
+![ADD SCREENSHOT](#)
 
-> Once the theme has loaded, you might want to replace the shell's startup command
-> from `login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
-> from Preferences, under Profiles > Shell tab
+## Terminal and Z-shell Theme
 
-![Terminal and Zshell Theme](http://i.imgur.com/Wc9hZiw.png)
+Once the theme has loaded, you might want to replace the shell's startup command in `Preferences` under `Profiles > Shell Tab`:
+
+`login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
+
+![ADD SCREENSHOT](#)
 
 ## To-Do
 
@@ -91,10 +99,8 @@ Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](
 
 ### Acknowledgments
 
-Inspiration and code:
-
-  - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
-  - [@necolas](https://github.com/necolas/dotfiles)
-  - [@cowboy](https://twitter.com/cowboy/dotfiles/)
-  - [@ptb](https://github.com/ptb/Mac-OS-X-Lion-Setup)
-  - [@pongstr](https://twitter.com/pongstr)
+- [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+- [@necolas](https://github.com/necolas/dotfiles)
+- [@cowboy](https://twitter.com/cowboy/dotfiles/)
+- [@ptb](https://github.com/ptb/Mac-OS-X-Lion-Setup)
+- [@pongstr](https://twitter.com/pongstr)

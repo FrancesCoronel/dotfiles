@@ -174,13 +174,15 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AyAAAAAAAAEBCAAoADXxASUm9ib3RvTW9uby1SZWd1bGFy0hMUFRZaJGNsYXNz
+	YXNzI0AwAAAAAAAAEBCAAoADXxASUm9ib3RvTW9uby1SZWd1bGFy0hMUFRZaJGNsYXNz
 	bmFtZVgkY2xhc3Nlc1ZOU0ZvbnSiFRdYTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLR
 	GhtUcm9vdIABCBEaIy0yNzxCS1JbYmlydHZ4jZKdpq2wucvO0wAAAAAAAAEBAAAAAAAA
 	ABwAAAAAAAAAAAAAAAAAAADV
 	</data>
 	<key>FontAntialias</key>
 	<true/>
+	<key>FontHeightSpacing</key>
+	<real>1.1000000000000001</real>
 	<key>ProfileCurrentVersion</key>
 	<real>2.04</real>
 	<key>SelectionColor</key>
@@ -233,7 +235,7 @@
 	<key>columnCount</key>
 	<integer>60</integer>
 	<key>name</key>
-	<string>materialize</string>
+	<string>Materialize</string>
 	<key>rowCount</key>
 	<integer>30</integer>
 	<key>type</key>
