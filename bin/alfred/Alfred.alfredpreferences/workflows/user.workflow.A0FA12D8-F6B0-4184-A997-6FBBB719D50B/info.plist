@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>5E6BA0B3-802A-486E-8413-6F92609B321B</key>
@@ -37,6 +41,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>814F7D3F-03F9-4248-8308-ECA4D3792F3F</key>
@@ -48,6 +54,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>942CCE71-9883-4AB2-A558-B5A44993DF3B</key>
@@ -59,6 +67,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
@@ -70,6 +80,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>B3D2103A-E31D-454E-BD6E-8F13020AC68D</key>
@@ -81,6 +93,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</key>
@@ -92,6 +106,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>BFC9E74C-8EB5-4863-8FE6-44AC5AE9427A</key>
@@ -103,6 +119,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
@@ -114,6 +132,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
@@ -125,6 +145,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -133,6 +155,8 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>Remove this locale</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -143,7 +167,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>TimeZones v1.7.0</string>
+	<string>TimeZones</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -169,7 +193,7 @@
 			<key>uid</key>
 			<string>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -191,6 +215,10 @@ tz_name="${data[4]}"
 UTC_offset="${data[5]}"
 
 echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" • $tz_name ($UTC_offset)"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -199,11 +227,13 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>942CCE71-9883-4AB2-A558-B5A44993DF3B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -222,6 +252,10 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<string>Fetching time data...</string>
 				<key>script</key>
 				<string>./timezone_list.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Display current time in various worldwide cities</string>
 				<key>title</key>
@@ -236,15 +270,20 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>F15F2405-5743-4407-9BFF-A45E6783BA88</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>largetypetext</key>
+				<string>{query}</string>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
 			<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -265,7 +304,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>5E6BA0B3-802A-486E-8413-6F92609B321B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -276,6 +315,10 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<integer>0</integer>
 				<key>script</key>
 				<string>./remove_city.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -284,7 +327,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>AAA84F5F-2F96-4126-A840-9CD676BDD208</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -293,11 +336,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>{query}</string>
@@ -309,7 +348,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -320,6 +359,10 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<integer>0</integer>
 				<key>script</key>
 				<string>./add_city.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -328,11 +371,13 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>3E37F651-EEB7-451F-B0AD-28710998F443</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -349,6 +394,10 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<string>Getting locations...</string>
 				<key>script</key>
 				<string>./input_city.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Add a city to your TimeZones cities list</string>
 				<key>title</key>
@@ -363,7 +412,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>0C80DC80-B943-48B3-82D3-1D5B0B37BB74</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -374,6 +423,10 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<integer>63</integer>
 				<key>script</key>
 				<string>./update.sh</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -382,7 +435,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>B3D2103A-E31D-454E-BD6E-8F13020AC68D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -403,7 +456,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>BFC9E74C-8EB5-4863-8FE6-44AC5AE9427A</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -414,6 +467,10 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 				<integer>63</integer>
 				<key>script</key>
 				<string>./move.sh</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -422,7 +479,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -443,7 +500,7 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>uid</key>
 			<string>814F7D3F-03F9-4248-8308-ECA4D3792F3F</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -541,66 +598,92 @@ v1.0
 	<dict>
 		<key>075CB49C-D3B5-4699-9B92-B421D704333D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>0C80DC80-B943-48B3-82D3-1D5B0B37BB74</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>240</real>
 		</dict>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>240</real>
 		</dict>
 		<key>5E6BA0B3-802A-486E-8413-6F92609B321B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>814F7D3F-03F9-4248-8308-ECA4D3792F3F</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>480</real>
 		</dict>
 		<key>942CCE71-9883-4AB2-A558-B5A44993DF3B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>B3D2103A-E31D-454E-BD6E-8F13020AC68D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>360</real>
 		</dict>
 		<key>BC542037-8795-4FE1-8534-AF381F4197FC</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>BFC9E74C-8EB5-4863-8FE6-44AC5AE9427A</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>360</real>
 		</dict>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>480</real>
 		</dict>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>

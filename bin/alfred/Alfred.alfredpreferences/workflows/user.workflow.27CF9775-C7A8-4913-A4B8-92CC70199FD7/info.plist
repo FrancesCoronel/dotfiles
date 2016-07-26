@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -25,12 +27,14 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Domainr v1.2.0</string>
+	<string>Domainr</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -82,6 +86,10 @@ foreach ( $domains-&gt;results as $results ) {
 };
 
 echo $w-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Type a domain or any words to search</string>
 				<key>title</key>
@@ -96,13 +104,15 @@ echo $w-&gt;toxml();</string>
 			<key>uid</key>
 			<string>79396A58-6CBD-47DB-A270-41AF2A4FA0E1</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>{query}</string>
 				<key>utf8</key>
@@ -113,7 +123,7 @@ echo $w-&gt;toxml();</string>
 			<key>uid</key>
 			<string>0393243C-36C6-4A1E-A8D1-342E37FC6894</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -122,11 +132,15 @@ echo $w-&gt;toxml();</string>
 	<dict>
 		<key>0393243C-36C6-4A1E-A8D1-342E37FC6894</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>90</real>
 		</dict>
 		<key>79396A58-6CBD-47DB-A270-41AF2A4FA0E1</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>90</real>
 		</dict>
