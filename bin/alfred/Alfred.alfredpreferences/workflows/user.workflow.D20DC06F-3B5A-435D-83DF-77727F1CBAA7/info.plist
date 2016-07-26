@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -25,7 +27,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Play music</string>
+	<string>Play Music</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -33,6 +35,8 @@
 			<dict>
 				<key>anchorfields</key>
 				<true/>
+				<key>argumenttype</key>
+				<integer>0</integer>
 				<key>daterange</key>
 				<integer>0</integer>
 				<key>fields</key>
@@ -78,8 +82,12 @@
 				<false/>
 				<key>keyword</key>
 				<string>play</string>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>scopes</key>
 				<array/>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Search for music</string>
 				<key>types</key>
@@ -96,17 +104,22 @@
 			<key>uid</key>
 			<string>B04386C1-663B-443E-97B6-7D48CC5A8884</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
-			<dict/>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
 			<string>CF142A6E-41D3-42F3-81BB-5F5F0BACBFBC</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -115,11 +128,15 @@
 	<dict>
 		<key>B04386C1-663B-443E-97B6-7D48CC5A8884</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
 		<key>CF142A6E-41D3-42F3-81BB-5F5F0BACBFBC</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
