@@ -9,6 +9,7 @@ subl/User/Package\ Control.last-run
 subl/User/Package\ Control.merged-ca-bundle
 subl/User/Package\ Control.system-ca-bundle
 subl/User/Package\ Control.user-ca-bundle
+alfred/Alfred.alfredpreferences/workflows/user.workflow.E71C4FEC-21D6-471F-A4D9-25DFA1D59E02/.auth_token
 
 Numerous always-ignore extensions
 *.diff
@@ -21,6 +22,9 @@ Numerous always-ignore extensions
 *.zip
 *.vi
 *~
+*.auth_token
+
+
 
 # OS or Editor folders
 .DS_Store
