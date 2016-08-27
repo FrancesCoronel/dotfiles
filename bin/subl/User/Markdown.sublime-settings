@@ -1,5 +1,6 @@
 {
   "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "theme": "Material-Theme.sublime-theme",
   "extensions": [
     "markdown",
     "mdown",
