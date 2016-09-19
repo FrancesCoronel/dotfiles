@@ -16,38 +16,6 @@
 <key>name</key>
 <string>mon_color</string>
 <key>scope</key>
-<string>mcol_25383CFF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#25383CFF</string>
-<key>foreground</key>
-<string>#C3D6DAFF</string>
-<key>caret</key>
-<string>#C3D6DAFF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_text_color</string>
-<key>scope</key>
-<string>mcol_text_25383CFF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#263239FF</string>
-<key>foreground</key>
-<string>#25383CFF</string>
-<key>caret</key>
-<string>#C3D6DAFF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_color</string>
-<key>scope</key>
 <string>mcol_b0b0b0FF</string>
 <key>settings</key>
 <dict>
@@ -73,6 +41,70 @@
 <string>#b0b0b0FF</string>
 <key>caret</key>
 <string>#4F4F4FFF</string>
+</dict>
+</dict>
+
+<dict>
+<key>name</key>
+<string>mon_color</string>
+<key>scope</key>
+<string>mcol_049cdbFF</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#049cdbFF</string>
+<key>foreground</key>
+<string>#01354BFF</string>
+<key>caret</key>
+<string>#01354BFF</string>
+</dict>
+</dict>
+
+<dict>
+<key>name</key>
+<string>mon_text_color</string>
+<key>scope</key>
+<string>mcol_text_049cdbFF</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#263239FF</string>
+<key>foreground</key>
+<string>#049cdbFF</string>
+<key>caret</key>
+<string>#01354BFF</string>
+</dict>
+</dict>
+
+<dict>
+<key>name</key>
+<string>mon_color</string>
+<key>scope</key>
+<string>mcol_FFFFFFFF</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#FFFFFFFF</string>
+<key>foreground</key>
+<string>#000000FF</string>
+<key>caret</key>
+<string>#000000FF</string>
+</dict>
+</dict>
+
+<dict>
+<key>name</key>
+<string>mon_text_color</string>
+<key>scope</key>
+<string>mcol_text_FFFFFFFF</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#263239FF</string>
+<key>foreground</key>
+<string>#FFFFFFFF</string>
+<key>caret</key>
+<string>#000000FF</string>
 </dict>
 </dict>
 
@@ -140,38 +172,6 @@
 </dict>
 </dict>
 
-<dict>
-<key>name</key>
-<string>mon_color</string>
-<key>scope</key>
-<string>mcol_049cdbFF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#049cdbFF</string>
-<key>foreground</key>
-<string>#01354BFF</string>
-<key>caret</key>
-<string>#01354BFF</string>
-</dict>
-</dict>
-
-<dict>
-<key>name</key>
-<string>mon_text_color</string>
-<key>scope</key>
-<string>mcol_text_049cdbFF</string>
-<key>settings</key>
-<dict>
-<key>background</key>
-<string>#263239FF</string>
-<key>foreground</key>
-<string>#049cdbFF</string>
-<key>caret</key>
-<string>#01354BFF</string>
-</dict>
-</dict>
-
 		<dict>
 			<key>settings</key>
 			<dict>
@@ -194,14 +194,14 @@
 				<key>lineHighlight</key>
 				<string>#00000050</string>
 				<key>popupCss</key>
-				<string><![CDATA[ html { background-color: #263238; color: #eeffff; padding: 16px; } a { color: #B2CCD6; line-height: 16px; } .error, .deleted { color: #FF5370; } .success, .inserted { color: #C3E88D; } .warning, .modified { color: #FFCB6B; } ]]></string>
+				<string><![CDATA[ html { background-color: #263238; color: #eeffff; padding: 16px; } a { color: #B2CCD6; line-height: 16px; } .error, .deleted { color: #FF5370; } .success, .inserted { color: #C3E88D; } .warning, .modified { color: #FFCB6B; } .type { color: #89DDFF; font-style: italic; } .param { color: #F78C6C; } .current { text-decoration: underline; } ]]></string>
 				<key>selection</key>
 				<string>#80CBC420</string>
 				<key>selectionBorder</key>
 				<string>#80CBC420</string>
 				<key>shadow</key>
 				<string>#00000010</string>
-				<key>stackGuides</key>
+				<key>stackGuide</key>
 				<string>#37474Fff</string>
 			</dict>
 		</dict>
@@ -288,6 +288,17 @@
 			<dict>
 				<key>foreground</key>
 				<string>#C792EA</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword, Storage</string>
+			<key>scope</key>
+			<string>storage.type, keyword.control</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
 			</dict>
 		</dict>
 		<dict>
@@ -709,6 +720,19 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Markdown - Markup Raw Inline Punctuation</string>
+			<key>scope</key>
+			<string>text.html.markdown punctuation.definition.raw.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#65737e</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Markdown - Line Break</string>
 			<key>scope</key>
 			<string>text.html.markdown meta.dummy.line-break</string>
@@ -871,21 +895,28 @@
 			<dict>
 				<key>background</key>
 				<string>#00000050</string>
-				<key>foreground</key>
-				<string>#eeffff</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Markdown - Fenced Bode Block</string>
 			<key>scope</key>
-			<string>punctuation.definition.fenced.markdown, variable.language.fenced.markdown</string>
+			<string>punctuation.definition.fenced.markdown</string>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
 				<string>#00000050</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markdown - Fenced Bode Block Variable</string>
+			<key>scope</key>
+			<string>markup.raw.block.fenced.markdown, variable.language.fenced.markdown, punctuation.section.class.end</string>
+			<key>settings</key>
+			<dict>
 				<key>foreground</key>
-				<string>#65737e</string>
+				<string>#eeffff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -947,6 +978,8 @@
 			<dict>
 				<key>background</key>
 				<string></string>
+				<key>foreground</key>
+				<string>#eeffff</string>
 			</dict>
 		</dict>
 		<dict>

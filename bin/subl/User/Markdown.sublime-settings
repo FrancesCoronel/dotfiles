@@ -1,17 +1,18 @@
 {
-  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-  "theme": "Material-Theme.sublime-theme",
-  "extensions": [
-    "markdown",
-    "mdown",
-    "md"
-  ],
-  "line_numbers": true,
-  "spell_check": true,
-  "draw_centered": false,
-  "trailing_spaces_trim_on_save": true,
-  "trim_automatic_white_space": true,
-  "trim_trailing_white_space_on_save": true,
-  "wrap_width": 0,
-  "word_wrap": "true"
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"extensions":
+	[
+		"markdown",
+		"mdown",
+		"md",
+		"md"
+	],
+	"line_numbers": true,
+	"spell_check": true,
+	"theme": "Material-Theme.sublime-theme",
+	"trailing_spaces_trim_on_save": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "true",
+	"wrap_width": 0
 }

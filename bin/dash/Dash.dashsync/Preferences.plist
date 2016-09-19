@@ -136,6 +136,16 @@
 			<key>searchSnippets</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>docsets</key>
+			<array>
+				<string>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</string>
+			</array>
+			<key>name</key>
+			<string>Just JS</string>
+			<key>searchSnippets</key>
+			<true/>
+		</dict>
 	</array>
 	<key>searchKey</key>
 	<dict>
