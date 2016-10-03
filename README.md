@@ -6,7 +6,7 @@ This sets up my dev environment to be very Material Design friendly.
 
 ---
 
-![ADD GIF](#)
+![Showcase](img/showcase.png)
 
 ---
 
@@ -61,11 +61,11 @@ $ ./.dotfiles/init/.fonts
 
 ## Alfred 3
 
-![ADD SCREENSHOT](#)
+![alfred](img/alfred.png)
 
 ## Sublime Text 3
 
-![ADD SCREENSHOT](#)
+![sublime-text](img/sublime-text.png)
 
 ## Terminal and Z-shell Theme
 
@@ -73,14 +73,12 @@ Once the theme has loaded, you might want to replace the shell's startup command
 
 `login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
 
-![ADD SCREENSHOT](#)
+![terminal](img/terminal.png)
 
 ## To-Do
 
-- Download latest release of WakaTime Plugins
+- download latest release of WakaTime Plugins
     + Sketch: https://github.com/wakatime/sketch-wakatime/releases/latest
-- Install Material Icon Design Font
-    + Link: https://materialdesignicons.com/getting-started
 
 ## Theming
 
@@ -101,6 +99,6 @@ Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](
 
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
 - [@necolas](https://github.com/necolas/dotfiles)
-- [@cowboy](https://twitter.com/cowboy/dotfiles/)
+- [@cowboy](https://github.com/cowboy/dotfiles/)
 - [@ptb](https://github.com/ptb/Mac-OS-X-Lion-Setup)
 - [@pongstr](https://twitter.com/pongstr)
