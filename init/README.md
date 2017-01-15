@@ -39,12 +39,12 @@
 
 ### App Store
 
-- [Amphetamine]()
-- [Blotter]()
-- [Candlelight]()
-- [Cleanbox]()
-- [LittleIpsum]()
-- [Prepo]()
+- [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
+- [Blotter](https://itunes.apple.com/us/app/blotter/id406580224?mt=12)
+- [Candlelight](https://itunes.apple.com/us/app/candlelight/id655899740?mt=12)
+- [Cleanbox](https://itunes.apple.com/us/app/cleanbox/id1190617406?mt=12)
+- [LittleIpsum](https://itunes.apple.com/us/app/littleipsum/id405772121?mt=12)
+- [Prepo](https://itunes.apple.com/us/app/prepo/id476533227?mt=12)
 
 ### Personal Packages
 

@@ -117,5 +117,17 @@ echo "Installing VLC"
 cask vlc
 
 echo ""
+echo "Installing Wordpress.com"
+cask wordpresscom
+
+echo ""
+echo "Installing YNAB"
+cask ynab
+
+echo ""
+echo "Installing uTorrent"
+cask utorrent
+
+echo ""
 echo "Cleaning up installation files..."
 brew cask cleanup
