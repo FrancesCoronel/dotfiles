@@ -10,6 +10,17 @@ This sets up my dev environment to be very Material Design friendly.
 
 ---
 
+## To-Do
+
+- commands for changing default apps
+    + `.txt` files open with Sublime Text 3
+- make all online apps into casks
+    + [Airtable](https://airtable.com/mac)
+    + [Zeit Now]()
+    + Sorty
+    + WakaTime Plugins
+        + [Sketch](https://github.com/wakatime/sketch-wakatime/releases/latest)
+
 ## Requirements
 
 **[Xcode](https://developer.apple.com/xcode/)** &amp; **[Command Line Tools](https://developer.apple.com/downloads)**
@@ -74,11 +85,6 @@ Once the theme has loaded, you might want to replace the shell's startup command
 `login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
 
 ![terminal](img/terminal.png)
-
-## To-Do
-
-- download latest release of WakaTime Plugins
-    + Sketch: https://github.com/wakatime/sketch-wakatime/releases/latest
 
 ## Theming
 

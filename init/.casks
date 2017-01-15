@@ -13,8 +13,12 @@ echo "Installing 1Password"
 cask 1password
 
 echo ""
-echo "Installing Alfred"
-cask alfred
+echo "Installing Adobe Air"
+cask adobe-air
+
+# echo ""
+# echo "Installing Alfred"
+# cask alfred
 
 echo ""
 echo "Installing Bartender"
@@ -25,6 +29,18 @@ echo "Installing cDock"
 cask cdock
 
 echo ""
+echo "Installing CleanMyMac"
+cask cleanmymac
+
+echo ""
+echo "Installing CodeKit"
+cask codekit
+
+echo ""
+echo "Installing Dash"
+cask dash
+
+echo ""
 echo "Installing Dropbox"
 cask dropbox
 
@@ -33,8 +49,20 @@ echo "Installing Flux"
 cask flux
 
 echo ""
+echo "Installing Franz"
+cask franz
+
+echo ""
+echo "Installing Gitify"
+cask gitify
+
+echo ""
 echo "Installing Google Chrome"
 cask google-chrome
+
+echo ""
+echo "Installing Google Drive"
+cask google-drive
 
 echo ""
 echo "Installing Heroku Toolbelt"
@@ -45,8 +73,40 @@ echo "Installing Image2icon"
 cask image2icon
 
 echo ""
+echo "Installing Minerva"
+cask minerva
+
+echo ""
+echo "Installing Quick Look Plugins"
+cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
+
+echo ""
+echo "Installing Quip"
+cask image2icon
+
+echo ""
+echo "Installing Screenhero"
+cask screenhero
+
+echo ""
+echo "Installing Sketch"
+cask sketch
+
+echo ""
 echo "Installing Skype"
 cask skype
+
+echo ""
+echo "Installing Spark"
+cask spark
+
+echo ""
+echo "Installing Spotify"
+cask spotify
+
+echo ""
+echo "Installing Sublime Text"
+cask sublime-text
 
 echo ""
 echo "Installing The Unarchiver"
@@ -55,10 +115,6 @@ cask the-unarchiver
 echo ""
 echo "Installing VLC"
 cask vlc
-
-echo ""
-echo "Installing Quick Look Plugins"
-cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
 
 echo ""
 echo "Cleaning up installation files..."
