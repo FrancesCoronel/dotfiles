@@ -22,7 +22,7 @@ duti -s com.sublimetext.3 .md editor
 duti -s com.sublimetext.3 .txt editor
 duti -s com.sublimetext.3 .cpp editor
 duti -s com.sublimetext.3 .css editor
-duti -s com.sublimetext.3 .html editor
+duti -s com.sublimetext.3 public.html editor
 duti -s com.sublimetext.3 .js editor
 duti -s com.sublimetext.3 .m editor
 duti -s com.sublimetext.3 .mm editor
@@ -44,6 +44,10 @@ duti -s org.videolan.vlc   m4v viewer
 duti -s org.videolan.vlc   mp4 viewer
 duti -s org.videolan.vlc   mov viewer
 duti -s org.videolan.vlc   mkv viewer
+
+echo ""
+echo "Installing Aerial Screensaver"
+defaults -currentHost write com.apple.screensaver modulePath -string “~/Dropbox/github/bin/screen-saver/Aerial.saver”
 
 echo ""
 echo "Disabling OS X Gate Keeper"
@@ -76,8 +80,8 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 echo ""
-echo "Setting sidebar icon size to small"
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+echo "Setting sidebar icon size to medium"
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 echo ""
 echo "Show item info near icons on the desktop and in other icon views"

@@ -95,7 +95,6 @@ install_formula () {
 
 }
 
-
 # install Hushlogin
 echo ""
 echo "Install hushlogin"
@@ -104,7 +103,6 @@ echo "    more info at @mathiasbynens/dotfiles http://goo.gl/wZBM80"
 echo ""
 yes | cp -rf "$DOTFILE/.hushlogin" $HOME/.hushlogin
 touch .hushlogin
-
 
 # install Homebrew
 echo ""

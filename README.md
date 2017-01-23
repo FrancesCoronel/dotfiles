@@ -9,7 +9,6 @@ This sets up my dev environment to be very Material Design friendly.
 - make all online apps into casks
     + [Airtable](https://airtable.com/mac)
     + [Zeit Now]()
-    + Sorty
     + WakaTime Plugins
         + [Sketch](https://github.com/wakatime/sketch-wakatime/releases/latest)
 
@@ -19,46 +18,45 @@ This sets up my dev environment to be very Material Design friendly.
 
 The `sudo` command is necessary for Homebrew to be installed and for some others.
 
-### To get started run these commands:
+### To get started run these commands...
 
 ```bash
-# download latest from Github
+# download latest version from Github
+curl -L -O https://github.com/fvcproductions/dotfiles/archive/3.0.zip
 
-$ curl -L -O https://github.com/fvcproductions/dotfiles/archive/2.0.zip
-
-# unzip the file and move to $HOME directory
-unzip 2.0.zip && mv dotfiles-2.0 ~/.dotfiles
+# unzip the file and move to my GitHub folder inside of Dropbox
+unzip 3.0.zip && mv dotfiles-3.0 ~/Dropbox/github/dotfiles
 
 # run bootstrap!
-sh ~/.dotfiles/bootstrap.sh
+sh ~/Dropbox/github/dotfiles/bootstrap.sh
 ```
 
 ## Initialize Dotfiles
 
 ```bash
 # Installs npm and certain npm packages
-$ ./.dotfiles/init/.npm
+sh ~/Dropbox/github/dotfiles/init/.npm
 
 # Installs casks and taps to caskroom-versions
-$ ./.dotfiles/init/.casks
+sh ~/Dropbox/github/dotfiles/init/.casks
 
 # Installs Sublime Text 3, Package Control, theme, and packages
-$ ./.dotfiles/init/.subl
+sh ~/Dropbox/github/dotfiles/init/.subl
 
 # Installs Atom and Packages
-$ ./.dotfiles/init/.atom
-
-# Guide that helps you setup your git configuration and ssh-key setup for Github and Bitbucket
-$ ./.dotfiles/init/.gituser
+sh ~/Dropbox/github/dotfiles/init/.atom
 
 # Installs oh-my-zsh, terminal theme, oh-my-zsh theme and configs
-$ ./.dotfiles/init/.shell
+sh ~/Dropbox/github/dotfiles/init/.shell
 
 # OSX optimal awesome settings
-$ ./.dotfiles/init/.osx
+sh ~/Dropbox/github/dotfiles/init/.osx
 
 # Installs fonts for coding and docs
-$ ./.dotfiles/init/.fonts
+sh ~/Dropbox/github/dotfiles/init/.fonts
+
+# Guide that helps you setup your git configuration and ssh-key setup for Github and Bitbucket
+sh ~/Dropbox/github/dotfiles/init/.gituser
 ```
 
 ## Alfred 3
@@ -66,6 +64,12 @@ $ ./.dotfiles/init/.fonts
 ![alfred](img/alfred.png)
 
 ## Sublime Text 3
+
+```shell
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+rm -r User
+ln -s /Users/fvcproductions/Dropbox/GitHub/dotfiles/bin/subl/User/
+```
 
 ![sublime-text](img/sublime-text.png)
 
