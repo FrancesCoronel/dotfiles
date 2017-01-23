@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo " _______           _______
+echo "
 (  ____ \|\     /|(  ____ \
 | (    \/| )   ( || (    \/
 | (__    | |   | || |
@@ -63,6 +63,18 @@ install_formula () {
   echo "  ➜ zsh"
   brew install zsh
 
+  echo ""
+  echo "  ➜ youtube-dl"
+  brew install youtube-dl
+
+  echo ""
+  echo "  ➜ libav"
+  brew install libav
+
+  echo ""
+  echo "  ➜ duti"
+  brew install duti
+
   # cleanup
   echo ""
   echo "Cleaning up Homebrew installation..."
@@ -80,12 +92,6 @@ install_formula () {
 
   # Make /Applications the default location of installed Homebrew casks
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-  echo ""
-  echo "Installing Hack font... "
-  brew cask install font-hack
-  brew cleanup
-
 
 }
 

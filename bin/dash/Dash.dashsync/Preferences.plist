@@ -86,32 +86,32 @@
 			<key>http://kapeli.com/feeds/AngularJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-06-25T23:59:26Z</date>
+				<date>2017-01-17T01:32:48Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bootstrap_4.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-06-25T23:59:32Z</date>
+				<date>2017-01-17T01:32:48Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-06-26T00:00:13Z</date>
+				<date>2017-01-17T01:33:25Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Python_3.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-10-25T01:00:26Z</date>
+				<date>2017-01-17T01:33:07Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-06-25T23:59:46Z</date>
+				<date>2017-01-17T01:32:52Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/jQuery.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-06-26T00:00:07Z</date>
+				<date>2017-01-17T01:33:07Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
@@ -163,6 +163,8 @@
 	<true/>
 	<key>shouldShowStatusIcon</key>
 	<false/>
+	<key>shouldStartAtLogin</key>
+	<true/>
 	<key>shouldSyncBookmarks</key>
 	<true/>
 	<key>shouldSyncDocsets</key>

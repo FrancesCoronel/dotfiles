@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
-brew cask install font-source-code-pro
-brew cask install font-open-sans
+echo ""
+echo "Installing Roboto font... "
 brew cask install font-roboto
+
+echo ""
+echo "Installing Roboto Mono font... "
 brew cask install font-roboto-mono
+
+echo ""
+echo "Installing Hack font... "
 brew cask install font-hack
+
+brew cleanup
+

@@ -1,17 +1,17 @@
 {
   "alfredtheme" : {
     "result" : {
-      "textSpacing" : 8,
+      "textSpacing" : 5,
       "subtext" : {
-        "size" : 11,
+        "size" : 10,
         "colorSelected" : "#B0BEC6FF",
-        "font" : "Roboto",
+        "font" : "Roboto Mono",
         "color" : "#ECEFF235"
       },
       "shortcut" : {
         "size" : 20,
         "colorSelected" : "#00BCD3FF",
-        "font" : "Roboto",
+        "font" : "Avenir",
         "color" : "#00BCD3FF"
       },
       "backgroundSelected" : "#ECEFF23F",
@@ -30,7 +30,7 @@
       "background" : "#26323800",
       "spacing" : 10,
       "text" : {
-        "size" : 45,
+        "size" : 50,
         "colorSelected" : "#000000FF",
         "font" : "Roboto",
         "color" : "#ECEFF2FF"

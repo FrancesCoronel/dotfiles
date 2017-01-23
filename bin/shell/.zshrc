@@ -12,13 +12,11 @@ export EDITOR=subl
 # time that oh-my-zsh is loaded.
 ZSH_THEME="fvcproductions"
 
-# Aliases
+# aliases
 alias zshconfig="subl $HOME/.zshrc"
 alias ohmyzsh="cd $HOME/.oh-my-zsh"
 
-# Home Folders
-# ---------------------------------------------------------------------------
-
+# home folders
 alias home="$HOME && clear"
 alias apps="cd $HOME/Applications/"
 alias music="cd $HOME/Music/"
@@ -26,13 +24,8 @@ alias movies="cd $HOME/Movies/"
 alias dropbox="cd $HOME/Dropbox/"
 alias pictures="cd $HOME/Pictures/"
 
-# Projects Directory
-# ---------------------------------------------------------------------------
-
+# github directory
 alias github="$HOME/Dropbox/GitHub"
-
-# Dev Stuff
-# ---------------------------------------------------------------------------
 
 # Jekyll: must be in the same working directory
 alias jekyllstart="jekyll serve --watch --baseurl=/"
@@ -60,8 +53,7 @@ plugins=(git osx ruby terminalapp zsh-wakatime)
 
 source $ZSH/oh-my-zsh.sh
 
-# Configs
-# -----------------------------------------------------------------------------
+# configs
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -83,6 +75,21 @@ function gemdir {
   fi
 }
 
+# cd & ls-a
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls -a
+}
+
+# reset launchpad
+function reset_launchpad() {
+  defaults write com.apple.dock ResetLaunchPad -bool TRUE;
+  killAll Dock;
+}
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -90,6 +97,3 @@ function gemdir {
 if [[ -d /opt/boxen ]] ; then
   [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 fi
-
-# Sublime Text
-# alias subl = "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ."

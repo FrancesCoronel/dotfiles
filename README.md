@@ -2,18 +2,10 @@
 
 This sets up my dev environment to be very Material Design friendly.
 
-> [@fvcproductions](http://twitter.com/fvcproductions)
-
----
-
 ![Showcase](img/showcase.png)
-
----
 
 ## To-Do
 
-- commands for changing default apps
-    + `.txt` files open with Sublime Text 3
 - make all online apps into casks
     + [Airtable](https://airtable.com/mac)
     + [Zeit Now]()
@@ -25,7 +17,9 @@ This sets up my dev environment to be very Material Design friendly.
 
 **[Xcode](https://developer.apple.com/xcode/)** &amp; **[Command Line Tools](https://developer.apple.com/downloads)**
 
-> `sudo` is necessary for Homebrew to be installed and for some others. To get started run these commands:
+The `sudo` command is necessary for Homebrew to be installed and for some others.
+
+### To get started run these commands:
 
 ```bash
 # download latest from Github
@@ -42,31 +36,28 @@ sh ~/.dotfiles/bootstrap.sh
 ## Initialize Dotfiles
 
 ```bash
-# Install `npm` and packages [bower, express, grunt-cli, jshint, less]
+# Installs npm and certain npm packages
 $ ./.dotfiles/init/.npm
 
-# Install `casks` and tap to `caskroom-versions`
+# Installs casks and taps to caskroom-versions
 $ ./.dotfiles/init/.casks
 
-# Install Sublime Text 3, Package Control, Spacegray Theme and Sublime Text Packages
+# Installs Sublime Text 3, Package Control, theme, and packages
 $ ./.dotfiles/init/.subl
 
-# Install Atom and Packages
+# Installs Atom and Packages
 $ ./.dotfiles/init/.atom
 
 # Guide that helps you setup your git configuration and ssh-key setup for Github and Bitbucket
 $ ./.dotfiles/init/.gituser
 
-# Install oh-my-zsh, Spacegray.terminal theme, oh-my-zsh theme and configs
+# Installs oh-my-zsh, terminal theme, oh-my-zsh theme and configs
 $ ./.dotfiles/init/.shell
-
-# Setup vim, make it extra awesome..
-$ ./.dotfiles/init/.vim
 
 # OSX optimal awesome settings
 $ ./.dotfiles/init/.osx
 
-# Install fonts for coding and docs
+# Installs fonts for coding and docs
 $ ./.dotfiles/init/.fonts
 ```
 
@@ -101,8 +92,9 @@ Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](
 - Blue: #2979FF
 - Cyan: #00BCD4
 
-### Acknowledgments
+## Credits
 
+- [@fvcproductions](https://github.com/fvcproductions/)
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
 - [@necolas](https://github.com/necolas/dotfiles)
 - [@cowboy](https://github.com/cowboy/dotfiles/)

@@ -2,17 +2,46 @@
 
 DOT="$HOME/.dotfiles"
 
+echo ""
 echo "Initializing .bash_aliases"
 cp -RfXv $DOT/bin/shell/.bash_aliases $HOME/.bash_aliases
 
+echo ""
 echo "Initializing .bash_profile"
 cp -RfXv $DOT/bin/shell/.bash_profile $HOME/.bash_profile
 
+echo ""
+echo "Downloading asciinema to record terminal sessions"
+curl -sL https://asciinema.org/install | sh
+
+# change git commit editor to nano
+# git config --global core.editor nano
+
+# change git commit editor to subl
+echo ""
+echo "Changing default editor to subl"
+git config --global core.editor "subl -n -w"
+
+# avoid DS_Store files
+echo ""
+echo "Avoiding creation of DS_Store files"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+# creating subl command
+echo ""
+echo "Creating subl command"
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+
 # Install zsh & oh-my-zsh
+echo ""
+echo "Installing Oh My Zsh"
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "Installing oh-my-zsh"
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 fi
+
+# Install Xcode Command Line
+xcode-select --install
 
 # Open Terminal Settings
 echo ""

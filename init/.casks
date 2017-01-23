@@ -16,13 +16,13 @@ echo ""
 echo "Installing Adobe Air"
 cask adobe-air
 
-# echo ""
-# echo "Installing Alfred"
-# cask alfred
-
 echo ""
 echo "Installing Bartender"
 cask bartender
+
+echo ""
+echo "Installing Between"
+cask between
 
 echo ""
 echo "Installing cDock"
@@ -82,7 +82,7 @@ cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv
 
 echo ""
 echo "Installing Quip"
-cask image2icon
+cask quip
 
 echo ""
 echo "Installing Screenhero"
@@ -95,10 +95,6 @@ cask sketch
 echo ""
 echo "Installing Skype"
 cask skype
-
-echo ""
-echo "Installing Spark"
-cask spark
 
 echo ""
 echo "Installing Spotify"

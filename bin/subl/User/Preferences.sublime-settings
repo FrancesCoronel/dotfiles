@@ -80,7 +80,7 @@
 	"caret_extra_top": 3,
 	"caret_extra_width": 2,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "LF",
 	"detect_indentation": true,
@@ -134,12 +134,13 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 15,
+	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Markdown",
+		"TrailingSpaces",
 		"Vintage"
 	],
 	"ignored_words":

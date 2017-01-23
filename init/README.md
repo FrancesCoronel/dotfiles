@@ -24,7 +24,6 @@
 - Screenhero
 - Sketch
 - Skype
-- Spark
 - Spotify
 - Sublime Text
 - The Unarchiver
