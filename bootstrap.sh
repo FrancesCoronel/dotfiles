@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
 echo "
-(  ____ \|\     /|(  ____ \
-| (    \/| )   ( || (    \/
-| (__    | |   | || |
-|  __)   ( (   ) )| |
-| (       \ \_/ / | |
-| )        \   /  | (____/\
-|/          \_/   (_______/
+ ******** **      **   ******
+/**///// /**     /**  **////**
+/**      /**     /** **    //
+/******* //**    ** /**
+/**////   //**  **  /**
+/**        //****   //**    **
+/**         //**     //******
+//           //       //////
+
++-+-+-+-+-+-+-+-+
+|D|o|t|f|i|l|e|s|
++-+-+-+-+-+-+-+-+
+
+https://github.com/fvcproductions/dotfiles.git
 "
-echo ""
-echo "  ..................................................  "
-echo "  .     Dotfiles for setting up OSX Workspace      .  "
-echo "  . https://github.com/fvcproductions/dotfiles.git .  "
-echo "  ..................................................  "
-echo ""
 
 # downloading Apple Dev Tools
 echo ""

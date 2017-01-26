@@ -1,6 +1,6 @@
 # Dotfiles
 
-This sets up my dev environment to be very Material Design friendly.
+> This sets up my dev environment to be very Material Design friendly.
 
 ![Showcase](img/showcase.png)
 
@@ -104,3 +104,24 @@ Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](
 - [@cowboy](https://github.com/cowboy/dotfiles/)
 - [@ptb](https://github.com/ptb/Mac-OS-X-Lion-Setup)
 - [@pongstr](https://twitter.com/pongstr)
+
+## Donations
+
+> Feed me... 🍕
+
+[![Donate via PayPal](https://raw.github.com/xioTechnologies/PayPal-Button/master/PayPal%20Button.png)](http://paypal.me/fvcproductions)
+
+```txt
+ ******** **      **   ******
+/**///// /**     /**  **////**
+/**      /**     /** **    //
+/******* //**    ** /**
+/**////   //**  **  /**
+/**        //****   //**    **
+/**         //**     //******
+//           //       //////
+
++-+-+-+-+-+-+-+-+
+|D|o|t|f|i|l|e|s|
++-+-+-+-+-+-+-+-+
+```
