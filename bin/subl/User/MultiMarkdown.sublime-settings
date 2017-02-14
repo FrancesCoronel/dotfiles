@@ -1,7 +1,6 @@
 {
 	"extensions":
 	[
-		"markdown",
 		"mdown"
 	],
 	"line_numbers": true,

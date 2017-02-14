@@ -164,7 +164,7 @@
 	<key>shouldShowStatusIcon</key>
 	<false/>
 	<key>shouldStartAtLogin</key>
-	<true/>
+	<false/>
 	<key>shouldSyncBookmarks</key>
 	<true/>
 	<key>shouldSyncDocsets</key>

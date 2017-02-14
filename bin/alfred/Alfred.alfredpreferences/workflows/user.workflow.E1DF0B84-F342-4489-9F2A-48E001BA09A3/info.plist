@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.fvcproductions.readme</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>0111CCA0-C94E-47BE-B416-40251BB1DE33</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>34B96433-F2D0-48AD-8F09-9362D9EEB77E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0111CCA0-C94E-47BE-B416-40251BB1DE33</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>FVCproductions</string>
+	<key>description</key>
+	<string>Copy a starter README in Markdown.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>README</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>readme</string>
+				<key>subtext</key>
+				<string>Copy README.md</string>
+				<key>text</key>
+				<string>README Starter Kit 📖</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>[![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&amp;s=200)](http://fvcproductions.com)
+
+# readme
+
+[![Github Issues](http://githubbadges.herokuapp.com/fvcproductions/readme/issues.svg?style=flat-square)](https://github.com/fvcproductions/readme/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/fvcproductions/readme/pulls.svg?style=flat-square)](https://github.com/fvcproductions/readme/pulls) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+Insert a quick description of your project here.
+
+- [View this project on platform]()
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [Donations](#donations)
+
+## Installation
+
+Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
+
+&gt; Install this package using the following command
+
+```shell
+$ brew update
+$ brew i fvcproductions
+```
+
+### Download this project at [link](http:link).
+
+## Usage
+
+The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screen shots of your project in action.
+
+## Contributing
+
+&gt; To get started...
+
+- 🍴 Fork this repo [here](https://github.com/fvcproductions/readme#fork-destination-box)
+- 🔨 Hack away
+- 👥 Add yourself as a contributor under credits
+- 🔧 Make a pull request [here](https://github.com/fvcproductions/readme/compare)
+- 🎉 Get your pull request approved - success!
+
+Or just [create an issue](https://github.com/fvcproductions/readme/issues) - any little bit of help counts! 😊
+
+## Credits
+
+- [FVCproductions](http://fvcproductions.com) 🍓🍫
+
+## Donations
+
+&gt; Feed me 🍕
+
+[![Donate via PayPal](https://raw.github.com/xioTechnologies/PayPal-Button/master/PayPal%20Button.png)](http://paypal.me/fvcproductions)</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>0111CCA0-C94E-47BE-B416-40251BB1DE33</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>README starter text was copied.</string>
+				<key>title</key>
+				<string>Copied! 🎉</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>34B96433-F2D0-48AD-8F09-9362D9EEB77E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Keywords are one of Alfred's most commonly used and most useful ways of launching actions. Set a keyword and connect it to the action(s) you want to perform.
+
+Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
+	<key>uidata</key>
+	<dict>
+		<key>0111CCA0-C94E-47BE-B416-40251BB1DE33</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>34B96433-F2D0-48AD-8F09-9362D9EEB77E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>note</key>
+			<string>1. Add a keyword object by right-clicking the canvas and choosing Inputs &gt; Keyword. Set the keyword and title to show it in Alfred's results.</string>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>http://fvcproductions.com</string>
+</dict>
+</plist>
