@@ -134,7 +134,7 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 13,
+	"font_size": 10,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
