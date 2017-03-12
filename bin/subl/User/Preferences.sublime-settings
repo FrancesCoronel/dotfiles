@@ -59,6 +59,7 @@
 		"passcode",
 		"sweetword"
 	],
+	"always_prompt_for_file_reload": false,
 	"always_show_minimap_viewport": true,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": true,
@@ -134,7 +135,7 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 10,
+	"font_size": 14,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":

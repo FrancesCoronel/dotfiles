@@ -5,7 +5,56 @@
 	<key>DHCheatRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>Font_Awesome</key>
+			<dict>
+				<key>date</key>
+				<date>2017-03-03T13:10:56Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>Font Awesome</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Font_Awesome</string>
+				</dict>
+			</dict>
+			<key>HTML_Entities</key>
+			<dict>
+				<key>date</key>
+				<date>2017-03-03T13:12:13Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>HTML Entities</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>HTML_Entities</string>
+				</dict>
+			</dict>
+			<key>HTML_Head_Elements</key>
+			<dict>
+				<key>date</key>
+				<date>2017-03-03T13:12:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>HTML Head Elements</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>HTML_Head_Elements</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -102,6 +151,11 @@
 			<dict>
 				<key>date</key>
 				<date>2017-01-17T01:33:07Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Sass.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-03-03T13:12:25Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
@@ -250,7 +304,16 @@
 	<key>versionedFeeds</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>http://kapeli.com/feeds/Bootstrap_4.xml</key>
+			<dict>
+				<key>4.0.0-alpha6</key>
+				<dict>
+					<key>date</key>
+					<date>2017-03-03T13:10:46Z</date>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
