@@ -24,7 +24,11 @@ Numerous always-ignore extensions
 *~
 *.auth_token
 
-
+# Atom sync
+/.atom/blob-store/
+/.atom/compile-cache/
+/.atom/packages/
+/.atom/storage/
 
 # OS or Editor folders
 .DS_Store

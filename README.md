@@ -59,13 +59,25 @@ sh ~/Dropbox/github/dotfiles/init/.fonts
 sh ~/Dropbox/github/dotfiles/init/.gituser
 ```
 
+## Atom
+
+![atom](https://i.imgur.com/HQKpe76.png)
+
+```bash
+# move .atom to .dotfiles
+mv ~/.atom/ ~/Dropbox/github/dotfiles/
+
+# create a symlink to the directory inside dotfiles
+ln -s ~/Dropbox/github/dotfiles/.atom/ ~/.atom
+```
+
 ## Alfred 3
 
 ![alfred](img/alfred.png)
 
 ## Sublime Text 3
 
-```shell
+```bash
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 rm -r User
 ln -s /Users/fvcproductions/Dropbox/GitHub/dotfiles/bin/subl/User/

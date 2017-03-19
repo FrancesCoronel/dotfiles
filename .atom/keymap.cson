@@ -1,0 +1,2 @@
+'atom-text-editor':
+    'ctrl-cmd-]': 'editor:auto-indent'

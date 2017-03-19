@@ -57,7 +57,9 @@
 		"Frontend",
 		"Repo",
 		"passcode",
-		"sweetword"
+		"sweetword",
+		"",
+		"screenshots"
 	],
 	"always_prompt_for_file_reload": false,
 	"always_show_minimap_viewport": true,
@@ -135,7 +137,7 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 14,
+	"font_size": 11,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
@@ -168,6 +170,7 @@
 	"material_theme_tree_headings": true,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
+	"preview_on_click": true,
 	"scroll_past_end": true,
 	"shift_tab_unindent": false,
 	"spacegray_sidebar_font_xlarge": true,
