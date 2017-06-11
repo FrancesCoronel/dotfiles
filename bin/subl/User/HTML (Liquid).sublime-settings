@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"htm"
+		"liquid",
+		"html"
 	]
 }

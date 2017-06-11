@@ -1,0 +1,72 @@
+# Sublime Text 3 Packages
+
+- A File Icon
+- AdvancedNewFile
+- Alignment
+- All Autocomplete
+- ApplySyntax
+- arduino-cli
+- Auto Semi-Colon
+- AutoFileName
+- AutoPEP8
+- AutoWrap
+- BracketHighlighter
+- Browser Refresh
+- Clickable URLs
+- CodeFormatter
+- Color Highlighter
+- ColorPicker
+- CSS3
+- CSScomb
+- DocBlockr
+- Dotfiles Syntax Highlighting
+- Emmet
+- Emoji
+- Fortran
+- FullScreenStatus
+- Gist
+- GitGutter
+- Google Spell Check
+- HTML Boilerplate
+- HTML-CSS-JS Prettify
+- HTML5
+- HTML5 Doctor CSS Reset snippet
+- HTMLAttributes
+- Jade
+- Jade Build
+- Jade Snippets
+- Javascript Beautify
+- JavaScriptNext - ES6 Syntax
+- JsFormat
+- JSHint
+- JSONLint
+- LESS
+- MarkdownEditing
+- Material Theme
+- Minify
+- Monokai JSON+
+- Origami
+- Package Control
+- PackageResourceViewer
+- Pretty JSON
+- Pretty YAML
+- Python Pretty Print
+- rsub
+- Sass
+- SassSolution
+- SCSS
+- Seti_UI
+- Seti_UX
+- SideBarEnhancements
+- Siteleaf Liquid Syntax
+- Sublime Tutor
+- SublimeAStyleFormatter
+- SublimeCodeIntel
+- SublimeLinter
+- SublimeLinter-javac
+- SublimeLinter-jshint
+- Terminal
+- Text Pastry
+- TrailingSpaces
+- WakaTime
+- WriteGooder

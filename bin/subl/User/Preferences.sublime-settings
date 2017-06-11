@@ -59,7 +59,9 @@
 		"passcode",
 		"sweetword",
 		"",
-		"screenshots"
+		"screenshots",
+		"flyer",
+		"blogging"
 	],
 	"always_prompt_for_file_reload": false,
 	"always_show_minimap_viewport": true,
@@ -137,7 +139,7 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 11,
+	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
@@ -180,7 +182,7 @@
 	"spacegray_tabs_xlarge": true,
 	"spell_check": true,
 	"tab_completion": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,

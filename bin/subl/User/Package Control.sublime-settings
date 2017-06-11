@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"AdvancedNewFile",
 		"Alignment",
 		"All Autocomplete",
@@ -24,6 +25,8 @@
 		"CSScomb",
 		"DocBlockr",
 		"Dotfiles Syntax Highlighting",
+		"Emmet",
+		"Emoji",
 		"Fortran",
 		"FullScreenStatus",
 		"Gist",
@@ -60,6 +63,7 @@
 		"Seti_UI",
 		"Seti_UX",
 		"SideBarEnhancements",
+		"Siteleaf Liquid Syntax",
 		"Sublime Tutor",
 		"SublimeAStyleFormatter",
 		"SublimeCodeIntel",

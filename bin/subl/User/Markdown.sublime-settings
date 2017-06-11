@@ -4,9 +4,9 @@
 	[
 		"markdown",
 		"mdown",
+		"markdown",
 		"md",
-		"md",
-		"markdown"
+		"md"
 	],
 	"line_numbers": true,
 	"spell_check": true,
