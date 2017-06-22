@@ -61,7 +61,8 @@
 		"",
 		"screenshots",
 		"flyer",
-		"blogging"
+		"blogging",
+		"emoji"
 	],
 	"always_prompt_for_file_reload": false,
 	"always_show_minimap_viewport": true,
@@ -139,7 +140,7 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 12,
+	"font_size": 10,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":

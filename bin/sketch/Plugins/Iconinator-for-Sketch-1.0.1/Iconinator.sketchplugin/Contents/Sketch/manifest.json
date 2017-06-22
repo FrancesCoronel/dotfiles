@@ -1,0 +1,20 @@
+{
+  "author" : "Agisilaos Tsaraboulidis",
+  "commands" : [
+    {
+      "script" : "Iconinator.cocoascript",
+      "name" : "Iconinator",
+      "identifier" : "Iconinator"
+      }
+  ],
+  "menu" : {
+    "items" : [
+      "Iconinator"
+    ]
+  },
+  "identifier" : "net.agisilaos.Iconinator",
+  "version" : "1.0",
+  "description" : "Sketch plugin for generating set of app icon artwork for iOS",
+  "authorEmail" : "agtsaraboulidis@gmail.com",
+  "name" : "Iconinator"
+}

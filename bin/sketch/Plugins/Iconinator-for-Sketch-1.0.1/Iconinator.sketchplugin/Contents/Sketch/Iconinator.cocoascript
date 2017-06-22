@@ -1,0 +1,147 @@
+var iTunesSizes = [NSArray arrayWithObjects: 512, nil]
+var iOSSizes = [NSArray arrayWithObjects: 83.5, 76, 60, 40, 29, 20, nil]
+var watchOSSizes = [NSArray arrayWithObjects: 98, 86, 27.5, 24, nil]
+var otherSizes = [NSArray arrayWithObjects: 72, 57, 50, nil]
+var iconSizes = [NSArray arrayWithObjects: iTunesSizes, iOSSizes, watchOSSizes, otherSizes, nil]
+
+function onRun(context) {
+    var doc = context.document
+    if (originalIcon = handleSelection(context)) {
+        if ([[originalIcon frame] width] == [[originalIcon frame] height]) {
+            [originalIcon setName: "Icon-Original"]
+            removeExistingIcons(context)
+            iconize(originalIcon)
+            [[doc currentView] centerLayersInCanvas]
+        } else {
+            [doc showMessage:"Oops, icon artboard must have same width and height"]
+        }
+    }
+}
+
+function handleSelection(context) {
+    var selection = context.selection
+    var doc = context.document
+    var iconArtboard
+
+    if([selection count] == 0) {
+        if ([[[doc currentPage] artboards] count] == 1) {
+            iconArtboard = [[[doc currentPage] artboards] firstObject]
+        } else {
+            [doc showMessage:"Oops, you have to select something"]
+        }
+    } else {
+        var currentSelection = selection[0]
+        if (currentSelection.className() == "MSArtboardGroup") {
+            iconArtboard = currentSelection
+        } else {
+            iconArtboard = [currentSelection parentArtboard]
+            if (!iconArtboard) {
+                [doc showMessage:"Oops, selection has to be inside artboard"]
+            }
+        }
+        [currentSelection setIsSelected:false]
+    }
+
+    return iconArtboard
+}
+
+function removeExistingIcons(context) {
+    var doc = context.document
+    var artboards = [[doc currentPage] artboards]
+    var loop = [artboards objectEnumerator]
+    var artboardNames = iconArtboardNames()
+
+    while (artboard = [loop nextObject]) {
+        var name = [artboard name]
+        if ([artboardNames containsObject: name]) {
+            [[doc currentPage] removeLayer:artboard]
+        }
+    }
+}
+
+function iconArtboardNames() {
+    var artboardNames = [NSMutableArray new]
+    var allSizes = [iconSizes objectEnumerator]
+
+    while (sizeArray = [allSizes nextObject]) {
+        var sizes = [sizeArray objectEnumerator]
+        while (newSize = [sizes nextObject]) {
+            var iconName = "Icon-" + newSize
+            [artboardNames addObject: iconName]
+        }
+    }
+
+    return artboardNames
+}
+
+function iconize(originalIcon) {
+    var originalSize = [[originalIcon frame] width]
+    var originalX = [[originalIcon absoluteRect] rulerX]
+    var originalY = [[originalIcon absoluteRect] rulerY]
+
+    var spacing = 40
+    var startX = originalX
+    var startY = originalY + originalSize + spacing
+
+    var allSizes = [iconSizes objectEnumerator]
+    while (sizeArray = [allSizes nextObject]) {
+        startY = createIconsWithSizes(sizeArray, originalIcon, startX, startY, spacing)
+    }
+}
+
+function createIconsWithSizes(sizeArray, originalIcon, fromX, fromY, spacing) {
+    maxX = 0
+    newY = fromY
+
+    var sizes = [sizeArray objectEnumerator]
+    while (newSize = [sizes nextObject]) {
+        var iconName = "Icon-" + newSize
+
+        var icon = scaleIcon(originalIcon, newSize, iconName)
+        configureExportOptionsForLayer(icon)
+
+        if (newSize == 512) {
+            [[icon absoluteRect] setRulerX:fromX]
+            [[icon absoluteRect] setRulerY:fromY]
+
+            newY = [[icon absoluteRect] y]
+        }
+        else {
+            if (maxX == 0) {
+               maxX = fromX + 512 + spacing
+            }
+
+            [[icon absoluteRect] setRulerX:maxX]
+            [[icon absoluteRect] setRulerY:fromY]
+
+            maxX = [[icon absoluteRect] x] + [[icon absoluteRect] width] + spacing
+
+            newMaxY = [[icon absoluteRect] y] + [[icon absoluteRect] height]
+            if (newMaxY > newY) {
+                newY = newMaxY + spacing
+            }
+        }
+
+    }
+
+    return newY
+}
+
+function scaleIcon(originalIcon, newSize, newName) {
+    var newIcon = [originalIcon duplicate]
+
+    var originalSize = [[originalIcon frame] width]
+    var ratio = newSize / originalSize
+    [newIcon multiplyBy:ratio]
+
+    [newIcon setName: newName]
+    [newIcon select:true byExpandingSelection:true]
+
+    return newIcon
+}
+
+function configureExportOptionsForLayer(layer) {
+    [[layer exportOptions] addExportFormat]
+    [[layer exportOptions] addExportFormat]
+    [[layer exportOptions] addExportFormat]
+ }

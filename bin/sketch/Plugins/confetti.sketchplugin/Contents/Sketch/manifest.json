@@ -1,0 +1,30 @@
+{
+  "author" : "Yummygum",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "Generate confetti! 🎉",
+      "handler" : "rerunWithCurrentSettings",
+      "shortcut" : "ctrl shift c",
+      "identifier" : "generateConfetti"
+    },
+    {
+      "name" : "Settings",
+      "script" : "script.cocoascript",
+      "handler" : "settings",
+      "identifier" : "settings"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "generateConfetti",
+      "settings"
+    ],
+    "title" : "Confetti"
+  },
+  "identifier" : "com.example.sketch.ae306dcb-ed0a-41a4-a471-c7333724bb48",
+  "version" : "1.0",
+  "description" : "Randomly distribute selected layers to create a 'confetti' effect.",
+  "authorEmail" : "",
+  "name" : "Confetti"
+}

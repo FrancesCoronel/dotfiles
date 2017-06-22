@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<workflow>
-  <name>Emoji</name>
-  <version>1.0</version>
-  <bundle>com.reorx.alfred.emoji</bundle>
-  <updated>1472719720</updated>
-  <file>emoji.alfredworkflow</file>
-</workflow>
