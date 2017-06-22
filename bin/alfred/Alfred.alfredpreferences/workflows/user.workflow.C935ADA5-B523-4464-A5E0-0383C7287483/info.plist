@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.leenno.addtobusycal</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>919B1C1C-8839-4A6D-B395-B1F6A1232CDC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A2459E5F-1E3F-452A-A4BF-3406F031E124</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7C670660-DFED-4E44-AB2B-72EF556C4113</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>"Enter" creates Todo (release ⌥ for adding as Event instead)</string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>LeEnno</string>
+	<key>description</key>
+	<string>Add an Event in Natural Language to BusyCal</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Add to BusyCal</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>busycalevent://new/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A2459E5F-1E3F-452A-A4BF-3406F031E124</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>70</integer>
+				<key>keyword</key>
+				<string>busy</string>
+				<key>script</key>
+				<string>$query = "{query}";
+echo '&lt;items&gt;
+  &lt;item uid="busy" arg="'.$query.'"&gt;
+    &lt;title&gt;Add "'.$query.'" to BusyCal&lt;/title&gt;
+    &lt;subtitle&gt;"Enter" creates Event (use ⌥ for adding as Todo instead)&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+&lt;/items&gt;';</string>
+				<key>subtext</key>
+				<string>Add an Event or Todo in Natural Language to BusyCal</string>
+				<key>title</key>
+				<string>Add to BusyCal</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>919B1C1C-8839-4A6D-B395-B1F6A1232CDC</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>busycalevent://new/-{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>7C670660-DFED-4E44-AB2B-72EF556C4113</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>7C670660-DFED-4E44-AB2B-72EF556C4113</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>919B1C1C-8839-4A6D-B395-B1F6A1232CDC</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>A2459E5F-1E3F-452A-A4BF-3406F031E124</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://www.ienno.de</string>
+</dict>
+</plist>

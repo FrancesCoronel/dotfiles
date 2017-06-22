@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<workflow>
-  <name>Screenshots</name>
-  <version>1.1</version>
-  <bundle>com.sztoltz.screenshots</bundle>
-  <updated>1393785108</updated>
-  <file>screenshots.alfredworkflow</file>
-</workflow>
