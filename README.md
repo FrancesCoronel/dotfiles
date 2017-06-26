@@ -93,6 +93,12 @@ Once the theme has loaded, you might want to replace the shell's startup command
 
 ![terminal](img/terminal.png)
 
+## Find Scope
+
+```
+<project>, -*/.atom/.apm/*, -*/.git/*, -*/.atom/.node-gyp/*
+```
+
 ## Theming
 
 Accents are as follows in accordance to the [ST3 Material Theme by equinusocio](https://github.com/equinusocio/material-theme):

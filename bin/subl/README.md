@@ -19,7 +19,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 2. Close `Sublime Text`
 3. Open `Terminal`
 
-## First Machine
+### First Machine
 
 On your first machine, use the following instructions.
 
@@ -34,7 +34,7 @@ mv User /Users/fvcproductions/Dropbox/GitHub/sexy-sublime
 ln -s Users/fvcproductions/Dropbox/GitHub/sexy-sublime/User
 ```
 
-## Other Machine(s)
+### Other Machine(s)
 
 On your other machine(s), use the following instructions.
 
@@ -49,9 +49,7 @@ rm -r User
 ln -s /Users/fvcproductions/Dropbox/GitHub/dotfiles/bin/subl/User
 ```
 
----
-
-### To Note
+## To Note
 
 Technically, the only 3 files you need are
 

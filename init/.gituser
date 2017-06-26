@@ -2,6 +2,9 @@
 
 SSHCONFIG="$HOME/.ssh/config"
 
+# Configure nano as default editor
+git config --global core.editor nano
+
 # Add SSH Config file
 echo ""
 echo "Adding config file for ssh-keys"

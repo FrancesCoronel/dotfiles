@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+RED='\033[0;31m' # Red Color
+YELLOW='\033[1;33m' # Yellow Color
+NC='\033[0m' # No Color
+
 function cask() {
   if brew cask info "${@}" | grep "Not installed" > /dev/null; then
     brew cask install "${@}"
@@ -17,12 +21,39 @@ echo "Installing Adobe Air"
 cask adobe-air
 
 echo ""
+echo "Installing Adobe Acrobat Reader"
+cask adobe-acrobat-reader
+
+echo ""
+echo "Installing Airtable"
+cask airtable
+
+echo ""
+echo "${RED}Make sure to install Alfred 3 using your own version ;-)${NC}"
+
+echo ""
+echo "${YELLOW}Make sure to install Amphetamine from the App Store!${NC}"
+
+echo ""
+echo "Installing Atom"
+cask atom
+
+echo ""
 echo "Installing Bartender"
 cask bartender
 
 echo ""
+echo "${RED}Make sure to install BetterSnapTool using your own version ;-)${NC}"
+
+echo ""
 echo "Installing Between"
 cask between
+
+echo ""
+echo "${RED}Make sure to install BusyCal using your own version ;-)${NC}"
+
+echo ""
+echo "${YELLOW}Make sure to install Cashew from the App Store!${NC}"
 
 echo ""
 echo "Installing cDock"
@@ -37,8 +68,14 @@ echo "Installing CodeKit"
 cask codekit
 
 echo ""
+echo "${RED}Make sure to install CodeRunner using your own version ;-)${NC}"
+
+echo ""
 echo "Installing Dash"
 cask dash
+
+echo ""
+echo "${RED}Make sure to install Day One Classic using your own version ;-)${NC}"
 
 echo ""
 echo "Installing Dropbox"
@@ -65,24 +102,50 @@ echo "Installing Google Drive"
 cask google-drive
 
 echo ""
-echo "Installing Heroku Toolbelt"
-cask heroku-toolbelt
-
-echo ""
 echo "Installing Image2icon"
 cask image2icon
 
 echo ""
-echo "Installing Minerva"
-cask minerva
+echo "Installing join.me"
+cask joinme
+
+echo ""
+echo "Installing mac2imgur"
+cask mac2imgur
+
+echo ""
+echo "${RED}Make sure to install Marked 2 using your own version ;-)${NC}"
+
+echo ""
+echo "Installing Material Colors"
+cask material-colors
+
+echo ""
+echo "Installing Monodrap"
+cask monodrap
+
+echo ""
+echo "${RED}Make sure to install Monosnap using your own version ;-)${NC}"
+
+echo ""
+echo "Installing Musixmatch"
+cask musixmatch
+
+echo ""
+echo "Installing Notion"
+cask musixmatch
+
+echo ""
+echo "Installing Nylas Mail"
+cask nylas-mail
+
+echo ""
+echo "Installing Promotee"
+cask nylas-mail
 
 echo ""
 echo "Installing Quick Look Plugins"
 cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
-
-echo ""
-echo "Installing Quip"
-cask quip
 
 echo ""
 echo "Installing Screenhero"
@@ -101,6 +164,10 @@ echo "Installing Spotify"
 cask spotify
 
 echo ""
+echo "Installing Steam"
+cask steam
+
+echo ""
 echo "Installing Sublime Text"
 cask sublime-text
 
@@ -109,12 +176,11 @@ echo "Installing The Unarchiver"
 cask the-unarchiver
 
 echo ""
-echo "Installing VLC"
-cask vlc
+echo "${RED}Make sure to install Tower using your own version ;-)${NC}"
 
 echo ""
-echo "Installing Wordpress.com"
-cask wordpresscom
+echo "Installing VLC"
+cask vlc
 
 echo ""
 echo "Installing YNAB"
@@ -123,6 +189,10 @@ cask ynab
 echo ""
 echo "Installing uTorrent"
 cask utorrent
+
+echo ""
+echo "Installing VIP Access"
+cask vip-access
 
 echo ""
 echo "Cleaning up installation files..."
