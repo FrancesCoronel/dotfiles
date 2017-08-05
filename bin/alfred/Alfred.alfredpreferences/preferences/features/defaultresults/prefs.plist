@@ -18,6 +18,7 @@
 	<true/>
 	<key>showUserDefined</key>
 	<array>
+		<string>com.apple.application-bundle</string>
 		<string>net.daringfireball.markdown</string>
 	</array>
 </dict>

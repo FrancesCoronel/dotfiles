@@ -1,0 +1,6 @@
+framework module SExtension {
+  umbrella header "SExtension.h"
+
+  export *
+  module * { export * }
+}

@@ -9,7 +9,7 @@
 			<key>Font_Awesome</key>
 			<dict>
 				<key>date</key>
-				<date>2017-03-03T13:10:56Z</date>
+				<date>2017-07-17T22:08:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -25,7 +25,7 @@
 			<key>HTML_Entities</key>
 			<dict>
 				<key>date</key>
-				<date>2017-03-03T13:12:13Z</date>
+				<date>2017-07-17T22:08:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -41,7 +41,7 @@
 			<key>HTML_Head_Elements</key>
 			<dict>
 				<key>date</key>
-				<date>2017-03-03T13:12:12Z</date>
+				<date>2017-07-17T22:08:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -132,40 +132,45 @@
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>http://kapeli.com/feeds/AngularJS.xml</key>
+			<key>http://kapeli.com/feeds/Angular.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-01-17T01:32:48Z</date>
+				<date>2017-07-17T22:09:03Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bootstrap_4.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-01-17T01:32:48Z</date>
+				<date>2017-07-17T22:08:59Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-01-17T01:33:25Z</date>
+				<date>2017-07-17T22:09:22Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Python_3.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-01-17T01:33:07Z</date>
+				<date>2017-07-17T22:09:06Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Sass.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-03-03T13:12:25Z</date>
+				<date>2017-07-17T22:09:03Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/TypeScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-07-17T22:09:04Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-01-17T01:32:52Z</date>
+				<date>2017-07-17T22:09:04Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/jQuery.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-01-17T01:33:07Z</date>
+				<date>2017-07-17T22:09:05Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
@@ -213,6 +218,13 @@
 		<key>modifiers</key>
 		<integer>8395520</integer>
 	</dict>
+	<key>searchUsingSelectedTextKey</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>-1</integer>
+		<key>modifiers</key>
+		<integer>8395520</integer>
+	</dict>
 	<key>shouldRestoreTabs</key>
 	<true/>
 	<key>shouldShowStatusIcon</key>
@@ -231,6 +243,8 @@
 	<true/>
 	<key>showSearchFallbacks</key>
 	<true/>
+	<key>snippetEditorFontSize</key>
+	<real>21</real>
 	<key>versionedDHCheatRepo</key>
 	<dict>
 		<key>installed</key>
@@ -310,13 +324,52 @@
 				<key>4.0.0-alpha6</key>
 				<dict>
 					<key>date</key>
-					<date>2017-03-03T13:10:46Z</date>
+					<date>2017-07-17T22:08:58Z</date>
 				</dict>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
+	<key>webSearches</key>
+	<array>
+		<dict>
+			<key>iconName</key>
+			<string>Google</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<true/>
+			<key>name</key>
+			<string>Google</string>
+			<key>url</key>
+			<string>https://www.google.com/search?q={query}</string>
+		</dict>
+		<dict>
+			<key>iconName</key>
+			<string>DuckDuckGo</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<false/>
+			<key>name</key>
+			<string>DuckDuckGo</string>
+			<key>url</key>
+			<string>https://duckduckgo.com/?q={query}&amp;ia=web</string>
+		</dict>
+		<dict>
+			<key>iconName</key>
+			<string>Stack Overflow</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<true/>
+			<key>name</key>
+			<string>Stack Overflow</string>
+			<key>url</key>
+			<string>https://stackoverflow.com/search?q={query}</string>
+		</dict>
+	</array>
 	<key>windowStyle</key>
 	<string>Standard</string>
 </dict>

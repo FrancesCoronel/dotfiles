@@ -50,7 +50,7 @@ check () { type -t "${@}" > /dev/null 2>&1; }
 
 # function to install Homebrew Formulas
 install_formula () {
-  DOTFILE=$(pwd)
+  DOTFILE="$HOME/Dropbox/github/dotfiles"
 
   echo ""
   echo "${LGREEN}Installing Homebrew Packages...${NC}"

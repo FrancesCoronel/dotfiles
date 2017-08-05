@@ -62,7 +62,8 @@
 		"screenshots",
 		"flyer",
 		"blogging",
-		"emoji"
+		"emoji",
+		"Accenture's"
 	],
 	"always_prompt_for_file_reload": false,
 	"always_show_minimap_viewport": true,
@@ -140,11 +141,12 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 8,
+	"font_size": 10,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"JavaScriptNext - ES6 Syntax",
 		"Markdown",
 		"TrailingSpaces",
 		"Vintage"

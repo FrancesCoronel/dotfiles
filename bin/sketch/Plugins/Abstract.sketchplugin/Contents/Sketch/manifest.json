@@ -1,0 +1,61 @@
+{
+  "author" : "",
+  "commands" : [
+    {
+      "script": "script.cocoascript",
+      "handlers": {
+        "actions": {
+          "Startup": "startAbstract"
+        }
+      }
+    },
+    {
+        "script": "script.cocoascript",
+        "shortcut": "",
+        "name": "Load Abstract",
+        "identifier": "load",
+        "handlers": {
+          "actions": {
+            "run": "loadAbstract"
+          }
+        }
+    },
+    {
+        "script": "script.cocoascript",
+        "shortcut": "cmd control a",
+        "name": "Toggle Overlay",
+        "identifier": "toggle",
+        "handlers": {
+            "actions": {
+                "run": "toggleAbstract"
+            }
+        }
+    },
+    {
+        "script": "script.cocoascript",
+        "shortcut": "cmd control c",
+        "name": "Preview and Commit",
+        "identifier": "previewAndCommit",
+        "handlers": {
+            "actions": {
+                "run": "previewAndCommit"
+            }
+        }
+    }
+  ],
+  "menu" : {
+    "items" : [
+        "load",
+        "toggle",
+        "previewAndCommit"
+    ],
+    "title" : "Abstract"
+  },
+  "identifier" : "com.abstractapp.sketchplugin.1685a5c9-5230-4d37-963c-5efa0f361065",
+  "version" : "97",
+  "description" : "Abstract for Mac companion plugin",
+  "authorEmail" : "support@goabstract.com",
+  "name" : "Abstract",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+}

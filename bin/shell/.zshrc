@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx ruby terminalapp zsh-wakatime)
+plugins=(git osx ruby terminalapp zsh-wakatime zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +102,8 @@ function reset_menubar() {
 if [[ -d /opt/boxen ]] ; then
   [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/fvcproductions/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/fvcproductions/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/fvcproductions/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/fvcproductions/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"JavaScriptNext - ES6 Syntax"
 	],
 	"installed_packages":
 	[
@@ -42,6 +43,7 @@
 		"Jade Snippets",
 		"Javascript Beautify",
 		"JavaScriptNext - ES6 Syntax",
+		"Jekyll",
 		"JsFormat",
 		"JSHint",
 		"JSONLint",
@@ -73,6 +75,7 @@
 		"Terminal",
 		"Text Pastry",
 		"TrailingSpaces",
+		"TypeScript",
 		"WakaTime",
 		"WriteGooder"
 	]
