@@ -11,6 +11,20 @@
     + [Zeit Now]()
     + WakaTime Plugins
         + [Sketch](https://github.com/wakatime/sketch-wakatime/releases/latest)
+- npm yarn
+- npm web pack
+- Abstract
+- Amazon Drive
+- Amazon Music
+- Jetbrains
+- Docker
+- Gitscout
+- Google App Engine
+- Google Drive
+- iTerm 2
+- Image Optim
+- Lepton
+- Visual Studio Code
 
 ## Requirements
 

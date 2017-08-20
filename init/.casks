@@ -102,6 +102,10 @@ echo "Installing Google Drive"
 cask google-drive
 
 echo ""
+echo "Installing Hyper"
+cask hyper
+
+echo ""
 echo "Installing Image2icon"
 cask image2icon
 

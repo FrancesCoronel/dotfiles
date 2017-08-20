@@ -146,7 +146,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"JavaScriptNext - ES6 Syntax",
 		"Markdown",
 		"TrailingSpaces",
 		"Vintage"

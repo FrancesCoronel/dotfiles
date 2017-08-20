@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"JavaScriptNext - ES6 Syntax"
 	],
 	"installed_packages":
 	[
@@ -42,7 +41,6 @@
 		"Jade Build",
 		"Jade Snippets",
 		"Javascript Beautify",
-		"JavaScriptNext - ES6 Syntax",
 		"Jekyll",
 		"JsFormat",
 		"JSHint",
