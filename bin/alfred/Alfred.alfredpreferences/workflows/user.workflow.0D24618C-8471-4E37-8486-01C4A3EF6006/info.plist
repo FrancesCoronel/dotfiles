@@ -19,19 +19,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>52A20DC2-D647-4F01-8D79-A0497DAA5FDA</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>325CF477-5077-4460-A9F1-1B2D5143052F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>76584C39-BB00-4E7D-9BE0-4ACCBB2829F6</key>
 		<array>
 			<dict>
@@ -76,19 +63,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BFDCE43A-5AE3-4362-88D9-D0D3CD119C81</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>CAF291F5-4BFB-4659-8CD5-4ED346828B77</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>502D7BFE-AC1E-4D5B-AD2E-BBB7E15F67DB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -146,7 +120,7 @@
 			<key>config</key>
 			<dict>
 				<key>applescript</key>
-				<string>on alfred_script(q)	tell application "Finder"		set pathList to (quoted form of POSIX path of (folder of the front window as alias))	end tell		tell application "System Events"		if not (exists (processes where name is "Terminal")) then			do shell script "open -a Terminal " &amp; pathList		else			tell application "Terminal"				activate				tell application "System Events" to tell process "Terminal.app" to keystroke "t" using command down				do script ("cd " &amp; pathList) in first window			end tell		end if	end tellend alfred_script</string>
+				<string>on alfred_script(q)	tell application "Finder"		set pathList to (quoted form of POSIX path of (folder of the front window as alias))	end tell		tell application "System Events"		if not (exists (processes where name is "Hyper")) then			do shell script "open -a Hyper " &amp; pathList		else			tell application "Hyper"				activate				tell application "System Events" to tell process "Hyper.app" to keystroke "t" using command down				do script ("cd " &amp; pathList) in first window			end tell		end if	end tellend alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
@@ -183,7 +157,7 @@
 			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
-	tell application "Terminal"		do script "open -a Finder ./" in first window	end tellend alfred_script</string>
+	tell application "Hyper"		do script "open -a Finder ./" in first window	end tellend alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
@@ -275,59 +249,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-	tell application "Path Finder"
-		set pathList to POSIX path of the target of the front finder window
-	end tell
-
-	tell application "System Events"
-		if not (exists (processes where name is "Terminal")) then
-			do shell script "open -a Terminal " &amp; quoted form of pathList
-		else
-			tell application "Terminal"
-				activate
-				delay 0.25
-				tell application "System Events" to tell process "Terminal" to keystroke "t" using command down
-				do script ("cd " &amp; quoted form of pathList &amp; "; clear") in first window
-			end tell
-		end if
-	end tell
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>502D7BFE-AC1E-4D5B-AD2E-BBB7E15F67DB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>pt</string>
-				<key>subtext</key>
-				<string>Open current Path Finder directory in Terminal</string>
-				<key>text</key>
-				<string>PathFinder → Terminal</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>CAF291F5-4BFB-4659-8CD5-4ED346828B77</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -351,7 +272,7 @@ end alfred_script</string>
 			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
-	tell application "Terminal"		do script "open -a 'Path Finder' ./" in first window	end tellend alfred_script</string>
+	tell application "Hyper"		do script "open -a 'Path Finder' ./" in first window	end tellend alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
@@ -359,77 +280,6 @@ end alfred_script</string>
 			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
 			<string>87A47DF6-4278-4C8D-85F0-D6EF244D5991</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>pi</string>
-				<key>subtext</key>
-				<string>Open current Path Finder directory in iTerm</string>
-				<key>text</key>
-				<string>Path Finder → iTerm</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>52A20DC2-D647-4F01-8D79-A0497DAA5FDA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-	tell application "Path Finder"
-		set pathList to POSIX path of the target of the front finder window
-	end tell
-
-	tell application "System Events"
-		set isRunning to (exists (processes where name is "iTerm"))
-	end tell
-
-	tell application "iTerm"
-		activate
-		set termCount to count of terminals
-		
-		if termCount is 0 then
-			set _term to (make new terminal)
-		else
-			if isRunning then
-				set _term to the first terminal
-				tell i term application "System Events" to tell process "Terminal.app" to keystroke "t" using command down
-			end if
-		end if
-		
-		try
-			set _session to current session of current terminal
-		on error
-			tell _term
-				launch session "Default"
-				set _session to current session
-			end tell
-		end try
-		
-		tell _session
-			write text "cd " &amp; quoted form of pathList &amp; "; clear"
-		end tell
-	end tell
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>325CF477-5077-4460-A9F1-1B2D5143052F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -490,28 +340,7 @@ end alfred_script</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<real>610</real>
-		</dict>
-		<key>325CF477-5077-4460-A9F1-1B2D5143052F</key>
-		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
-			<key>ypos</key>
-			<real>730</real>
-		</dict>
-		<key>502D7BFE-AC1E-4D5B-AD2E-BBB7E15F67DB</key>
-		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
-			<key>ypos</key>
-			<real>490</real>
-		</dict>
-		<key>52A20DC2-D647-4F01-8D79-A0497DAA5FDA</key>
-		<dict>
-			<key>xpos</key>
-			<integer>300</integer>
-			<key>ypos</key>
-			<real>730</real>
+			<integer>490</integer>
 		</dict>
 		<key>7113EA2C-468F-40D5-B2AA-C7E5E3D020A4</key>
 		<dict>
@@ -532,7 +361,7 @@ end alfred_script</string>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<real>610</real>
+			<integer>490</integer>
 		</dict>
 		<key>964C67AF-870F-420E-8B91-6079B9457583</key>
 		<dict>
@@ -569,26 +398,19 @@ end alfred_script</string>
 			<key>ypos</key>
 			<real>370</real>
 		</dict>
-		<key>CAF291F5-4BFB-4659-8CD5-4ED346828B77</key>
-		<dict>
-			<key>xpos</key>
-			<integer>300</integer>
-			<key>ypos</key>
-			<real>490</real>
-		</dict>
 		<key>DCAF940C-48A0-4523-9C5C-AEA1ED50891B</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<real>850</real>
+			<integer>610</integer>
 		</dict>
 		<key>EFC3EA8E-3058-4011-B146-E820A2D2781F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<real>850</real>
+			<integer>610</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
