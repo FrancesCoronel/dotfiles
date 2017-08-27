@@ -1,3 +1,0 @@
-[zest.releaser.releaser.after_checkout]
-pyroma = pint:_run_pyroma
-
