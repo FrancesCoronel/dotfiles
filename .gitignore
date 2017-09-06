@@ -49,3 +49,6 @@ bin/subl/User/Package Control.system-ca-bundle
 Package Control.system-ca-bundle
 bin/screensaver/.DS_Store
 Package Control.user-ca-bundle
+
+# Alfred Workflow - Spotify
+user.workflow.C917DEDA-0A77-4FBD-A10D-AA8AC69414FB

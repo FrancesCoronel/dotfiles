@@ -210,6 +210,16 @@
 			<key>searchSnippets</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>docsets</key>
+			<array>
+				<string>~/Library/Application Support/Dash/Cheat Sheets/Font Awesome/Font_Awesome.docset</string>
+			</array>
+			<key>name</key>
+			<string>Font Awesome</string>
+			<key>searchSnippets</key>
+			<true/>
+		</dict>
 	</array>
 	<key>searchKey</key>
 	<dict>
