@@ -7,12 +7,10 @@
 ## To-Do
 
 - make all online apps into casks
-    + [Airtable](https://airtable.com/mac)
-    + [Zeit Now]()
-    + WakaTime Plugins
-        + [Sketch](https://github.com/wakatime/sketch-wakatime/releases/latest)
-- npm yarn
-- npm web pack
+  - [Airtable](https://airtable.com/mac)
+  - [Zeit Now]()
+  - WakaTime Plugins
+    - [Sketch](https://github.com/wakatime/sketch-wakatime/releases/latest)
 - Abstract
 - Amazon Drive
 - Amazon Music
@@ -25,6 +23,7 @@
 - Image Optim
 - Lepton
 - Visual Studio Code
+- Fonts
 
 ## Requirements
 

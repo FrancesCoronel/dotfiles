@@ -135,13 +135,13 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Roboto Mono",
+	"font_face": "Input Mono",
 	"font_options":
 	[
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 11,
+	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":

@@ -26,7 +26,7 @@
       "iconSize" : 40
     },
     "search" : {
-      "paddingVertical" : 5,
+      "paddingVertical" : 19,
       "background" : "#26323800",
       "spacing" : 10,
       "text" : {
