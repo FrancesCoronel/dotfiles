@@ -262,17 +262,22 @@ end alfred_script</string>
 				<key>includesystem</key>
 				<false/>
 				<key>keyword</key>
-				<string>vscode*</string>
+				<string>vscode</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
-				<array/>
+				<array>
+					<string>~/Documents</string>
+					<string>~/Dropbox</string>
+				</array>
 				<key>subtext</key>
 				<string>Find files and folders and open in Visual Studio Code</string>
 				<key>title</key>
 				<string>Find and open with Visual Studio Code</string>
 				<key>types</key>
-				<array/>
+				<array>
+					<string>public.folder</string>
+				</array>
 				<key>withspace</key>
 				<true/>
 			</dict>
