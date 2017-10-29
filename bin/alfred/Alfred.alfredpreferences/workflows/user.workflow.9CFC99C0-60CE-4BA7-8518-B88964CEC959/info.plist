@@ -261,17 +261,23 @@ end alfred_script
 				<key>includesystem</key>
 				<false/>
 				<key>keyword</key>
-				<string>subl*</string>
+				<string>subl</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
-				<array/>
+				<array>
+					<string>~/Dropbox</string>
+					<string>~/Dropbox/GitHub</string>
+					<string>~/Dropbox/GitLab</string>
+				</array>
 				<key>subtext</key>
 				<string>Find files and folders and open in Sublime Text</string>
 				<key>title</key>
 				<string>Find and open with Sublime Text</string>
 				<key>types</key>
-				<array/>
+				<array>
+					<string>public.folder</string>
+				</array>
 				<key>withspace</key>
 				<true/>
 			</dict>

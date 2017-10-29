@@ -563,9 +563,9 @@ That said, you can edit anything else within this workflow (including adding new
 				<key>script</key>
 				<string>./dashAlfredWorkflow "bootstrap:{query}"</string>
 				<key>subtext</key>
-				<string>Search Bootstrap 4.0.0-alpha6 and 1 other for "{query}"</string>
+				<string>Search Bootstrap 4 and 1 other for "{query}"</string>
 				<key>title</key>
-				<string>Search Bootstrap 4.0.0-alpha6</string>
+				<string>Search Bootstrap 4</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>

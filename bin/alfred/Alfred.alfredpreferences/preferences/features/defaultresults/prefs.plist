@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>showAppleScripts</key>
-	<true/>
+	<key>applicationFuzzyType</key>
+	<integer>1</integer>
 	<key>showArchives</key>
 	<true/>
 	<key>showBookmarks</key>
@@ -19,6 +19,7 @@
 	<key>showUserDefined</key>
 	<array>
 		<string>com.apple.application-bundle</string>
+		<string>com.apple.iwork.keynote.sffkey</string>
 		<string>net.daringfireball.markdown</string>
 	</array>
 </dict>

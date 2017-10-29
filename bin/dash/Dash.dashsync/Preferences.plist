@@ -121,6 +121,8 @@
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
+	<key>DHWebViewIsDark</key>
+	<false/>
 	<key>annotationsAreShown</key>
 	<true/>
 	<key>docsets</key>
@@ -238,9 +240,9 @@
 	<key>shouldRestoreTabs</key>
 	<true/>
 	<key>shouldShowStatusIcon</key>
-	<false/>
+	<true/>
 	<key>shouldStartAtLogin</key>
-	<false/>
+	<true/>
 	<key>shouldSyncBookmarks</key>
 	<true/>
 	<key>shouldSyncDocsets</key>
@@ -250,11 +252,11 @@
 	<key>shouldSyncView</key>
 	<true/>
 	<key>showInDock</key>
-	<true/>
+	<false/>
 	<key>showSearchFallbacks</key>
 	<true/>
 	<key>snippetEditorFontSize</key>
-	<real>21</real>
+	<real>20</real>
 	<key>versionedDHCheatRepo</key>
 	<dict>
 		<key>installed</key>
