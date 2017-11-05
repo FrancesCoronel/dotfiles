@@ -18,6 +18,8 @@
 [![GitHub Issues](https://img.shields.io/github/issues/fvcproductions/dotfiles.svg?style=flat-square)](https://github.com/fvcproductions/dotfiles/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/fvcproductions/dotfiles.svg?style=flat-square)](https://github.com/fvcproductions/dotfiles/pulls) [![MIT License](https://img.shields.io/github/license/fvcproductions/dotfiles.svg?style=flat-square)](http://badges.mit-license.org) [![Become a Patron!](https://img.shields.io/badge/Patreon-Become%20a%20Patron!-orange.svg?style=flat-square)](https://www.patreon.com/fvcproductions)
 
 > This sets up my dev environment to be very Material Design friendly.
+>
+> Background photo from [Unsplash Wallpapers](https://unsplash.com/).
 
 ![Showcase](https://i.imgur.com/0FtAWo2.jpg)
 
