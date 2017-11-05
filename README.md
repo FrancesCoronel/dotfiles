@@ -40,8 +40,7 @@
     - [iTerm 2](#iterm-2)
     - [Terminal](#terminal)
 - [Usage](#usage)
-  - [Theming](#theming)
-  - [Tools](#tools)
+- [Theming](#theming)
 - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
 - [Credits](#credits)
@@ -215,7 +214,7 @@ Once the theme has loaded, you might want to replace the shell's startup command
 
 #### Hyper
 
-Copy Hyper configuration file to root folder.
+Copy Hyper configuration file to the root folder.
 
 ```bash
 mv ~Dropbox/Code/dotfiles/bin/shell/hyper/hyper.config.js ~/.hyper.js
@@ -237,9 +236,9 @@ Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/bin/shell/te
 
 ## Usage
 
-If you decide to utilize or folk these configurations, please make sure to give me some kudos as I have done with the folks that have inspired me. 😊
+If you decide to utilize these configurations, please make sure to give me some kudos as I have done below with the developers that inspired me. 😊
 
-### Theming
+## Theming
 
 Accents are as follows in accordance to [Sublime Text 3 Material Theme](https://github.com/equinusocio/material-theme):
 
@@ -253,17 +252,6 @@ Accents are as follows in accordance to [Sublime Text 3 Material Theme](https://
 - Pink: `#FF4081`
 - Blue: `#2979FF`
 - Cyan: `#00BCD4`
-
-### Tools
-
-There is a LOT going on within these dotfiles.
-
-A few tools I've used, in no particular order, for the process include:
-
-- Homebrew
-- Monodraw
-- oh-my-zsh
-- ThemeBeta
 
 ## Contributing
 
