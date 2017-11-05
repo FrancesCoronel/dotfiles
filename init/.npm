@@ -30,6 +30,8 @@ node_modules=(
   mean-cli
   mongoose
   nodemon
+  conduct
+  pure-prompt
 )
 
 # install Node Packages

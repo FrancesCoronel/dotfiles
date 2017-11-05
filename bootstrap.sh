@@ -96,6 +96,18 @@ install_formula () {
   echo "  ➜ duti"
   brew install duti
 
+  echo ""
+  echo "  ➜ pandoc"
+  brew install pandoc
+
+  echo ""
+  echo "  ➜ zsh"
+  brew install zsh
+
+  echo ""
+  echo "  ➜ zsh-syntax-highlighting"
+  brew install zsh-syntax-highlighting
+
   # cleanup
   echo ""
   echo "${LGREEN}Cleaning up Homebrew installation...${NC}"

@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 7,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#B0BEC6FF",
+        "font" : "System",
+        "color" : "#ECEFF235"
+      },
+      "shortcut" : {
+        "size" : 24,
+        "colorSelected" : "#00BCD3FF",
+        "font" : "System",
+        "color" : "#00BCD3FF"
+      },
+      "backgroundSelected" : "#ECEFF23F",
+      "text" : {
+        "size" : 25,
+        "colorSelected" : "#FEFFFFFF",
+        "font" : "System",
+        "color" : "#5D7D87BF"
+      },
+      "iconPaddingHorizontal" : 15,
+      "paddingVertical" : 8,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 7,
+      "background" : "#26323800",
+      "spacing" : 10,
+      "text" : {
+        "size" : 55,
+        "colorSelected" : "#000000FF",
+        "font" : "System",
+        "color" : "#ECEFF2FF"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#263239FF",
+      "paddingHorizontal" : 0,
+      "width" : 560,
+      "borderPadding" : 10,
+      "borderColor" : "#26323900",
+      "blur" : 40,
+      "roundness" : 5,
+      "paddingVertical" : 10
+    },
+    "credit" : "FVCproductions",
+    "separator" : {
+      "color" : "#FFFFFF00",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#ECEFF226",
+      "thickness" : 2
+    },
+    "name" : "Materialize"
+  }
+}

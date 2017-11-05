@@ -8,347 +8,54 @@ function cask() {
   if brew cask info "${@}" | grep "Not installed" > /dev/null; then
     brew cask install "${@}"
   else
-    echo "${@} is already installed."
+    echo "${YELLOW}${@} is already installed.${NC}"
   fi
 }
 
-echo ""
-echo "Installing 1Password"
 cask 1password
-
-echo ""
-echo "Installing Adobe Air"
-cask adobe-air
-
-echo ""
-echo "Installing Adobe Acrobat Reader"
 cask adobe-acrobat-reader
-
-echo ""
-echo "Installing Airtable"
+cask adobe-air
 cask airtable
-
-echo ""
-echo "${RED}Make sure to install Alfred 3 using your own version ;-)${NC}"
-
-echo ""
-echo "${YELLOW}Make sure to install Amphetamine from the App Store!${NC}"
-
-echo ""
-echo "Installing Atom"
 cask atom
-
-echo ""
-echo "Installing Bartender"
 cask bartender
-
-echo ""
-echo "${RED}Make sure to install BetterSnapTool using your own version ;-)${NC}"
-
-echo ""
-echo "Installing Between"
 cask between
-
-echo ""
-echo "${RED}Make sure to install BusyCal using your own version ;-)${NC}"
-
-echo ""
-echo "${YELLOW}Make sure to install Cashew from the App Store!${NC}"
-
-echo ""
-echo "Installing cDock"
+cask caption
 cask cdock
-
-echo ""
-echo "Installing CleanMyMac"
 cask cleanmymac
-
-echo ""
-echo "Installing CodeKit"
 cask codekit
-
-echo ""
-echo "${RED}Make sure to install CodeRunner using your own version ;-)${NC}"
-
-echo ""
-echo "Installing Dash"
 cask dash
-
-echo ""
-echo "${RED}Make sure to install Day One Classic using your own version ;-)${NC}"
-
-echo ""
-echo "Installing Dropbox"
+cask discord
 cask dropbox
-
-echo ""
-echo "Installing Flux"
 cask flux
-
-echo ""
-echo "Installing Franz"
 cask franz
-
-echo ""
-echo "Installing Gitify"
+cask github-desktop
 cask gitify
-
-echo ""
-echo "Installing Google Chrome"
+cask gitscout
+cask google-backup-and-sync
 cask google-chrome
-
-echo ""
-echo "Installing Google Drive"
-cask google-drive
-
-echo ""
-echo "Installing Hyper"
+cask googleappengine
+cask grammarly
+cask handbrake
 cask hyper
-
-echo ""
-echo "Installing Image2icon"
 cask image2icon
-
-echo ""
-echo "Installing join.me"
 cask joinme
-
-echo ""
-echo "Installing mac2imgur"
+cask lepton
 cask mac2imgur
-
-echo ""
-echo "${RED}Make sure to install Marked 2 using your own version ;-)${NC}"
-
-echo ""
-echo "Installing Material Colors"
 cask material-colors
-
-echo ""
-echo "Installing Monodrap"
-cask monodrap
-
-echo ""
-echo "${RED}Make sure to install Monosnap using your own version ;-)${NC}"
-
-echo ""
-echo "Installing Musixmatch"
 cask musixmatch
-
-echo ""
-echo "Installing Notion"
-cask musixmatch
-
-echo ""
-echo "Installing Nylas Mail"
-cask nylas-mail
-
-echo ""
-echo "Installing Promotee"
-cask nylas-mail
-
-echo ""
-echo "Installing Quick Look Plugins"
-cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
-
-echo ""
-echo "Installing Screenhero"
-cask screenhero
-
-echo ""
-echo "Installing Sketch"
+cask muzzle
+cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo quicklook-pat quicklookapk provisionql
 cask sketch
-
-echo ""
-echo "Installing Skype"
 cask skype
-
-echo ""
-echo "Installing Spotify"
 cask spotify
-
-echo ""
-echo "Installing Steam"
 cask steam
-
-echo ""
-echo "Installing Sublime Text"
 cask sublime-text
-
-echo ""
-echo "Installing The Unarchiver"
 cask the-unarchiver
-
-echo ""
-echo "${RED}Make sure to install Tower using your own version ;-)${NC}"
-
-echo ""
-echo "Installing VLC"
-cask vlc
-
-echo ""
-echo "Installing YNAB"
-cask ynab
-
-echo ""
-echo "Installing uTorrent"
 cask utorrent
-
-echo ""
-echo "Installing VIP Access"
-cask vip-access
+cask visual-studio-code
+cask vlc
+cask ynab
 
 echo ""
 echo "Cleaning up installation files..."
 brew cask cleanup
-
-cask install 1checker
-cask install 1password-6
-cask install abstract
-cask install adobe
-cask install airtable
-cask install alfred-3
-cask install amazon-drive
-cask install amazon-music
-cask install amphetamine
-cask install app-store
-cask install appcode
-cask install atom
-cask install automator
-cask install backup-and-sync
-cask install bartender-2
-cask install bettersnaptool
-cask install between
-cask install blotter
-cask install box-sync
-cask install boxy
-cask install busycal
-cask install calculator
-cask install calendar
-cask install caption
-cask install cashew
-cask install chess
-cask install cleanmymac-3
-cask install clocker
-cask install codekit
-cask install coderunner
-cask install contacts
-cask install dvd-player
-cask install dash
-cask install dashboard
-cask install day-one-classic
-cask install dictionary
-cask install docker
-cask install dragand
-cask install dropbox
-cask install facetime
-cask install fantastical-2
-cask install flux
-cask install focuslist
-cask install font-book
-cask install fotor-photo-editor
-cask install franz
-cask install gemini-2
-cask install github-desktop
-cask install gitify
-cask install gitscout
-cask install google-chrome
-cask install googleappenginelauncher
-cask install grammarly
-cask install hazeover
-cask install healthier
-cask install hemingway-editor
-cask install hyper
-cask install iina
-cask install iconjar
-cask install image-capture
-cask install image2icon
-cask install imageoptim
-cask install integrity
-cask install irvue
-cask install kaleidoscope
-cask install keynote
-cask install kite
-cask install launchpad
-cask install lepton
-cask install littleipsum
-cask install living-earth-desktop
-cask install mail
-cask install mailbutler
-cask install maps
-cask install marked-2
-cask install marp
-cask install material-colors
-cask install messages
-cask install microsoft-excel
-cask install microsoft-outlook
-cask install microsoft-powerpoint
-cask install microsoft-word
-cask install mission-control
-cask install monosnap
-cask install musixmatch
-cask install muzzle
-cask install myworkspace
-cask install noizio
-cask install notes
-cask install numbers
-cask install nylas-mail
-cask install opera-neon
-cask install opera
-cask install pages
-cask install parallels-desktop
-cask install photo-booth
-cask install photos
-cask install preview
-cask install promotee
-cask install quicktime-player
-cask install raindrop.io
-cask install redacted
-cask install reminders
-cask install safari
-cask install screenhero
-cask install shazam
-cask install sip
-cask install siri
-cask install sketch
-cask install skype-for-business
-cask install skype
-cask install slack
-cask install spectrum
-cask install spotify
-cask install squash
-cask install stand
-cask install station
-cask install steam
-cask install stickies
-cask install sublime-text
-cask install sylo
-cask install system-preferences
-cask install tadam
-cask install textedit
-cask install the-unarchiver
-cask install time-machine
-cask install tower
-cask install trello
-cask install typora
-cask install ulysses
-cask install upterm
-cask install utilities
-cask install vip-access
-cask install vlc
-cask install vsee
-cask install visual-studio-code
-cask install webstorm
-cask install xcode
-cask install ynab-4
-cask install yoink
-cask install ibooks-author
-cask install ibooks
-cask install imovie
-cask install istat-menus
-cask install iterm
-cask install itunes
-cask install join.me
-cask install mac2imgur
-cask install tyke
-cask install utorrent
