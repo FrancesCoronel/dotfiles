@@ -12,5 +12,8 @@ echo ""
 echo "Installing Hack font... "
 brew cask install font-hack
 
-brew cleanup
+echo ""
+echo "Installing Input font... "
+brew cask install font-input
 
+brew cleanup

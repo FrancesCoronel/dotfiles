@@ -55,57 +55,22 @@ install_formula () {
   echo ""
   echo "${LGREEN}Installing Homebrew Packages...${NC}"
 
-  echo ""
-  echo "  ➜ git"
-  brew install git
-
-  echo ""
-  echo "  ➜ mongodb"
-  brew install mongo
-  mkdir $HOME/.mongodb-data
-
-  echo ""
-  echo "  ➜ nginx"
-  brew install nginx
-
-  echo ""
-  echo "  ➜ node"
-  brew install node
-
-  echo ""
-  echo "  ➜ openssl"
-  brew install openssl
-
-  echo ""
-  echo "  ➜ python"
-  brew install python
-
-  echo ""
-  echo "  ➜ zsh"
-  brew install zsh
-
-  echo ""
-  echo "  ➜ youtube-dl"
-  brew install youtube-dl
-
-  echo ""
-  echo "  ➜ libav"
-  brew install libav
-
-  echo ""
-  echo "  ➜ duti"
+  brew install asciinema
   brew install duti
-
-  echo ""
-  echo "  ➜ pandoc"
+  brew install git
+  brew install git-lfs
+  brew install howdoi
+  brew install hugo
+  brew install libav
+  brew install nginx
+  brew install node
+  brew install now
+  brew install openssl
   brew install pandoc
-
-  echo ""
-  echo "  ➜ zsh"
+  brew install python
+  brew install yarn
+  brew install youtube-dl
   brew install zsh
-
-  echo ""
-  echo "  ➜ zsh-syntax-highlighting"
   brew install zsh-syntax-highlighting
 
   # cleanup

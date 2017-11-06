@@ -32,6 +32,7 @@ node_modules=(
   nodemon
   conduct
   pure-prompt
+  license-up
 )
 
 # install Node Packages

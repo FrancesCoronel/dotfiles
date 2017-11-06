@@ -91,4 +91,4 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # zsh-syntax-highlighting
-source .zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

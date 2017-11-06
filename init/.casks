@@ -16,6 +16,7 @@ cask 1password
 cask adobe-acrobat-reader
 cask adobe-air
 cask airtable
+cask audacity
 cask atom
 cask bartender
 cask between
@@ -38,6 +39,7 @@ cask grammarly
 cask handbrake
 cask hyper
 cask image2icon
+cask java
 cask joinme
 cask lepton
 cask mac2imgur
@@ -54,7 +56,6 @@ cask the-unarchiver
 cask utorrent
 cask visual-studio-code
 cask vlc
-cask ynab
 
 echo ""
 echo "Cleaning up installation files..."
