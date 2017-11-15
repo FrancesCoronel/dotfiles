@@ -392,18 +392,30 @@ If you decide to utilize these configurations, please make sure to give me some 
 
 ## Theming
 
-Accents are as follows in accordance to [Sublime Text 3 Material Theme](https://github.com/equinusocio/material-theme):
+Accents are as follows in accordance to [Sublime Text 3 Material Theme](https://github.com/equinusocio/material-theme).
 
-- Lime: `#7CB342`
-- Purple: `#AB47BC`
-- Red: `#E57373`
-- Red Orange: `#F74A50`
-- Orange: `#FF7042`
-- Yellow: `#FFA000`
-- Indigo: `#5C6BC0`
-- Pink: `#FF4081`
-- Blue: `#2979FF`
-- Cyan: `#00BCD4`
+![Lime](https://img.shields.io/badge/Lime-%237CB342-lightgrey.svg?colorB=7CB342) ![Purple](https://img.shields.io/badge/Purple-%23AB47BC-lightgrey.svg?colorB=AB47BC) ![Red](https://img.shields.io/badge/Red-%23E57373-lightgrey.svg?colorB=E57373) ![Red Orange](https://img.shields.io/badge/Red_Orange-%23F74A50-lightgrey.svg?colorB=F74A50) ![Orange](https://img.shields.io/badge/Orange-%23FF7042-lightgrey.svg?colorB=FF7042) ![Yellow](https://img.shields.io/badge/Yellow-%23FFA000-lightgrey.svg?colorB=FFA000) ![Indigo](https://img.shields.io/badge/Indigo-%235C6BC0-lightgrey.svg?colorB=5C6BC0) ![Pink](https://img.shields.io/badge/Pink-%23FF4081-lightgrey.svg?colorB=FF4081) ![Blue](https://img.shields.io/badge/Blue-%232979FF-lightgrey.svg?colorB=2979FF) ![Cyan](https://img.shields.io/badge/Cyan-%2300BCD4-lightgrey.svg?colorB=00BCD4)
+
+- Lime
+  - `#7CB342`
+- Purple
+  - `#AB47BC`
+- Red
+  - `#E57373`
+- Red orange
+  - `#F74A50`
+- Orange
+  - `#FF7042`
+- Yellow
+  - `#FFA000`
+- Indigo
+  - `#5C6BC0`
+- Pink
+  - `#FF4081`
+- Blue
+  - `#2979FF`
+- Cyan
+  - `#00BCD4`
 
 ## Contributing
 
