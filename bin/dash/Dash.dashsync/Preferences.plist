@@ -125,6 +125,8 @@
 	<false/>
 	<key>annotationsAreShown</key>
 	<true/>
+	<key>bookmarks</key>
+	<array/>
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
