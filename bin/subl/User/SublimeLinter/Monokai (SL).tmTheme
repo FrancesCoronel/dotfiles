@@ -595,7 +595,17 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#D02000</string>
+                <string>#DA2000</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Warning</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.warning</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#EDBA00</string>
             </dict>
         </dict><dict>
             <key>name</key>
@@ -606,16 +616,6 @@
             <dict>
                 <key>foreground</key>
                 <string>#FFFFFF</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>SublimeLinter Warning</string>
-            <key>scope</key>
-            <string>sublimelinter.mark.warning</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#DDB700</string>
             </dict>
         </dict></array>
 </dict>
