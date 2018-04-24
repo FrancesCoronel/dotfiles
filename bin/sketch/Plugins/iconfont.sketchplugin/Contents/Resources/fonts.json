@@ -1,36 +1,5 @@
 {
   "fonts" : {
-    "Roboto" : {
-      "path" : "Roboto.json",
-      "container" : "roboto"
-    },
-    "FontAwesome" : {
-      "path" : "FontAwesome.json",
-      "container" : "<i class='fa fa-*****'></i>"
-    },
-    "RobotoRegular" : {
-      "path" : "RobotoRegular.json",
-      "container" : "<i class='RobotoRegular-*****'></i>"
-    },
-    "RobotoMedium" : {
-      "path" : "RobotoMedium.json",
-      "container" : "<i class='RobotoMedium-*****'></i>"
-    },
-    "simple-line-icons" : {
-      "path" : "simple-line-icons.json",
-      "container" : "<i class='icon-*****'></i>"
-    },
-    "material" : {
-      "path" : "material.json",
-      "container" : "<i class='material-icons'>*****</i>"
-    },
-    "anticon" : {
-      "path" : "anticon.json",
-      "container" : "<Icon type='*****' />"
-    },
-    "Ionicons" : {
-      "path" : "Ionicons.json",
-      "container" : "<i class='icon ion-*****'></i>"
-    }
+
   }
 }

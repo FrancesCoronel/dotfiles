@@ -6,74 +6,75 @@ module.exports = {
   config: {
     // hyper-spotify config
     hyperSpotify: {
-      position: 'top' // or 'bottom'
+      position: "bottom" // or 'bottom'
     },
     // Choose either "stable" for receiving highly polished,
     // or "canary" for less polished but more frequent updates
-    updateChannel: 'stable',
+    updateChannel: "stable",
 
     // default font size in pixels for all tabs
     fontSize: 18,
 
     // font family with optional fallbacks
-    fontFamily: 'Input, Roboto Mono, Menlo, Consolas, monospace',
+    fontFamily: "Input, Roboto Mono, Menlo, Consolas, monospace",
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: '#FFD233',
+    cursorColor: "#FFD233",
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BEAM',
+    cursorShape: "BEAM",
 
     // set to true for blinking cursor
     cursorBlink: true,
 
     // color of the text
-    foregroundColor: '#fff',
+    foregroundColor: "#fff",
 
     // terminal background color
-    backgroundColor: '#263239',
+    backgroundColor: "#263239",
 
     // border color (window, tabs)
-    borderColor: '',
+    borderColor: "",
 
     // custom css to embed in the main window
-    css: `.tabs-nav { font-size: 20px !important; }; .tab_tab.tab_active{ border-bottom-width: 2px !important; border-color: #42A5F5 !important;}`,
+    css:
+      "li.tab_tab.tab_active, .tab_tab.tab_active { border-bottom-width: 2px !important; border-bottom-color: #42A5F5 !important; } .tabs-nav { font-size: 20px !important; };",
 
     // custom css to embed in the terminal window
-    termCSS: '',
+    termCSS: "",
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
-    showHamburgerMenu: '',
+    showHamburgerMenu: "",
 
     // set to `false` if you want to hide the minimize, maximize and close buttons
     // additionally, set to `'left'` if you want them on the left, like in Ubuntu
     // default: `true` on windows and Linux (ignored on macOS)
-    showWindowControls: '',
+    showWindowControls: "",
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    padding: "12px 14px",
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#252525',
-      red: '#FF5252',
-      green: '#C3D82C',
-      yellow: '#FFC135',
-      blue: '#42A5F5',
-      magenta: '#D81B60',
-      cyan: '#00ACC1',
-      white: '#F5F5F5',
-      lightBlack: '#708284',
-      lightRed: '#FF5252',
-      lightGreen: '#C3D82C',
-      lightYellow: '#FFC135',
-      lightBlue: '#42A5F5',
-      lightMagenta: '#D81B60',
-      lightCyan: '#00ACC1',
-      lightWhite: '#F5F5F5'
+      black: "#252525",
+      red: "#FF5252",
+      green: "#C3D82C",
+      yellow: "#FFC135",
+      blue: "#42A5F5",
+      magenta: "#D81B60",
+      cyan: "#00ACC1",
+      white: "#F5F5F5",
+      lightBlack: "#708284",
+      lightRed: "#FF5252",
+      lightGreen: "#C3D82C",
+      lightYellow: "#FFC135",
+      lightBlue: "#42A5F5",
+      lightMagenta: "#D81B60",
+      lightCyan: "#00ACC1",
+      lightWhite: "#F5F5F5"
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -88,17 +89,17 @@ module.exports = {
     //
     // Powershell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '',
+    shell: "",
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
-    shellArgs: ['--login'],
+    shellArgs: ["--login"],
 
     // for environment variables
     env: {},
 
     // set to false for no bell
-    bell: 'SOUND',
+    bell: "SOUND",
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: false
@@ -120,9 +121,9 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    `hyper-spotify`,
     `hyperterm-tab-icons`,
     `hypercwd`,
+    // `hyper-one-light`,
     `hyper-sync-settings`,
     `hyperterm-paste`
   ],
