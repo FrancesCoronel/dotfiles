@@ -87,6 +87,7 @@ install_formula () {
   brew tap homebrew/services
   brew tap caskroom/versions
   brew tap caskroom/fonts
+  brew tap homebrew/cask-fonts
 
   # Make /Applications the default location of installed Homebrew casks
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"

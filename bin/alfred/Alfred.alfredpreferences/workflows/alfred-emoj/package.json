@@ -1,50 +1,28 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "alfred-emoj",
-        "scope": null,
-        "escapedName": "alfred-emoj",
-        "name": "alfred-emoj",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "/Users/frances.coronel"
-    ]
-  ],
-  "_from": "alfred-emoj@latest",
+  "_from": "alfred-emoj",
   "_id": "alfred-emoj@1.0.0",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-p8AOl9oa7oqPT6endnSEAU6IgAA=",
   "_location": "/alfred-emoj",
-  "_nodeVersion": "4.6.2",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/alfred-emoj-1.0.0.tgz_1484303285321_0.23550167959183455"
-  },
-  "_npmUser": {
-    "name": "sindresorhus",
-    "email": "sindresorhus@gmail.com"
-  },
-  "_npmVersion": "2.15.11",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "alfred-emoj",
-    "scope": null,
-    "escapedName": "alfred-emoj",
     "name": "alfred-emoj",
+    "escapedName": "alfred-emoj",
     "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/alfred-emoj/-/alfred-emoj-1.0.0.tgz",
   "_shasum": "a7c00e97da1aee8a8f4fa7a7767484014e888000",
-  "_shrinkwrap": null,
   "_spec": "alfred-emoj",
-  "_where": "/Users/frances.coronel",
+  "_where": "/Users/fvcproductions",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
@@ -53,19 +31,16 @@
   "bugs": {
     "url": "https://github.com/sindresorhus/alfred-emoj/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "alfy": "^0.6.0"
   },
+  "deprecated": false,
   "description": "Alfred 3 workflow to find relevant emoji from text",
   "devDependencies": {
     "alfy-test": "^0.3.0",
     "ava": "*",
     "xo": "*"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "a7c00e97da1aee8a8f4fa7a7767484014e888000",
-    "tarball": "https://registry.npmjs.org/alfred-emoj/-/alfred-emoj-1.0.0.tgz"
   },
   "engines": {
     "node": ">=4"
@@ -75,7 +50,6 @@
     "icon.png",
     "info.plist"
   ],
-  "gitHead": "ac654f8f27b4a5808f84657e7f4999e6f21d9e30",
   "homepage": "https://github.com/sindresorhus/alfred-emoj#readme",
   "keywords": [
     "emoj",
@@ -92,15 +66,7 @@
     "alfy"
   ],
   "license": "MIT",
-  "maintainers": [
-    {
-      "name": "sindresorhus",
-      "email": "sindresorhus@gmail.com"
-    }
-  ],
   "name": "alfred-emoj",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sindresorhus/alfred-emoj.git"

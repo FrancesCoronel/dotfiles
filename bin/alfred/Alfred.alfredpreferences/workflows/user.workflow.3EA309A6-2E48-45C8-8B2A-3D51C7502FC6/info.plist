@@ -74,7 +74,7 @@
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>keyword</key>

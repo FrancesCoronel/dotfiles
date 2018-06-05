@@ -9,7 +9,7 @@
 			<key>Font_Awesome</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:08:57Z</date>
+				<date>2018-06-05T22:37:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -25,7 +25,7 @@
 			<key>HTML_Entities</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:08:57Z</date>
+				<date>2018-06-05T22:37:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -41,7 +41,7 @@
 			<key>HTML_Head_Elements</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:08:57Z</date>
+				<date>2018-06-05T22:37:14Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -139,12 +139,12 @@
 			<key>http://kapeli.com/feeds/Angular.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:09:03Z</date>
+				<date>2018-06-05T22:39:55Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bootstrap_4.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:08:59Z</date>
+				<date>2018-06-05T22:37:20Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
@@ -154,12 +154,12 @@
 			<key>http://kapeli.com/feeds/Python_3.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:09:06Z</date>
+				<date>2018-06-05T22:37:54Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Sass.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:09:03Z</date>
+				<date>2018-06-05T22:37:59Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/TypeScript.xml</key>
 			<dict>
@@ -169,12 +169,12 @@
 			<key>http://kapeli.com/feeds/VueJS.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:09:04Z</date>
+				<date>2018-06-05T22:38:22Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/jQuery.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2017-07-17T22:09:05Z</date>
+				<date>2018-06-05T22:38:36Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
@@ -338,7 +338,7 @@
 				<key>4.0.0-alpha6</key>
 				<dict>
 					<key>date</key>
-					<date>2017-07-17T22:08:58Z</date>
+					<date>2018-06-05T22:37:30Z</date>
 				</dict>
 			</dict>
 		</dict>

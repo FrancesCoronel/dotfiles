@@ -4,8 +4,6 @@
 <dict>
 	<key>applicationFuzzyType</key>
 	<integer>1</integer>
-	<key>showArchives</key>
-	<true/>
 	<key>showBookmarks</key>
 	<true/>
 	<key>showDocuments</key>
