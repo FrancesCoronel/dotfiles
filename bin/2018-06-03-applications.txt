@@ -1,0 +1,123 @@
+1Password 6.app
+Adobe
+Airtable.app
+Alfred 3.app
+Amphetamine.app
+App Store.app
+Audacity.app
+Automator.app
+Background Music.app
+Backup and Sync.app
+Bartender 3.app
+BetterSnapTool.app
+Between.app
+Blotter.app
+Calculator.app
+Calendar.app
+Caption.app
+Chess.app
+CleanMyMac 3.app
+CodeKit.app
+CodeRunner.app
+Contacts.app
+DVD Player.app
+Dash.app
+Dashboard.app
+Day One Classic.app
+Dictionary.app
+Discord.app
+Docker.app
+Dropbox.app
+FaceTime.app
+Fantastical 2.app
+Firefox.app
+Flux.app
+Font Book.app
+Franz.app
+Gemini 2.app
+GitHub Desktop.app
+Gitify.app
+Gitscout.app
+Google Chrome.app
+GoogleAppEngineLauncher.app
+Grammarly.app
+Healthier.app
+Hemingway Editor.app
+Hyper.app
+Image Capture.app
+Image2Icon.app
+Irvue.app
+Kaleidoscope.app
+Kap.app
+Keep.app
+Keynote.app
+Launchpad.app
+Lepton.app
+LittleIpsum.app
+Living Earth Desktop.app
+Mail.app
+Maps.app
+Marked 2.app
+Messages.app
+Microsoft Excel.app
+Microsoft Outlook.app
+Microsoft PowerPoint.app
+Microsoft Word.app
+Mission Control.app
+Monosnap.app
+Musixmatch.app
+Muzzle.app
+Noizio.app
+Notes.app
+Notion.app
+Numbers.app
+Pages.app
+Photo Booth.app
+Photos.app
+PiPifier.app
+Preview.app
+QuickTime Player.app
+Quip.app
+Redacted.app
+Reminders.app
+STAMP.app
+Safari.app
+Shazam.app
+Sip.app
+Siri.app
+SiteSucker.app
+Sketch.app
+Skype.app
+Slack.app
+Spectrum.app
+Speedtest.app
+Spotify.app
+Squash.app
+Steam.app
+Stickies.app
+Sublime Text.app
+System Preferences.app
+TextEdit.app
+The Unarchiver.app
+Time Machine.app
+Todoist Organize your life.appdownload
+Todoist.app
+Tower.app
+Unclutter.app
+Utilities
+VLC.app
+Visual Studio Code.app
+WebTorrent.app
+Wunderlist.app
+Xcode.app
+Yoink.app
+iBooks Author.app
+iBooks.app
+iMovie.app
+iStat Menus.app
+iTerm.app
+iTunes.app
+mac2imgur.app
+tyke.app
+uTorrent.app
+zoom.us.app
