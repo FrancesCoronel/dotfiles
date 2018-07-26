@@ -40,7 +40,7 @@
 	<key>description</key>
 	<string>Find relevant emoji from text</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Emoji Finder</string>
 	<key>objects</key>
@@ -152,7 +152,7 @@ return output;
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>transient</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>

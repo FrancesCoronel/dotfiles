@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 # node version manager
-require_brew nvm
-
-# nvm
-require_nvm stable
+brew install nvm
 
 # always pin versions (no surprises, consistent dev/build machines)
 npm config set save-exact true
@@ -33,6 +30,7 @@ node_modules=(
   conduct
   pure-prompt
   license-up
+  maintain-me
 )
 
 # install Node Packages

@@ -215,6 +215,8 @@ end alfred_script
 			<dict>
 				<key>anchorfields</key>
 				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>daterange</key>
@@ -266,7 +268,11 @@ end alfred_script
 				<string></string>
 				<key>scopes</key>
 				<array>
+					<string>~/Documents</string>
+					<string>~/Downloads</string>
 					<string>~/Dropbox</string>
+					<string>~/Dropbox (Personal)</string>
+					<string>~/Dropbox (Personal)/Code</string>
 					<string>~/Dropbox/GitHub</string>
 					<string>~/Dropbox/GitLab</string>
 				</array>

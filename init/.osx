@@ -18,28 +18,28 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 
 echo ""
 echo "Setting up duti open file preferences..."
-duti -s com.sublimetext.3 .md editor
-duti -s com.sublimetext.3 .txt editor
-duti -s com.sublimetext.3 .cpp editor
-duti -s com.sublimetext.3 .css editor
-duti -s com.sublimetext.3 public.html editor
-duti -s com.sublimetext.3 .js editor
-duti -s com.sublimetext.3 .m editor
-duti -s com.sublimetext.3 .mm editor
-duti -s com.sublimetext.3 .pl editor
-duti -s com.sublimetext.3 .rb editor
-duti -s com.sublimetext.3 .scpt editor
-duti -s com.sublimetext.3 .swift editor
-duti -s com.sublimetext.3 .c editor
-duti -s com.sublimetext.3 .cs editor
-duti -s com.sublimetext.3 .go editor
-duti -s com.sublimetext.3 .java editor
-duti -s com.sublimetext.3 .lua editor
-duti -s com.sublimetext.3 .php editor
-duti -s com.sublimetext.3 .py editor
-duti -s com.sublimetext.3 .rs editor
-duti -s com.sublimetext.3 .sh editor
-duti -s com.sublimetext.3 .tex editor
+duti -s com.microsoft.VSCode .md editor
+duti -s com.microsoft.VSCode .txt editor
+duti -s com.microsoft.VSCode .cpp editor
+duti -s com.microsoft.VSCode .css editor
+duti -s com.microsoft.VSCode public.html editor
+duti -s com.microsoft.VSCode .js editor
+duti -s com.microsoft.VSCode .m editor
+duti -s com.microsoft.VSCode .mm editor
+duti -s com.microsoft.VSCode .pl editor
+duti -s com.microsoft.VSCode .rb editor
+duti -s com.microsoft.VSCode .scpt editor
+duti -s com.microsoft.VSCode .swift editor
+duti -s com.microsoft.VSCode .c editor
+duti -s com.microsoft.VSCode .cs editor
+duti -s com.microsoft.VSCode .go editor
+duti -s com.microsoft.VSCode .java editor
+duti -s com.microsoft.VSCode .lua editor
+duti -s com.microsoft.VSCode .php editor
+duti -s com.microsoft.VSCode .py editor
+duti -s com.microsoft.VSCode .rs editor
+duti -s com.microsoft.VSCode .sh editor
+duti -s com.microsoft.VSCode .tex editor
 duti -s org.videolan.vlc   m4v viewer
 duti -s org.videolan.vlc   mp4 viewer
 duti -s org.videolan.vlc   mov viewer
@@ -237,18 +237,6 @@ defaults write com.apple.dock show-process-indicators -bool true
 echo ""
 echo "Wiping out all (default) app icons from the Dock"
 defaults write com.apple.dock persistent-apps -array
-
-echo ""
-echo "Set dock to hide/show"
-defaults write com.apple.dock autohide -bool true
-
-echo ""
-echo "Removing auto-hide Dock delay"
-defaults write com.apple.dock autohide-delay -float 0
-
-echo ""
-echo "Removing the animation when hiding/showing the Dock"
-defaults write com.apple.dock autohide-time-modifier -float 0
 
 echo ""
 echo "Speed up Mission Control animations"

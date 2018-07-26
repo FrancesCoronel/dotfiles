@@ -45,15 +45,15 @@ xcode-select --install
 
 # Open Terminal Settings
 echo ""
-echo "Install FVCproductions Theme"
-open "$DOT/bin/shell/fvcproductions.terminal"
+echo "Install Materialize Theme for Terminal"
+open "$DOT/bin/shell/terminal/Materialize.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 
 # Set Terminal Custom Theme
 echo ""
-echo "Setting fvcproductions.terminal as the default theme."
-defaults write com.apple.terminal "Default Window Settings" -string "fvcproductions.terminal"
-defaults write com.apple.terminal "Startup Window Settings" -string "fvcproductions.terminal"
+echo "Setting Materialize.terminal as the default theme."
+defaults write com.apple.terminal "Default Window Settings" -string "Materialize.terminal"
+defaults write com.apple.terminal "Startup Window Settings" -string "Materialize.terminal"
 
 # Link .zshrc
 echo ""
@@ -61,11 +61,29 @@ echo "Install FVCproductions zsh-theme"
 cp -RfXv "$DOT/bin/shell/fvcproductions.zsh-theme" "$HOME/.oh-my-zsh/themes/fvcproductions.zsh-theme"
 cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc" && source $HOME/.zshrc
 
+echo ""
+echo "Install Refined zsh-theme"
+cp -RfXv "$DOT/bin/shell/refined.zsh-theme" "$HOME/.oh-my-zsh/themes/refined.zsh-theme"
+cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc" && source $HOME/.zshrc
+
 # setup zsh-syntax-hightlighting
 echo ""
-echo "Configuring zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "Installing ZSH Plugins"
+echo "zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "zsh-auto-suggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+echo "source ~/.zshrc"
+source ~/.zshrc
+
+echo ""
+echo "Adding on zsh env file"
+cp -RfXv "$DOT/bin/shell/.zshenv" "$HOME/.zshenv" && source $HOME/.zshenv
+
+echo ""
+echo "Set ZSH as default"
+chsh -s $(which zsh)
 
 sleep 1
 killall Terminal

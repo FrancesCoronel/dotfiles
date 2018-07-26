@@ -24,10 +24,6 @@ alias music="cd $HOME/Music/"
 alias movies="cd $HOME/Movies/"
 alias dropbox="cd $HOME/Dropbox/"
 alias pictures="cd $HOME/Pictures/"
-alias code="cd $HOME/Dropbox/Code"
-
-# Jekyll: must be in the same working directory
-alias jekyllstart="jekyll serve --watch --baseurl=/"
 
 # Python Web Start
 alias pywebstart="python -m SimpleHTTPServer"
@@ -50,7 +46,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting git osx ruby terminalapp zsh-wakatime)
+plugins=(zsh-syntax-highlighting git osx ruby terminalapp zsh-wakatime zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,4 +87,9 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # zsh-syntax-highlighting
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
+
+# For brew, at least
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  2>/dev/null
+$(nvm use node) 2>/dev/null

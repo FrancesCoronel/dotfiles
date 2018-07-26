@@ -64,7 +64,6 @@ install_formula () {
   brew install libav
   brew install nginx
   brew install node
-  brew install now
   brew install openssl
   brew install pandoc
   brew install python
@@ -83,10 +82,9 @@ install_formula () {
   yes | cp -rf $DOTFILE/bin/shell/.bash_profile $HOME/.bash_profile
 
   echo "${LGREEN}Installing Caskroom, Caskroom versions, Caskroom Fonts and Brew Services${NC}"
-  brew install caskroom/cask/brew-cask
+  brew tap homebrew/cask
   brew tap homebrew/services
-  brew tap caskroom/versions
-  brew tap caskroom/fonts
+  brew tap homebrew/cask-versions
   brew tap homebrew/cask-fonts
 
   # Make /Applications the default location of installed Homebrew casks
