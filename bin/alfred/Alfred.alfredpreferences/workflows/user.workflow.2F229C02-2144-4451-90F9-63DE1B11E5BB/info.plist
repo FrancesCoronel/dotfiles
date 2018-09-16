@@ -267,10 +267,7 @@ end alfred_script</string>
 				<string></string>
 				<key>scopes</key>
 				<array>
-					<string>~/Documents</string>
-					<string>~/Dropbox</string>
-					<string>~/Dropbox (Personal)</string>
-					<string>~/Dropbox (Slack)</string>
+					<string>~/Google Drive</string>
 				</array>
 				<key>subtext</key>
 				<string>Find files and folders and open in Visual Studio Code</string>

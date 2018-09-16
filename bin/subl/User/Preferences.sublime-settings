@@ -148,7 +148,7 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"SublimeLinter",
+		"Origami",
 		"TrailingSpaces",
 		"Vintage"
 	],
