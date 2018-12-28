@@ -80,6 +80,11 @@ function downloadWebCode(context) {
     [APSketch downloadWebCode];
 }
 
+function shareHandoff(context) {
+    loadBundleIfRequired();
+    [APSketch shareHandoff];
+}
+
 function myAccount(context) {
     loadBundleIfRequired();
     [APSketch myAccount];
@@ -134,3 +139,8 @@ function clearExportCache(context) {
     [APSketch clearExportCache];
 }
 
+
+function removeAutolayoutData(context) {
+    loadBundleIfRequired();
+    [APSketch removeAutolayoutData];
+}

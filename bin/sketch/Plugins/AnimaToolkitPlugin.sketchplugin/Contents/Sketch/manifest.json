@@ -3,9 +3,9 @@
     "commands" : [
                   {
                   "script" : "framework_actions.js",
-                  "handler" : "exportToZeplin",
-                  "name" : "Export to Zeplin",
-                  "identifier" : "com.animaapp.export-to-zeplin",
+                  "handler" : "shareHandoff",
+                  "name" : "Share Handoff Link",
+                  "identifier" : "com.animaapp.share-handoff",
                   "isRoot" : false
                   },
                   {
@@ -173,6 +173,13 @@
                   "isRoot" : false
                   },
                   {
+                      "script" : "framework_actions.js",
+                      "handler" : "removeAutolayoutData",
+                      "name" : "Remove all Stacks, Padding and Pins",
+                      "identifier" : "com.animaapp.remove-from-doc",
+                      "isRoot" : false
+                  },
+                  {
                   "script":"autolayout.js",
                   "handlers":{
                       "actions":{
@@ -200,6 +207,7 @@
                        "items" : [
                                   "com.animaapp.publish-website",
                                   "com.animaapp.export-code-web",
+                                  "com.animaapp.share-handoff",
                                   "com.animaapp.my-exports",
                                   "-",
                                   "com.animaapp.my-account",
@@ -215,6 +223,7 @@
                                             "com.animaapp.edit-mata-tags",
                                             "com.animaapp.edit-fonts-fallbacks",
                                             "com.animaapp.clear-cache",
+                                            "com.animaapp.remove-from-doc",
                                             "-",
                                             "com.animaapp.create-sizes-doc-autolayout",
                                             "com.animaapp.duplicate-detach",
@@ -251,10 +260,10 @@
     "authorEmail" : "support@animaapp.com",
     "name" : "Anima Toolkit",
     "homepage": "https://www.animaapp.com",
-    "version": "2.0.19",
+    "version": "2.3.5",
     "manifestURL": "",
     "downloadURL": "",
-    "compatibleVersion": 51,
+    "compatibleVersion": 52,
     "bundleVersion": 1,
     "appcast": "https://www.animaapp.com/timeline/appcast.xml"
 }

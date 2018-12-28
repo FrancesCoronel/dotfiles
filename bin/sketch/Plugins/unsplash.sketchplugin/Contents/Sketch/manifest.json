@@ -1,0 +1,40 @@
+{
+  "name": "Unsplash",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "suppliesData": true,
+  "commands": [
+    {
+      "name": "View Photo on Unsplash",
+      "identifier": "imageDetails",
+      "script": "DataProvider.js",
+      "handler": {
+        "run": "onImageDetails"
+      }
+    },
+    {
+      "script": "DataProvider.js",
+      "handlers": {
+        "actions": {
+          "Startup": "onStartup",
+          "Shutdown": "onShutdown",
+          "SupplyRandomPhoto": "onSupplyRandomPhoto",
+          "SearchPhoto": "onSearchPhoto"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "Unsplash",
+    "items": [
+      "imageDetails"
+    ]
+  },
+  "version": "1.0.2",
+  "description": "Easily grab images from Unsplash",
+  "identifier": "unsplash",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/BohemianCoding/unsplash-sketchplugin/master/.appcast.xml",
+  "author": "Sketch"
+}

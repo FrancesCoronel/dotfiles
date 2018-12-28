@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "This snippets collection is complementary to the Dynamic Placeholders documentation, which you'll find here:\nhttps:\/\/www.alfredapp.com\/help\/features\/clipboard\/dynamic-placeholders\/\n\nDynamic content makes it possible to include changing content in your snippets, such as the date, time, clipboard contents and more.\n\nTake a look at each snippet's configuration in Alfred's Features > Snippets preferences to see the placeholder text used to paste the examples in this collection.\n",
+    "dontautoexpand" : true,
+    "uid" : "E39490D1-2CB5-41E4-8D3E-EED899783227",
+    "name" : "1. Intro to Dynamic Content",
+    "keyword" : "dynamic"
+  }
+}

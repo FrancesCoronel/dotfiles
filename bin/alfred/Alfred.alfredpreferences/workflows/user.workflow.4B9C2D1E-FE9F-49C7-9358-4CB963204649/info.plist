@@ -272,11 +272,11 @@ python esearch.py $query</string>
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>transient</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -357,7 +357,7 @@ This plug tries to load all Emoji from Unicode.  It will return Emoji that may n
 	<key>variables</key>
 	<dict>
 		<key>keyword</key>
-		<string>emoji</string>
+		<string>e</string>
 	</dict>
 	<key>version</key>
 	<string>1.0.2</string>

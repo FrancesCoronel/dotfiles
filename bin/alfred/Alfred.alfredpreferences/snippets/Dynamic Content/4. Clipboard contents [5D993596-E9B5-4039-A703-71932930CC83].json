@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "To paste the current clipboard's content, use the clipboard keyword with curly brackets.\n\nYou can also specify the clipboard position of the item you want to paste, if it isn't the latest.\n\nYour current clipboard content\n{clipboard}\n\n\nThe next clipboard item (1)\n\n{clipboard:1}",
+    "dontautoexpand" : true,
+    "uid" : "5D993596-E9B5-4039-A703-71932930CC83",
+    "name" : "4. Clipboard contents",
+    "keyword" : "clipcont"
+  }
+}

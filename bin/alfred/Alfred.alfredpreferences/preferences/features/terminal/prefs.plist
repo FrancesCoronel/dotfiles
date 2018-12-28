@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>application</key>
-	<integer>1</integer>
 	<key>custom</key>
 	<string>-- This is v0.6 of the custom script for AlfredApp for iTerm 2.9+
 -- Please see https://github.com/stuartcryan/custom-iterm-applescripts-for-alfred/

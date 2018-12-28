@@ -267,7 +267,7 @@ end alfred_script</string>
 				<string></string>
 				<key>scopes</key>
 				<array>
-					<string>~/Google Drive</string>
+					<string>~</string>
 				</array>
 				<key>subtext</key>
 				<string>Find files and folders and open in Visual Studio Code</string>

@@ -1,5 +1,5 @@
 {
-  "author" : "Roy, Nikolas, Sergi, Hussain",
+  "author" : "Runner Team",
   "commands" : [
     {
       "script" : "script.js",
@@ -97,7 +97,7 @@
     ]
   },
   "identifier" : "com.sketchrunner.Runner",
-  "version" : "0.9.7",
+  "version" : "0.9.8",
   "icon" : "icons/runner-icon.png",
   "description" : "Speed up your Sketch workflow",
   "authorEmail" : "hello@sketchrunner.com",
