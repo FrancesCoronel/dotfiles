@@ -198,7 +198,7 @@
                    ]
     },
     "menu" :{
-            "title" : "Anima",
+            "title" : "🚀 Anima Toolkit",
             "isRoot" : true,
             "items" : [
                        
@@ -260,10 +260,10 @@
     "authorEmail" : "support@animaapp.com",
     "name" : "Anima Toolkit",
     "homepage": "https://www.animaapp.com",
-    "version": "2.3.5",
+    "version": "2.4.21",
     "manifestURL": "",
     "downloadURL": "",
-    "compatibleVersion": 52,
+    "compatibleVersion": 53,
     "bundleVersion": 1,
     "appcast": "https://www.animaapp.com/timeline/appcast.xml"
 }
