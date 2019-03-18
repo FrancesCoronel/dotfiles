@@ -125,7 +125,7 @@
 	<key>description</key>
 	<string>Copy emoji to the clipboard</string>
 	<key>disabled</key>
-	<true/>
+	<false/>
 	<key>name</key>
 	<string>Emoji Search</string>
 	<key>objects</key>
