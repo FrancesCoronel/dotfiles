@@ -254,7 +254,7 @@
 	<key>shouldSyncView</key>
 	<true/>
 	<key>showInDock</key>
-	<false/>
+	<true/>
 	<key>showSearchFallbacks</key>
 	<true/>
 	<key>snippetEditorFontSize</key>
@@ -377,7 +377,7 @@
 			<key>isDefault</key>
 			<true/>
 			<key>isEnabled</key>
-			<true/>
+			<false/>
 			<key>name</key>
 			<string>Stack Overflow</string>
 			<key>url</key>

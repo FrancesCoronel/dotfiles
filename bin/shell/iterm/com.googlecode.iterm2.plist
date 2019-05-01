@@ -579,7 +579,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Dropbox (Personal)/Code/dotfiles/bin/shell/iterm</string>
+	<string>~/Dropbox/Code/dotfiles/bin/shell/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -614,11 +614,11 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 534 620 392 0 0 1920 1057 </string>
+	<string>0 405 700 622 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>704 312 918 512 0 0 2560 1057 </string>
+	<string>449 284 918 514 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>840 144 839 883 0 0 1920 1080 </string>
+	<string>576 401 685 447 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1920,7 +1920,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>706D9E6E-8B46-4848-8AD4-0F53DEFCDA71</string>
 	<key>NoSyncLastTipTime</key>
-	<real>566330063.02350199</real>
+	<real>576786324.05360699</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -1935,6 +1935,8 @@
 		<string>0004</string>
 		<string>0005</string>
 		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1970,7 +1972,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/fvcproductions/Dropbox (Personal)/Code/dotfiles/bin/shell/iterm</string>
+	<string>/Users/fvcproductions/Dropbox/Code/dotfiles/bin/shell/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1982,7 +1986,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-12-12T21:23:27Z</date>
+	<date>2019-04-18T17:26:27Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2000,7 +2004,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.6</string>
+	<string>3.2.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
