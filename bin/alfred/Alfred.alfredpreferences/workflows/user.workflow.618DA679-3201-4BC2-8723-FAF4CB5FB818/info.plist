@@ -127,7 +127,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Emoji Search</string>
+	<string>Emoji search</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -145,7 +145,7 @@
 			<key>uid</key>
 			<string>AEDE6F2A-3933-4CB6-9F5B-0D53DDFE79BA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -275,6 +275,8 @@ fi
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -282,7 +284,7 @@ fi
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>emoji</string>
+				<string>e</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -296,7 +298,7 @@ fi
 				<key>script</key>
 				<string>query=$*
 
-./node emoji.js "$query"</string>
+osascript -l JavaScript emoji.js "$query" 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -304,7 +306,7 @@ fi
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Seach emoji</string>
+				<string>Search emoji</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -315,7 +317,7 @@ fi
 			<key>uid</key>
 			<string>05450F7C-3D4F-45BF-ACA3-9422EF54EFDD</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -336,18 +338,18 @@ fi
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>transient</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>5A54554C-598A-41C6-B0D9-62046CEFB1AD</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -457,8 +459,13 @@ https://github.com/jsumners/alfred-emoji/issues
 			<integer>180</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>skin_tone</key>
+		<string></string>
+	</dict>
 	<key>version</key>
-	<string>1.6.0</string>
+	<string>1.9.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/jsumners/alfred-emoji</string>
 </dict>
