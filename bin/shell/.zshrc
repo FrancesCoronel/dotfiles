@@ -1,5 +1,23 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/frances/.oh-my-zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 #!/usr/bin/sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/.composer/vendor/bin:$PATH
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -11,7 +29,9 @@ export EDITOR=subl
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="refined"
+# ZSH_THEME="refined"
+# ZSH_THEME="materialshell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # aliases
 alias zshconfig="subl $HOME/.zshrc"
@@ -24,6 +44,9 @@ alias music="cd $HOME/Music/"
 alias movies="cd $HOME/Movies/"
 alias dropbox="cd $HOME/Dropbox/"
 alias pictures="cd $HOME/Pictures/"
+
+# BLOBIFY??
+alias blobify="echo 'Type text to blobify:' && read text && echo \$text | sed 's/\([a-zA-Z]\)/:blob_\1:/g' | sed 's/ /:blank:/g' | sed \"s/'/:blob_apostrophe:/g\" | sed 's/,/:blob_comma:/g' | sed 's/!/:blob_exclamation:/g' | sed 's/\?/:blob_question:/g' | pbcopy && echo 'Blobified text copied to your clipboard.'"
 
 # Python Web Start
 alias pywebstart="python -m SimpleHTTPServer"
@@ -46,7 +69,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting git osx ruby terminalapp zsh-wakatime zsh-autosuggestions)
+plugins=(zsh-syntax-highlighting git macos ruby zsh-wakatime zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,8 +106,8 @@ function reset_menubar() {
 }
 
 # pure
-autoload -U promptinit; promptinit
-prompt pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 # zsh-syntax-highlighting
 source $ZSH/oh-my-zsh.sh
@@ -93,3 +116,6 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  2>/dev/null
 $(nvm use node) 2>/dev/null
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

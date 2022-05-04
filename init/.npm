@@ -19,13 +19,6 @@ node index.js
 
 # list Packages that will be installed
 node_modules=(
-  bower
-  express
-  grunt-cli
-  gulp
-  jshint
-  mean-cli
-  mongoose
   nodemon
   conduct
   pure-prompt

@@ -12,9 +12,19 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>7CACE21E-92A7-416D-ABCD-AEEB87207004</string>
+				<string>9543A8BC-0098-457F-91ED-E1A22D22563B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7CACE21E-92A7-416D-ABCD-AEEB87207004</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -48,7 +58,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E1F19DF7-21B1-4BF9-BD79-BB35574E13C0</string>
+				<string>2DCC28F1-9B76-4084-B20E-6A6F93FCCB28</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -70,21 +80,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E1F19DF7-21B1-4BF9-BD79-BB35574E13C0</key>
-		<array/>
-		<key>E52FE50C-0451-49B1-B9B7-445BBE59BC3A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E60C6824-A5CC-4639-9506-C333BFE96386</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Renfei Song</string>
@@ -96,6 +91,29 @@
 	<string>SnippetsLab</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>open -g "snippetslab://alfred/{query}/"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9543A8BC-0098-457F-91ED-E1A22D22563B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -132,6 +150,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -151,7 +171,7 @@
 				<key>runningsubtext</key>
 				<string>Searching…</string>
 				<key>script</key>
-				<string>./SnippetsLabAlfredWorkflow --search "{query}"</string>
+				<string>./SnippetsLabAlfredWorkflow --action=search --query="{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -170,24 +190,7 @@
 			<key>uid</key>
 			<string>55D83194-5870-403C-99F3-BB84529D5ADE</string>
 			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>E1F19DF7-21B1-4BF9-BD79-BB35574E13C0</string>
-			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -197,7 +200,7 @@
 				<key>escaping</key>
 				<integer>110</integer>
 				<key>script</key>
-				<string>./SnippetsLabAlfredWorkflow --fetch "{query}"</string>
+				<string>./SnippetsLabAlfredWorkflow --action=fetch --query="{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -211,6 +214,25 @@
 			<string>7CACE21E-92A7-416D-ABCD-AEEB87207004</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2DCC28F1-9B76-4084-B20E-6A6F93FCCB28</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -264,35 +286,24 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>E60C6824-A5CC-4639-9506-C333BFE96386</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>Type “snippet {query}” to search.
 
-- Press Return to choose the primary action (defaults to “Copy to Clipboard”).
-- Press Option-Return to choose the secondary action (defaults to “Open in Main App”).
-- Press Command-Return to paste directly to frontmost app.
-- The primary/secondary action can be customized in SnippetsLab Preferences &gt; Assistant.
+- Press Return to choose the primary action (defaults to “Copy to Clipboard”, configurable in SnippetsLab Preferences).
 
-Note: Requires SnippetsLab 1.7.1 or higher. Works with macOS High Sierra.</string>
+- Press Option-Return to choose the secondary action (defaults to “Open in Main App”, configurable in SnippetsLab Preferences).
+
+- Press Command-Return to paste directly to the frontmost app.</string>
 	<key>uidata</key>
 	<dict>
+		<key>2DCC28F1-9B76-4084-B20E-6A6F93FCCB28</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
 		<key>55D83194-5870-403C-99F3-BB84529D5ADE</key>
 		<dict>
 			<key>xpos</key>
@@ -321,12 +332,12 @@ Note: Requires SnippetsLab 1.7.1 or higher. Works with macOS High Sierra.</strin
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
-		<key>E1F19DF7-21B1-4BF9-BD79-BB35574E13C0</key>
+		<key>9543A8BC-0098-457F-91ED-E1A22D22563B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>650</integer>
+			<integer>500</integer>
 			<key>ypos</key>
-			<integer>190</integer>
+			<real>60</real>
 		</dict>
 		<key>E52FE50C-0451-49B1-B9B7-445BBE59BC3A</key>
 		<dict>
@@ -335,16 +346,11 @@ Note: Requires SnippetsLab 1.7.1 or higher. Works with macOS High Sierra.</strin
 			<key>ypos</key>
 			<real>320</real>
 		</dict>
-		<key>E60C6824-A5CC-4639-9506-C333BFE96386</key>
-		<dict>
-			<key>xpos</key>
-			<integer>650</integer>
-			<key>ypos</key>
-			<integer>320</integer>
-		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.7.1</string>
+	<string>2.0</string>
 	<key>webaddress</key>
 	<string>https://www.renfei.org/snippets-lab/</string>
 </dict>
