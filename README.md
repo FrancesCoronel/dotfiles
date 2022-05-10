@@ -21,7 +21,7 @@
 >
 > Background photo from [Unsplash Wallpaperss](https://unsplash.com/).
 
-![Showcase](https://i.imgur.com/0FtAWo2.jpg)
+![Showcase](https://i.imgur.com/ErIiC3v.png)
 
 - [Installation](#installation)
   - [Alfred](#alfred)
