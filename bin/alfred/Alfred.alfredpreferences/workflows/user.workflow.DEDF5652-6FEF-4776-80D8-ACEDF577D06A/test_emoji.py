@@ -1,7 +1,9 @@
 # content of test_sysexit.py
 import pytest
-from buildDataFiles import DataFilerBuilder
-from workflow import Workflow3, web
+from workflow import Workflow3
+
+from src.buildDataFiles import DataFilerBuilder
+
 # def f():
 #     raise SystemExit(1)
 
@@ -25,9 +27,9 @@ def test_stream(travis = None):
             for chunk in r.iter_content(chunk_size=4096):
                 dl += len(chunk)
                 if chunk:
-                    print float(total_size) / (dl * 4096)
+                    print (float(total_size) / (dl * 4096))
                     f.write(chunk)
-        print 'done'
+        print ('done')
 
     url1 = 'http://unicode.org/emoji/charts-beta/full-emoji-list.html'
     if travis:
@@ -48,4 +50,4 @@ def test_download(travis = None):
     else:
         r = web.get(url1, timeout=6000)
 
-        print r.status_code
+        print (r.status_code)

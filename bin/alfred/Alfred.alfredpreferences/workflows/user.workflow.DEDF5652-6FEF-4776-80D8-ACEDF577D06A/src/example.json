@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "title": "grinning face",
+      "subtitle": "grinning face",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/1.png",
+      "icon": {
+        "path": "img/1.png"
+      }
+    },
+    {
+      "title": "grinning face with big eyes",
+      "subtitle": "grinning face with big eyes",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/2.png",
+      "icon": {
+        "path": "img/2.png"
+      }
+    },
+    {
+      "title": "grinning face with smiling eyes",
+      "subtitle": "grinning face with smiling eyes",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/3.png",
+      "icon": {
+        "path": "img/3.png"
+      }
+    },
+    {
+      "title": "grinning squinting face",
+      "subtitle": "grinning squinting face",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/5.png",
+      "icon": {
+        "path": "img/5.png"
+      }
+    },
+    {
+      "title": "grinning face with sweat",
+      "subtitle": "grinning face with sweat",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/6.png",
+      "icon": {
+        "path": "img/6.png"
+      }
+    },
+    {
+      "title": "grinning cat",
+      "subtitle": "grinning cat",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/105.png",
+      "icon": {
+        "path": "img/105.png"
+      }
+    },
+    {
+      "title": "grinning cat with smiling eyes",
+      "subtitle": "grinning cat with smiling eyes",
+      "valid": true,
+      "quicklookurl": "file:///Users/jstein/devel/emoji/src/../img/106.png",
+      "icon": {
+        "path": "img/106.png"
+      }
+    }
+  ]
+}
