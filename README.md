@@ -42,9 +42,9 @@
     - [Hyper](#hyper)
     - [iTerm 2](#iterm-2)
     - [Terminal](#terminal)
-- [Usage](#usage)
   - [Tracking](#tracking)
 - [Theming](#theming)
+- [Usage](#usage)
 - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
 - [Credits](#credits)
@@ -87,58 +87,52 @@ sh ~/.dotfiles/init/.gituser
 
 With Alfred, I use a theme called [Materialize](https://www.alfredapp.com/extras/theme/5hT6cEQ6h1/) that is published online for anyone to install through Alfred Themes.
 
-![Alfred](https://i.imgur.com/on1ZDB7.png)
-
 ### Chrome
 
-I use a theme I made myself called [Materialize](https://www.themebeta.com/chrome/theme/856926) which anyone can install from [ThemeBeta](https://www.themebeta.com).
+I use a basic white theme for Chrome.
 
-![Materialize Chrome Theme](https://i.imgur.com/VwGjdAs.png)
+![Chrome Theme](https://i.imgur.com/qZjkvIo.png)
 
 #### Chrome Extensions
 
-- [1Password](https://agilebits.com/onepassword)
-- [Adguard AdBlocker](https://chrome.google.com/webstore/detail/bgnkhhnnamicmpeenaelnjfhikgbkllg)
-- [Amazon Assistant for Chrome](https://chrome.google.com/webstore/detail/pbjikboenpfhbbejgkoklgkhjpfogcam)
-- [Cycle Tab](https://chrome.google.com/webstore/detail/ijhbdahcljlkbhcaagjmhkhdmgamokdl)
-- [Enhancer for YouTube](https://chrome.google.com/webstore/detail/ponfpcnoihfmfllpaingbgckeeldkhle)
-- [FireShot](https://chrome.google.com/webstore/detail/mcbpblocgmgfnpjjppndjkmgjaogfceg)
-- [Fontface Ninja](https://www.fontface.ninja/)
-- [GitHunt](http://kamranahmed.info/)
-- [GitZip](https://chrome.google.com/webstore/detail/ffabmkklhbepgcgfonabamgnfafbdlkn)
-- [Google Inbox Checker](https://chrome.google.com/webstore/detail/ljeebljkookphadpedhmnlokpennimon)
-- [Google Keep Chrome Extension](https://chrome.google.com/webstore/detail/lpcaedmchfhocbbapmcbpinfpgnhiddi)
-- [Grammarly for Chrome](https://chrome.google.com/webstore/detail/kbfnbcaeplbcioakkpcpgfkobkghlhen)
-- [Hova!](https://chrome.google.com/webstore/detail/fmcjcbeolgfldjahlimdijaifioiikeg)
-- [Hover Zoom](http://hoverzoom.net/)
-- [HoverCards](http://hovercards.com/)
-- [I'm a Gentleman](https://chrome.google.com/webstore/detail/afjaicccalbbickikgdegaihmajaidpd)
-- [Ink for Google](https://chrome.google.com/webstore/detail/hmanckoiohnlgdommlcckcflkmllobgj)
-- [JobHero Sidekick](https://chrome.google.com/webstore/detail/jbghgdobbhngjkngibnbbjpalkoooghb)
-- [JSON View](https://chrome.google.com/webstore/detail/chklaanhfefbnpoihckbnefhakgolnmc)
-- [Lighthouse](https://chrome.google.com/webstore/detail/blipmdconlkpinefehnmjammfjpmpbjk)
-- [Musixmatch Lyrics for YouTube](https://chrome.google.com/webstore/detail/gfenjblodoldnbiddmggcbkcapiolbig)
-- [Notifier for GitHub](https://github.com/sindresorhus/notifier-for-github-chrome)
-- [OctoMate](https://chrome.google.com/webstore/detail/baggcehellihkglakjnmnhpnjmkbmpkf)
-- [Panda 5 | News & Inspiration Dashboard](https://chrome.google.com/webstore/detail/haafibkemckmbknhfkiiniobjpgkebko)
-- [Password Alert](https://chrome.google.com/webstore/detail/noondiphcddnnabmjcihcjfbhfklnnep)
-- [Pop up blocker for Chrome™ - Poper Blocker](http://www.poperblocker.com/)
-- [Product Hunt](https://chrome.google.com/webstore/detail/likjafohlgffamccflcidmedfongmkee)
-- [Pushbullet](https://www.pushbullet.com/)
-- [Raindrop.io](https://raindrop.io/)
-- [Refined GitHub](https://github.com/sindresorhus/refined-github)
-- [SimpleExtManager](https://chrome.google.com/webstore/detail/kniehgiejgnnpgojkdhhjbgbllnfkfdk)
-- [Sprucemarks](https://chrome.google.com/webstore/detail/fakeocdnmmmnokabaiflppclocckihoj)
-- [Stylebot](https://chrome.google.com/webstore/detail/oiaejidbmkiecgbjeifoejpgmdaleoha)
-- [WakaTime](https://wakatime.com/)
-- [Wappalyzer](https://wappalyzer.com/)
-- [Wikiwand](http://www.wikiwand.com/)
+- 1Password – Password ManagerAdGuard AdBlocker
+- Application Launcher For Drive (by Google)
+- Awesome Screenshot and Screen Recorder
+- axe DevTools - Web Accessibility Testing
+- Calendly: Meeting Scheduling Software
+- Clockwise: Team Time & Calendar Management
+- Designer Tools
+- GIFs for GitHub
+- GoFullPage - Full Page Screen Capture
+- Google Docs Offline
+- Grammarly: Grammar Checker and Writing App
+- I'm a Gentleman
+- JSONVue
+- Loom – Free Screen Recorder & Screen Capture
+- Material Icons for GitHub
+- Neutral Face Emoji Tools
+- Notifier for GitHub
+- Notion Web Clipper
+- Office Editing for Docs, Sheets & Slides
+- Page Ruler
+- Panda 5 - Your favorite websites in one place
+- Pushbullet
+- Raindrop.io
+- React Developer Tools
+- Refined GitHub
+- Sprucemarks
+- Todoist for Chrome
+- Todoist for Gmail
+- Todoist New Tab
+- WakaTime
+- Wappalyzer - Technology profiler
+- Wikiwand: Wikipedia Modernized
 
 ### Desktop
 
-I use the [Unsplash Wallpapers](https://unsplash.com/wallpaper) app to automatically generate a new wallpaper every day and the images are so hi-res, it's quite nice.
+I use the [Irvue](https://leonspok.com/irvue/landing/) app to automatically generate a new wallpaper every day and the images are so hi-res, it's quite nice.
 
-![Unsplash Wallpapers](https://i.imgur.com/09UZ1ZM.png)
+![Unsplash Wallpapers](https://leonspok.com/irvue/landing/resources/macbook_pro.png)
 
 ### Fonts
 
@@ -230,36 +224,32 @@ A full list of the apps installed automatically using Homebrew Casks can be foun
 
 #### Manual
 
-These applications may need to be manually downloaded upon a fresh install.
+These applications don't have casks so they need to be manually downloaded from the App Store upon a fresh install.
 
-- [Alfred](https://www.alfredapp.com/)
-  - 10x better than Spotlight
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
   - Keeps my computer on
 - [BetterSnapTool](https://itunes.apple.com/us/app/bettersnaptool/id417375580?mt=12)
   - Easy to drag & resize windows
-- [Day One Classic](http://dayoneapp.com/)
+- [Day One](http://dayoneapp.com/)
   - Personal journal
-- [Fantastical](https://flexibits.com/fantastical)
-  - A better calendar
-- [Kaleidoscope](https://www.kaleidoscopeapp.com/)
-  - Dem merge conflicts tho
-- [Tower](https://www.git-tower.com/mac/)
-  - Best GitHub GUI
-- [Tyke](http://tyke.io/)
-  - Mac menubar note taker
+- [Healthier](https://healthier.lessapps.net/)
+  - Reminds me to take breaks
+- [Irvue](https://apps.apple.com/us/app/irvue/id1039633667?mt=12)
+  - Changes my wallpaper
+- [Spark](https://sparkmailapp.com/)
+  - Email client
+- [SnippetsLab](https://www.renfei.org/snippets-lab/)
+  - Makes it easy to reuse snippets/templates
 
 #### Menubar
 
-![Menubar](https://i.imgur.com/urjOm9B.png?1)
-
-![Bartender Menubar](https://i.imgur.com/RuYsXaW.png?1)
+![Menubar](https://i.imgur.com/Wx12TLm.png)
 
 ### Screensaver
 
 I use the lovely [Aerial screensaver](https://github.com/JohnCoates/Aerial) which even allows me to have different 3D views on different monitors.
 
-![Aerial](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
+![Aerial](https://aerialscreensaver.github.io/img/macbookpro-aerial.png)
 
 ### Shells
 
@@ -291,10 +281,6 @@ Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/bin/shell/te
 
 ![Terminal](https://i.imgur.com/kaqt9BC.png)
 
-## Usage
-
-If you decide to utilize these configurations, please make sure to give me some kudos as I have done below with the developers that inspired me. 😊
-
 ### Tracking
 
 I use [WakaTime](https://wakatime.com/) with my [API key](https://wakatime.com/api-key) to track all the time spent across different platforms.
@@ -312,45 +298,20 @@ Accents are as follows in accordance to [Sublime Text 3 Material Theme](https://
 
 ![Lime](https://img.shields.io/badge/Lime-%237CB342-lightgrey.svg?colorB=7CB342) ![Purple](https://img.shields.io/badge/Purple-%23AB47BC-lightgrey.svg?colorB=AB47BC) ![Red](https://img.shields.io/badge/Red-%23E57373-lightgrey.svg?colorB=E57373) ![Red Orange](https://img.shields.io/badge/Red_Orange-%23F74A50-lightgrey.svg?colorB=F74A50) ![Orange](https://img.shields.io/badge/Orange-%23FF7042-lightgrey.svg?colorB=FF7042) ![Yellow](https://img.shields.io/badge/Yellow-%23FFA000-lightgrey.svg?colorB=FFA000) ![Indigo](https://img.shields.io/badge/Indigo-%235C6BC0-lightgrey.svg?colorB=5C6BC0) ![Pink](https://img.shields.io/badge/Pink-%23FF4081-lightgrey.svg?colorB=FF4081) ![Blue](https://img.shields.io/badge/Blue-%232979FF-lightgrey.svg?colorB=2979FF) ![Cyan](https://img.shields.io/badge/Cyan-%2300BCD4-lightgrey.svg?colorB=00BCD4)
 
-- Lime
+- Lime — `#7CB342`
+- Purple — `#AB47BC`
+- Red — `#E57373`
+- Red orange — `#F74A50`
+- Orange — `#FF7042`
+- Yellow — `#FFA000`
+- Indigo — `#5C6BC0`
+- Pink — `#FF4081`
+- Blue — `#2979FF`
+- Cyan — `#00BCD4`
 
-  - `#7CB342`
+## Usage
 
-- Purple
-
-  - `#AB47BC`
-
-- Red
-
-  - `#E57373`
-
-- Red orange
-
-  - `#F74A50`
-
-- Orange
-
-  - `#FF7042`
-
-- Yellow
-
-  - `#FFA000`
-
-- Indigo
-
-  - `#5C6BC0`
-
-- Pink
-
-  - `#FF4081`
-
-- Blue
-
-  - `#2979FF`
-
-- Cyan
-
-  - `#00BCD4`
+If you decide to utilize these configurations, please make sure to give me some kudos as I have done below with the developers that inspired me. 😊
 
 ## Contributing
 
