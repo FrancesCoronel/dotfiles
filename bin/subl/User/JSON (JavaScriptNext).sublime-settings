@@ -1,8 +1,0 @@
-{
-	"extensions":
-	[
-		"json",
-		"sublime-settings"
-	],
-  "word_wrap": true
-}

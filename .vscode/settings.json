@@ -1,2 +1,202 @@
+// Place your settings in this file to overwrite the default settings
 {
+  "cSpell.userWords": [
+    "Airtable",
+    "Anywho",
+    "Appt",
+    "Aslan",
+    "Behance",
+    "Blockquotes",
+    "Bullseye",
+    "CFPs",
+    "Changelog",
+    "Codecademy",
+    "Codelabs",
+    "Coronel",
+    "Cproductions",
+    "Customizations",
+    "Entprenurship",
+    "FVCproductions",
+    "GIFs",
+    "Grammarly",
+    "HBCUs",
+    "Hindsights",
+    "ISLC",
+    "Kapor",
+    "Latinas",
+    "Latinx",
+    "Leaderboard",
+    "Meetups",
+    "Ohana",
+    "PWAs",
+    "Repo",
+    "Roboto",
+    "Scalability",
+    "Simba",
+    "Techqueria",
+    "Theming",
+    "Thinkful",
+    "Thinkful's",
+    "Truthy",
+    "Udacity",
+    "Unsubscriber",
+    "Waitlist",
+    "Wordpress",
+    "bootcamp",
+    "bootcamps",
+    "dropdown",
+    "embedly",
+    "endfor",
+    "ethnicities",
+    "fullstack",
+    "fvcproductions",
+    "hackathon",
+    "hackathons",
+    "headshot",
+    "heartedly",
+    "imgtype",
+    "impactful",
+    "infographic",
+    "informatics",
+    "intersectionality",
+    "interwebs",
+    "kpaths",
+    "lightgallery",
+    "markdownlint",
+    "mentorship",
+    "mentorships",
+    "nanotech",
+    "nother",
+    "permalink",
+    "preprocessors",
+    "primeng",
+    "prototyped",
+    "repos",
+    "schooler",
+    "scrollbar",
+    "shittiness",
+    "transformative",
+    "twemoji",
+    "underserved"
+  ],
+  "files.associations": {
+    "*.html": "html"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.exclude": {
+    "**/bower_components": true,
+    "**/jspm_packages": true,
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/": true
+  },
+  "markdownlint.config": {
+    "ol-prefix": {
+      "style": "ordered"
+    },
+    "ul-style": {
+      "style": "dash"
+    },
+    "first-header-h1": false,
+    "first-line-h1": false,
+    "list-marker-space": false,
+    "no-bare-urls": false,
+    "no-hard-tabs": false,
+    "no-inline-html": false,
+    "no-trailing-punctuation": false,
+    "ul-indent": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "auto-close-tag.enableAutoCloseTag": true,
+  "breadcrumbs.enabled": true,
+  "cSpell.enabled": false,
+  "editor.cursorWidth": 3,
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "'Input Mono', 'Roboto Mono', Menlo, Consolas, monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 18,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "boundary",
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.decorations.colors": false,
+  "extensions.ignoreRecommendations": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "html.format.wrapLineLength": 0,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown.extension.preview.autoShowPreviewToSide": false,
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.preview.fontFamily": "BlinkMacSystemFont,-apple-system,Roboto,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
+  "markdown.trace": "verbose",
+  "markdownlint.run": "onSave",
+  "sync.autoDownload": false,
+  "sync.autoUpload": true,
+  "sync.forceDownload": false,
+  "sync.gist": "42f14d19392a50ae6fd03feae51ed1de",
+  "sync.quietSync": true,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.lineHeight": 1,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.editor": "json",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "editor.inlineSuggest.enabled": true,
+  "redhat.telemetry.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": false
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "GitHub Light",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "githubPullRequests.pullBranch": "never",
+  "[njk]": {
+    "editor.defaultFormatter": "eseom.nunjucks-template"
+  },
+  "window.zoomLevel": -1,
 }

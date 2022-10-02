@@ -46,10 +46,6 @@ duti -s org.videolan.vlc   mov viewer
 duti -s org.videolan.vlc   mkv viewer
 
 echo ""
-echo "Installing Aerial Screensaver"
-defaults -currentHost write com.apple.screensaver modulePath -string “~/Dropbox/github/bin/screen-saver/Aerial.saver”
-
-echo ""
 echo "Disabling OS X Gate Keeper"
 echo "(You'll be able to install any app you want from here on, not just Mac App Store apps)"
 sudo spctl --master-disable

@@ -34,7 +34,7 @@ ${LGREEN}
 |D|o|t|f|i|l|e|s|
 +-+-+-+-+-+-+-+-+
 ${WHITE}
-https://github.com/fvcproductions/dotfiles.git
+https://github.com/FrancesCoronel/dotfiles.git
 ${NC}
 "
 
@@ -98,7 +98,7 @@ echo "${LGREEN}Installing hushlogin...${NC}"
 echo "Disabling the system copyright notice, the date and time of the last login."
 echo "More info at @mathiasbynens/dotfiles http://goo.gl/wZBM80."
 echo ""
-yes | cp -rf "$DOTFILE/.hushlogin" $HOME/.hushlogin
+yes | cp -rf "$DOTFILE/init/.hushlogin" $HOME/.hushlogin
 touch .hushlogin
 
 # install Homebrew

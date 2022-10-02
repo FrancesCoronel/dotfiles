@@ -1,9 +1,0 @@
-{
-	"extensions":
-	[
-		"YAML-tmLanguage",
-		".gemrc",
-		"yml.dist",
-		"yml"
-	]
-}

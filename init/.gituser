@@ -19,9 +19,17 @@ echo "Please select which task you would like to perform"
 echo ""
 echo "[1] Configure Global Git Settings"
 echo "[2] Generate Github SSH Key"
-echo "[3] All of the above"
+echo "[3] Copy over existing Git config"
+echo "[4] All of the above"
 echo "[Q/q] Quit"
 echo ""
+
+function setdefaultgitconfig () {
+  echo "Copying over existing Git config"
+  cp -RfXv $DOT/bin/.github/.gitconfig $HOME/.gitconfig
+  echo "Okay all good"
+}
+
 
 function gitconfig () {
   read -p "Please enter your Git Author Name: " GIT_AUTHOR_NAME
@@ -62,6 +70,8 @@ function github_sshkey () {
 }
 
 function exec_all () {
+  setdefaultgitconfig;
+  sleep 5
   gitconfig;
   sleep 5
   github_sshkey;
@@ -73,7 +83,8 @@ while true; do
   case $ANSWER in
     [1]*) gitconfig; break;;
     [2]*) github_sshkey; break;;
-    [3]*) exec_all; break;;
+    [3]*) setdefaultgitconfig; break;;
+    [4]*) exec_all; break;;
     [Q/q]*) exit;;
     *) echo "Please select from the options above"
   esac

@@ -29,12 +29,9 @@
     - [Chrome Extensions](#chrome-extensions)
   - [Desktop](#desktop)
   - [Fonts](#fonts)
-  - [Editors](#editors)
-    - [Atom](#atom)
-    - [Sublime Text](#sublime-text)
-    - [Visual Studio Code](#visual-studio-code)
-      - [Open with Terminal](#open-with-terminal)
-      - [Visual Studio Code Extensions](#visual-studio-code-extensions)
+  - [Visual Studio Code Editor](#visual-studio-code-editor)
+    - [Open with Terminal](#open-with-terminal)
+    - [Visual Studio Code Extensions](#visual-studio-code-extensions)
   - [Homebrew](#homebrew)
   - [macOS Apps](#macos-apps)
     - [Casks](#casks)
@@ -150,42 +147,17 @@ I use the [Unsplash Wallpapers](https://unsplash.com/wallpaper) app to automatic
 - [Hack](https://github.com/source-foundry/Hack)
 - [Input](http://input.fontbureau.com/)
 
-### Editors
-
-#### Atom
-
-Using [Sync Settings](https://atom.io/packages/sync-settings) package with this [Gist](https://gist.github.com/FrancesCoronel/ae1c2069a9ad59e71e321c7f7ba85d53).
-
-![Atom](https://i.imgur.com/JVhDvcq.png)
-
-#### Sublime Text
-
-First install [Package Control](https://packagecontrol.io/installation)
-
-Then use the [SyncSettings](https://github.com/mfuentesg/SyncSettings) package with this [Gist](https://gist.github.com/FrancesCoronel/6452da691c3a5b37e6b27d2423cb3a26).
-
-Use `Sync Settings: Edit User Settings` and within `SyncSettings.sublime-settings`, type in the following:
-
-```json
-{
-    "access_token": "xxx",
-    "gist_id": "6452da691c3a5b37e6b27d2423cb3a26"
-}
-```
-
-![Sublime Text](https://i.imgur.com/JUpBQVU.png)
-
-#### Visual Studio Code
+### Visual Studio Code Editor
 
 Using [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension with this [Gist](https://gist.github.com/FrancesCoronel/42f14d19392a50ae6fd03feae51ed1de).
 
-##### Open with Terminal
+#### Open with Terminal
 
 Use `Shell Command: Install 'code' command in PATH`.
 
 ![Visual Studio Code](https://i.imgur.com/NBiUCtM.png)
 
-##### Visual Studio Code Extensions
+#### Visual Studio Code Extensions
 
 ```bash
 ❯ code --list-extensions | xargs -L 1 echo code --install-extension
@@ -258,62 +230,26 @@ A full list of the apps installed automatically using Homebrew Casks can be foun
 
 #### Manual
 
-These applications need to be manually downloaded or transferred from the App Store or Dropbox upon a fresh install.
+These applications may need to be manually downloaded upon a fresh install.
 
 - [Alfred](https://www.alfredapp.com/)
-
   - 10x better than Spotlight
-
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
-
-  - Slightly better than the Caffeine app
-
+  - Keeps my computer on
 - [BetterSnapTool](https://itunes.apple.com/us/app/bettersnaptool/id417375580?mt=12)
-
   - Easy to drag & resize windows
-
-- [Blotter](https://itunes.apple.com/us/app/blotter/id406580224?mt=12)
 - [Day One Classic](http://dayoneapp.com/)
-
   - Personal journal
-
-- [Gemini](https://macpaw.com/gemini)
 - [Fantastical](https://flexibits.com/fantastical)
+  - A better calendar
 - [Kaleidoscope](https://www.kaleidoscopeapp.com/)
-
   - Dem merge conflicts tho
-
-- [LittleIpsum](https://itunes.apple.com/us/app/littleipsum/id405772121?mt=12)
-- [Living Earth Desktop](http://www.livingearthapp.com/)
-- [Marked](http://marked2app.com/)
-
-  - Preview Markdown files with tons of features/options
-
-- [Monodraw](https://monodraw.helftone.com/)
-- [Monosnap](https://monosnap.com/welcome)
-
-  - Easily share video recordings
-
-- [Prepo](https://itunes.apple.com/us/app/prepo/id476533227?mt=12)
-- [Promotee](http://www.netwalkapps.com/app/promotee)
-
-  - To showcase apps off
-
-- [Redacted](https://itunes.apple.com/us/app/redacted/id984968384?mt=12)
-- [Sip](https://sipapp.io/)
-
-  - Cool color manager
-
 - [Tower](https://www.git-tower.com/mac/)
-
-  - Best GitHub GUI right now
-
+  - Best GitHub GUI
 - [Tyke](http://tyke.io/)
-- [Unsplash Wallpapers](https://unsplash.com/wallpaper)
+  - Mac menubar note taker
 
 #### Menubar
-
-> Just for future reference.
 
 ![Menubar](https://i.imgur.com/urjOm9B.png?1)
 
