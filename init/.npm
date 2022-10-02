@@ -19,11 +19,14 @@ node index.js
 
 # list Packages that will be installed
 node_modules=(
-  nodemon
   conduct
-  pure-prompt
+  eslint
   license-up
   maintain-me
+  nodemon
+  prettier
+  pure-prompt
+  typescript
 )
 
 # install Node Packages

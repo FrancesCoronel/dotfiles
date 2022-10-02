@@ -15,7 +15,7 @@
 
 # Dotfiles
 
-[![GitHub Issues](https://img.shields.io/github/issues/fvcproductions/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/fvcproductions/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/pulls) [![MIT License](https://img.shields.io/github/license/fvcproductions/dotfiles.svg?style=flat-square)](http://badges.mit-license.org)
+[![GitHub Issues](https://img.shields.io/github/issues/FrancesCoronel/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/FrancesCoronel/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/pulls) [![MIT License](https://img.shields.io/github/license/FrancesCoronel/dotfiles.svg?style=flat-square)](http://badges.mit-license.org)
 
 > This sets up my dev environment to be very Material Design friendly.
 >
@@ -177,7 +177,7 @@ Use `Sync Settings: Edit User Settings` and within `SyncSettings.sublime-setting
 
 #### Visual Studio Code
 
-Using [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension with this [Gist](https://gist.github.com/FrancesCoronel/10a8ad61c7bbd2a618af29a2f7bf05c1).
+Using [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension with this [Gist](https://gist.github.com/FrancesCoronel/42f14d19392a50ae6fd03feae51ed1de).
 
 ##### Open with Terminal
 
@@ -191,39 +191,44 @@ Use `Shell Command: Install 'code' command in PATH`.
 ❯ code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
-- aaron-bond.better-comments
-- bierner.markdown-preview-github-styles
-- christian-kohler.npm-intellisense
-- christian-kohler.path-intellisense
-- DavidAnson.vscode-markdownlint
-- dbaeumer.vscode-eslint
-- dsznajder.es7-react-js-snippets
-- eamodio.gitlens
-- ecmel.vscode-html-css
-- eg2.vscode-npm-script
-- esbenp.prettier-vscode
-- formulahendry.auto-close-tag
-- formulahendry.auto-rename-tag
-- GitHub.copilot
-- GitHub.github-vscode-theme
-- GitHub.vscode-pull-request-github
-- marvhen.reflow-markdown
-- mdickin.markdown-shortcuts
-- mgmcdermott.vscode-language-babel
-- ms-vsliveshare.vsliveshare
-- oderwat.indent-rainbow
-- Orta.vscode-jest
-- PKief.material-icon-theme
-- redhat.vscode-yaml
-- remimarsal.prettier-now
-- ritwickdey.LiveServer
-- Shan.code-settings-sync
-- streetsidesoftware.code-spell-checker
-- syler.sass-indented
-- tehnix.vscode-tidymarkdown
-- wayou.vscode-todo-highlight
-- yzhang.markdown-all-in-one
-- Zignd.html-css-class-completion
+- `aaron-bond.better-comments`
+- `bierner.markdown-preview-github-styles`
+- `christian-kohler.npm-intellisense`
+- `christian-kohler.path-intellisense`
+- `DavidAnson.vscode-markdownlint`
+- `dbaeumer.vscode-eslint`
+- `dsznajder.es7-react-js-snippets`
+- `eamodio.gitlens`
+- `ecmel.vscode-html-css`
+- `eg2.vscode-npm-script`
+- `esbenp.prettier-vscode`
+- `eseom.nunjucks-template`
+- `formulahendry.auto-close-tag`
+- `formulahendry.auto-rename-tag`
+- `GitHub.codespaces`
+- `GitHub.copilot`
+- `GitHub.github-vscode-theme`
+- `GitHub.vscode-pull-request-github`
+- `jkjustjoshing.vscode-text-pastry`
+- `marvhen.reflow-markdown`
+- `mdickin.markdown-shortcuts`
+- `mgmcdermott.vscode-language-babel`
+- `ms-vsliveshare.vsliveshare`
+- `naumovs.color-highlight`
+- `oderwat.indent-rainbow`
+- `Orta.vscode-jest`
+- `PKief.material-icon-theme`
+- `redhat.vscode-yaml`
+- `remimarsal.prettier-now`
+- `ritwickdey.LiveServer`
+- `Shan.code-settings-sync`
+- `streetsidesoftware.code-spell-checker`
+- `syler.sass-indented`
+- `tehnix.vscode-tidymarkdown`
+- `WakaTime.vscode-wakatime`
+- `wayou.vscode-todo-highlight`
+- `yzhang.markdown-all-in-one`
+- `Zignd.html-css-class-completion`
 
 ### Homebrew
 
@@ -250,6 +255,7 @@ Use `Shell Command: Install 'code' command in PATH`.
 #### Casks
 
 A full list of the apps installed automatically using Homebrew Casks can be found at [`init/.casks`](.init/.casks).
+
 #### Manual
 
 These applications need to be manually downloaded or transferred from the App Store or Dropbox upon a fresh install.
@@ -325,7 +331,7 @@ I'm using the oh-my-zsh [pure](https://github.com/sindresorhus/pure) theme.
 
 Once the theme has loaded, you might want to replace the shell's startup command in `Preferences` under `Profiles > Shell Tab`:
 
-`login -fpql fvcproductions /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
+`login -fpql FrancesCoronel /bin/zsh` to `login -fpql YOURNAME /bin/zsh`
 
 #### Hyper
 
@@ -355,23 +361,13 @@ If you decide to utilize these configurations, please make sure to give me some 
 
 ### Tracking
 
-I use [WakaTime](https://wakatime.com/) to track all the time spent across different platforms.
+I use [WakaTime](https://wakatime.com/) with my [API key](https://wakatime.com/api-key) to track all the time spent across different platforms.
 
 For editors, I have the plugin installed. Otherwise, I just use enter the following in the `~/.wakatime.cfg` file.
 
 ```text
 [settings]
 api_key = MY_API_KEY_GOES_HERE
-```
-
-For Sketch, I also take the following steps.
-
-```bash
-cd ~/Library/Application Support/com.bohemiancoding.sketch3
-# remove Plugins folder
-rm -r Plugins
-# create alias with existing User folder
-ln -s /Users/fvcproductions/Dropbox/Code/dotfiles/bin/sketch/Plugins
 ```
 
 ## Theming

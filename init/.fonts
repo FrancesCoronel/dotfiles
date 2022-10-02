@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+DOT="$HOME/.dotfiles"
+
+
 echo ""
 echo "Installing Roboto font... "
 brew cask install font-roboto
@@ -15,5 +18,9 @@ brew cask install font-hack
 echo ""
 echo "Installing Input font... "
 brew cask install font-input
+
+echo ""
+echo "Copying over Latina Essential font..."
+cp -RfXv $DOT/bin/fonts/Latina-Essential ~/Library/Fonts/
 
 brew cleanup

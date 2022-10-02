@@ -13,34 +13,38 @@ function cask() {
 }
 
 cask 1password
-cask airtable
-cask atom
-cask between
-cask caption
+cask aerial
+cask alfred
+cask amphetamine
+cask bettersnaptool
+cask cardhop
 cask cleanmymac
-cask codekit
-cask dash
-cask discord
+cask dayone
 cask dropbox
+cask figma
 cask flux
+cask gifox
 cask gitify
-cask gitscout
 cask google-backup-and-sync
 cask google-chrome
-cask googleappengine
 cask grammarly
-cask handbrake
-cask hyper
-cask image2icon
-cask lepton
-cask mac2imgur
+cask healthier
+cask imageoptim
+cask irvue
+cask iterm
+cask kaleidoscope
 cask material-colors
-cask muzzle
 cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo quicklook-pat quicklookapk provisionql
-cask steam
+cask slack
+cask snippetslab
+cask spark
 cask the-unarchiver
+cask todoist
+cask tower
+cask tyke
 cask visual-studio-code
-cask vlc
+cask whatsapp
+cask zoom
 
 echo ""
 echo "Cleaning up installation files..."

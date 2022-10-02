@@ -1,6 +1,0 @@
-framework module SketchRunner {
-  umbrella header "SketchRunner.h"
-
-  export *
-  module * { export * }
-}
