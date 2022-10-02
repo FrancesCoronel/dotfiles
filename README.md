@@ -56,10 +56,10 @@ The `sudo` command is necessary for Homebrew to be installed and for some others
 
 ```bash
 # Download latest version from Github
-curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/5.0.zip
+curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/7.0.zip
 
 # Unzip the file and move to root
-unzip 5.0.zip && mv dotfiles-5.0 .dotfiles && rm 5.0.zip
+unzip 7.0.zip && mv dotfiles-7.0 .dotfiles && rm 7.0.zip
 
 # Run bootstrap!
 sh ~/.dotfiles/bootstrap.sh
