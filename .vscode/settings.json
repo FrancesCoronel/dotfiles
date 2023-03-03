@@ -190,7 +190,7 @@
   "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "GitHub Light",
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "Noctis Lux",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -198,5 +198,5 @@
   "[njk]": {
     "editor.defaultFormatter": "eseom.nunjucks-template"
   },
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0
 }

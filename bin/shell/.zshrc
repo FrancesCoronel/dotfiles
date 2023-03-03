@@ -52,7 +52,7 @@ CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="false"
 
 # Uncomment to change how often before auto-updates occur? (in days)
-export UPDATE_ZSH_DAYS=10
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment following line if you want to disable auto setting terminal title.
 DISABLE_AUTO_TITLE="true"
@@ -118,25 +118,3 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
-#
-# Byteboard Stuff
-#
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/frances/Documents/byteboard-dev-env/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/frances/Documents/byteboard-dev-env/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/frances/Documents/byteboard-dev-env/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/frances/Documents/byteboard-dev-env/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Google Cloud - Byteboard
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/frances/byteboard/byteboard-client-api-default-service-account-key.json"
-
-# For running deploys
-prod_cred () {
-  export GOOGLE_APPLICATION_CREDENTIALS='/Users/frances/byteboard/byteboard-client-api-default-service-account-key.json'
-}
-
-qa_cred () {
-  export GOOGLE_APPLICATION_CREDENTIALS='/Users/frances/byteboard/byteboard-qa-environment-default-key.json'
-}

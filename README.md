@@ -153,6 +153,8 @@ Use `Shell Command: Install 'code' command in PATH`.
 
 #### Visual Studio Code Extensions
 
+These are synced via Settings Sync automatically.
+
 ```bash
 ❯ code --list-extensions | xargs -L 1 echo code --install-extension
 ```
@@ -236,8 +238,6 @@ These applications don't have casks so they need to be manually downloaded from 
   - Reminds me to take breaks
 - [Irvue](https://apps.apple.com/us/app/irvue/id1039633667?mt=12)
   - Changes my wallpaper
-- [Spark](https://sparkmailapp.com/)
-  - Email client
 - [SnippetsLab](https://www.renfei.org/snippets-lab/)
   - Makes it easy to reuse snippets/templates
 
