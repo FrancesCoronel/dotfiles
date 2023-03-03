@@ -19,30 +19,28 @@
 
 > This sets up my dev environment to be very Material Design friendly.
 >
-> Background photo from [Unsplash Wallpaperss](https://unsplash.com/).
+> Background photo from [Unsplash](https://unsplash.com/).
 
 ![Showcase](https://i.imgur.com/ErIiC3v.png)
 
 - [Installation](#installation)
+- [Customizations](#customizations)
   - [Alfred](#alfred)
   - [Chrome](#chrome)
     - [Chrome Extensions](#chrome-extensions)
   - [Desktop](#desktop)
   - [Fonts](#fonts)
-  - [Visual Studio Code Editor](#visual-studio-code-editor)
-    - [Open with Terminal](#open-with-terminal)
-    - [Visual Studio Code Extensions](#visual-studio-code-extensions)
   - [Homebrew](#homebrew)
-  - [macOS Apps](#macos-apps)
-    - [Casks](#casks)
-    - [Manual](#manual)
-    - [Menubar](#menubar)
+  - [Menubar](#menubar)
   - [Screensaver](#screensaver)
   - [Shells](#shells)
     - [Hyper](#hyper)
     - [iTerm 2](#iterm-2)
     - [Terminal](#terminal)
   - [Tracking](#tracking)
+  - [Visual Studio Code Editor](#visual-studio-code-editor)
+    - [Open with Terminal](#open-with-terminal)
+    - [Visual Studio Code Extensions](#visual-studio-code-extensions)
 - [Theming](#theming)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -56,10 +54,10 @@ The `sudo` command is necessary for Homebrew to be installed and for some others
 
 ```bash
 # Download latest version from Github
-curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/7.0.zip
+curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/8.0.zip
 
 # Unzip the file and move to root
-unzip 7.0.zip && mv dotfiles-7.0 .dotfiles && rm 7.0.zip
+unzip 8.0.zip && mv dotfiles-8.0 .dotfiles && rm 8.0.zip
 
 # Run bootstrap!
 sh ~/.dotfiles/bootstrap.sh
@@ -83,6 +81,8 @@ sh ~/.dotfiles/init/.fonts
 sh ~/.dotfiles/init/.gituser
 ```
 
+## Customizations
+
 ### Alfred
 
 With Alfred, I use a theme called [Materialize](https://www.alfredapp.com/extras/theme/5hT6cEQ6h1/) that is published online for anyone to install through Alfred Themes.
@@ -94,6 +94,8 @@ I use a basic white theme for Chrome.
 ![Chrome Theme](https://i.imgur.com/qZjkvIo.png)
 
 #### Chrome Extensions
+
+These are automatically synced via my Google account.
 
 - 1Password – Password ManagerAdGuard AdBlocker
 - Application Launcher For Drive (by Google)
@@ -141,64 +143,9 @@ I use the [Irvue](https://leonspok.com/irvue/landing/) app to automatically gene
 - [Hack](https://github.com/source-foundry/Hack)
 - [Input](http://input.fontbureau.com/)
 
-### Visual Studio Code Editor
-
-Using [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension with this [Gist](https://gist.github.com/FrancesCoronel/42f14d19392a50ae6fd03feae51ed1de).
-
-#### Open with Terminal
-
-Use `Shell Command: Install 'code' command in PATH`.
-
-![Visual Studio Code](https://i.imgur.com/NBiUCtM.png)
-
-#### Visual Studio Code Extensions
-
-These are synced via Settings Sync automatically.
-
-```bash
-❯ code --list-extensions | xargs -L 1 echo code --install-extension
-```
-
-- `aaron-bond.better-comments`
-- `bierner.markdown-preview-github-styles`
-- `christian-kohler.npm-intellisense`
-- `christian-kohler.path-intellisense`
-- `DavidAnson.vscode-markdownlint`
-- `dbaeumer.vscode-eslint`
-- `dsznajder.es7-react-js-snippets`
-- `eamodio.gitlens`
-- `ecmel.vscode-html-css`
-- `eg2.vscode-npm-script`
-- `esbenp.prettier-vscode`
-- `eseom.nunjucks-template`
-- `formulahendry.auto-close-tag`
-- `formulahendry.auto-rename-tag`
-- `GitHub.codespaces`
-- `GitHub.copilot`
-- `GitHub.github-vscode-theme`
-- `GitHub.vscode-pull-request-github`
-- `jkjustjoshing.vscode-text-pastry`
-- `marvhen.reflow-markdown`
-- `mdickin.markdown-shortcuts`
-- `mgmcdermott.vscode-language-babel`
-- `ms-vsliveshare.vsliveshare`
-- `naumovs.color-highlight`
-- `oderwat.indent-rainbow`
-- `Orta.vscode-jest`
-- `PKief.material-icon-theme`
-- `redhat.vscode-yaml`
-- `remimarsal.prettier-now`
-- `ritwickdey.LiveServer`
-- `Shan.code-settings-sync`
-- `streetsidesoftware.code-spell-checker`
-- `syler.sass-indented`
-- `tehnix.vscode-tidymarkdown`
-- `WakaTime.vscode-wakatime`
-- `wayou.vscode-todo-highlight`
-- `yzhang.markdown-all-in-one`
-- `Zignd.html-css-class-completion`
-
 ### Homebrew
+
+These are listed in `bootstrap.sh`.
 
 - [asciinema](https://asciinema.org/)
 - [duti](http://duti.org/)
@@ -218,30 +165,7 @@ These are synced via Settings Sync automatically.
 - [zsh](http://www.zsh.org/)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-### macOS Apps
-
-#### Casks
-
-A full list of the apps installed automatically using Homebrew Casks can be found at [`init/.casks`](.init/.casks).
-
-#### Manual
-
-These applications don't have casks so they need to be manually downloaded from the App Store upon a fresh install.
-
-- [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
-  - Keeps my computer on
-- [BetterSnapTool](https://itunes.apple.com/us/app/bettersnaptool/id417375580?mt=12)
-  - Easy to drag & resize windows
-- [Day One](http://dayoneapp.com/)
-  - Personal journal
-- [Healthier](https://healthier.lessapps.net/)
-  - Reminds me to take breaks
-- [Irvue](https://apps.apple.com/us/app/irvue/id1039633667?mt=12)
-  - Changes my wallpaper
-- [SnippetsLab](https://www.renfei.org/snippets-lab/)
-  - Makes it easy to reuse snippets/templates
-
-#### Menubar
+### Menubar
 
 ![Menubar](https://i.imgur.com/Wx12TLm.png)
 
@@ -290,6 +214,26 @@ For editors, I have the plugin installed. Otherwise, I just use enter the follow
 ```text
 [settings]
 api_key = MY_API_KEY_GOES_HERE
+```
+
+### Visual Studio Code Editor
+
+I use Settings Sync to manage everything related to VS Code.
+
+#### Open with Terminal
+
+Use `Shell Command: Install 'code' command in PATH`.
+
+![Visual Studio Code](https://i.imgur.com/NBiUCtM.png)
+
+#### Visual Studio Code Extensions
+
+These are synced via Settings Sync automatically.
+
+The command below lists all extensions.
+
+```bash
+❯ code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
 ## Theming
