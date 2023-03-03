@@ -27,11 +27,9 @@
 - [Customizations](#customizations)
   - [Alfred](#alfred)
   - [Chrome](#chrome)
-    - [Chrome Extensions](#chrome-extensions)
   - [Desktop](#desktop)
   - [Fonts](#fonts)
   - [Homebrew](#homebrew)
-  - [Menubar](#menubar)
   - [Screensaver](#screensaver)
   - [Shells](#shells)
     - [Hyper](#hyper)
@@ -89,46 +87,7 @@ With Alfred, I use a theme called [Materialize](https://www.alfredapp.com/extras
 
 ### Chrome
 
-I use a basic white theme for Chrome.
-
-![Chrome Theme](https://i.imgur.com/qZjkvIo.png)
-
-#### Chrome Extensions
-
-These are automatically synced via my Google account.
-
-- 1Password – Password ManagerAdGuard AdBlocker
-- Application Launcher For Drive (by Google)
-- Awesome Screenshot and Screen Recorder
-- axe DevTools - Web Accessibility Testing
-- Calendly: Meeting Scheduling Software
-- Clockwise: Team Time & Calendar Management
-- Designer Tools
-- GIFs for GitHub
-- GoFullPage - Full Page Screen Capture
-- Google Docs Offline
-- Grammarly: Grammar Checker and Writing App
-- I'm a Gentleman
-- JSONVue
-- Loom – Free Screen Recorder & Screen Capture
-- Material Icons for GitHub
-- Neutral Face Emoji Tools
-- Notifier for GitHub
-- Notion Web Clipper
-- Office Editing for Docs, Sheets & Slides
-- Page Ruler
-- Panda 5 - Your favorite websites in one place
-- Pushbullet
-- Raindrop.io
-- React Developer Tools
-- Refined GitHub
-- Sprucemarks
-- Todoist for Chrome
-- Todoist for Gmail
-- Todoist New Tab
-- WakaTime
-- Wappalyzer - Technology profiler
-- Wikiwand: Wikipedia Modernized
+My Chrome theme and extensions are automatically synced via my Google account.
 
 ### Desktop
 
@@ -164,10 +123,6 @@ These are listed in `bootstrap.sh`.
 - [youtube-dl](https://rg3.github.io/youtube-dl/)
 - [zsh](http://www.zsh.org/)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-
-### Menubar
-
-![Menubar](https://i.imgur.com/Wx12TLm.png)
 
 ### Screensaver
 
