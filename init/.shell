@@ -63,15 +63,22 @@ cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc" && source $HOME/.zshrc
 
 echo ""
 echo "Install Powerlevel config"
-cp -RfXv "$DOT/bin/shell/zsh/.p10k.zsh "$HOME/.p10k.zsh"
+# cp -RfXv "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+p10k configure
+
+# setup zsh plugins
 
 # setup zsh-syntax-hightlighting
 echo ""
 echo "Installing ZSH Plugins"
+
 echo "zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+brew install zsh-syntax-highlighting
+
 echo "zsh-auto-suggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+brew install zsh-autosuggestions
 
 echo "source ~/.zshrc"
 source ~/.zshrc

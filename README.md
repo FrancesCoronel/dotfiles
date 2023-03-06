@@ -55,7 +55,9 @@ The `sudo` command is necessary for Homebrew to be installed and for some others
 curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/8.0.zip
 
 # Unzip the file and move to root
-unzip 8.0.zip && mv dotfiles-8.0 .dotfiles && rm 8.0.zip
+unzip 8.0.zip
+mv dotfiles-8.0 .dotfiles
+rm 8.0.zip
 
 # Run bootstrap!
 sh ~/.dotfiles/bootstrap.sh

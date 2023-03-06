@@ -190,7 +190,7 @@
   "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "GitHub Light",
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-  "workbench.colorTheme": "Noctis Lux",
+  "workbench.colorTheme": "GitHub Light",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

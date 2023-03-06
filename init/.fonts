@@ -5,19 +5,19 @@ DOT="$HOME/.dotfiles"
 
 echo ""
 echo "Installing Roboto font... "
-brew cask install font-roboto
+brew install font-roboto --cask
 
 echo ""
 echo "Installing Roboto Mono font... "
-brew cask install font-roboto-mono
+brew install font-roboto-mono --cask
 
 echo ""
 echo "Installing Hack font... "
-brew cask install font-hack
+brew install font-hack --cask
 
 echo ""
 echo "Installing Input font... "
-brew cask install font-input
+brew install font-input --cask
 
 echo ""
 echo "Copying over Latina Essential font..."
