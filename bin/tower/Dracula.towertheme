@@ -1,0 +1,27 @@
+{
+  "name" : "Dracula",
+  "identifier" : "9C04A1A1-D6FF-4C9B-A8D5-9563BDD3C6E9",
+  "fontSize" : 11,
+  "backgroundColor" : {
+    "hexValue" : "282a36",
+    "alpha" : 1,
+    "version" : 3
+  },
+  "textColor" : {
+    "hexValue" : "f8f8f2",
+    "alpha" : 0.75,
+    "version" : 3
+  },
+  "addedColor" : {
+    "hexValue" : "50fa7b",
+    "version" : 3,
+    "alpha" : 0.15
+  },
+  "version" : 4,
+  "deletedColor" : {
+    "hexValue" : "ff5555",
+    "version" : 3,
+    "alpha" : 0.15
+  },
+  "fontName" : "Menlo-Regular",
+}

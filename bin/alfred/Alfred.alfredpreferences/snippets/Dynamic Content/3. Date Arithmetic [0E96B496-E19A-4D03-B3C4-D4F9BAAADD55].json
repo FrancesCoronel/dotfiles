@@ -1,9 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "Let's get fancy with our date formatting and look at the future and past. Again, look at the snippet configuration to see what format was used to create the results below.\n\nTomorrow's date (+1d)\n{date +1d}\n\nYesterday's date in full (-1d: full}\n{date -1d:full}\n\nThe day of the week in two years, 3 months and a day (+2y +3M +1d:EEEE)\n{date +2y +3M +1d:EEEE}",
-    "dontautoexpand" : true,
-    "uid" : "0E96B496-E19A-4D03-B3C4-D4F9BAAADD55",
-    "name" : "3. Date Arithmetic",
-    "keyword" : "darithmetic"
-  }
-}

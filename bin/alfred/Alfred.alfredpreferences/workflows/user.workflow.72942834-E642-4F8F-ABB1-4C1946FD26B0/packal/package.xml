@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<workflow>
-  <name>Add to Fantastical</name>
-  <version>1.0</version>
-  <bundle>com.dean-christensen.fantastical2</bundle>
-  <updated>1456262921</updated>
-  <file>add_to_fantastical.alfredworkflow</file>
-</workflow>

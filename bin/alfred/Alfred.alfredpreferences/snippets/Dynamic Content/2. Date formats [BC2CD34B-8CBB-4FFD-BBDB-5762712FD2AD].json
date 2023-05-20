@@ -1,9 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "Dates can be added by using the keywords date, time and datetime in curly brackets. Here are a few examples of date formats.\n\nClick the button with curly brackets in the bottom left of your snippet's configuration sheet to get quick access to various date and time formats and examples.\n\nCurrent time and date in your Mac's default format\n{datetime}\n\nCurrent date in short\n{date:short}\n\nCurrent time in full\n{time:full}\n\nYou'll find more information on dynamic content here:\nhttps:\/\/www.alfredapp.com\/help\/features\/clipboard\/dynamic-placeholders\/",
-    "dontautoexpand" : true,
-    "uid" : "BC2CD34B-8CBB-4FFD-BBDB-5762712FD2AD",
-    "name" : "2. Date formats",
-    "keyword" : "dformats"
-  }
-}
