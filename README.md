@@ -57,7 +57,7 @@ curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/9.0.zip
 
 # Unzip the file and move to root
 unzip 9.0.zip
-mv dotfiles-8.0 .dotfiles
+mv dotfiles-9.0 .dotfiles
 rm 9.0.zip
 
 # Run bootstrap!
