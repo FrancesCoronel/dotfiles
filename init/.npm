@@ -15,8 +15,6 @@ npm config set save-exact true
 
 npm install
 
-node index.js
-
 # list Packages that will be installed
 node_modules=(
   conduct

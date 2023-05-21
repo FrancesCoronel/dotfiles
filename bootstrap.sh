@@ -50,7 +50,7 @@ check () { type -t "${@}" > /dev/null 2>&1; }
 
 # function to install Homebrew Formulas
 install_formula () {
-  DOTFILE="$HOME/Dropbox/github/dotfiles"
+  DOTFILE="$HOME/Dropbox/Code/dotfiles"
 
   echo ""
   echo "${LGREEN}Installing Homebrew Packages...${NC}"
@@ -70,7 +70,6 @@ install_formula () {
   brew install yarn
   brew install youtube-dl
   brew install zsh
-  brew install zsh-syntax-highlighting
 
   # cleanup
   echo ""
@@ -124,8 +123,8 @@ fi
 
 # install Homebrew Formulas
 while true; do
-  read -p "${LGREEN}Would you like to install Homebrew formulas? [y/n]${NC}" answer
-  echo ""
+  read -p "Would you like to install Homebrew formulas? [y/n]" answer
+  echo "${NC}"
   case $answer in
     [y/Y]* ) install_formula; break;;
     [n/N]* ) break;;

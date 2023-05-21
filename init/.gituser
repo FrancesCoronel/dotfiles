@@ -30,7 +30,6 @@ function setdefaultgitconfig () {
   echo "Okay all good"
 }
 
-
 function gitconfig () {
   read -p "Please enter your Git Author Name: " GIT_AUTHOR_NAME
   git config --global user.name "$GIT_AUTHOR_NAME"

@@ -2,7 +2,6 @@
 
 DOT="$HOME/.dotfiles"
 
-
 echo ""
 echo "Installing Roboto font... "
 brew install font-roboto --cask
@@ -22,5 +21,9 @@ brew install font-input --cask
 echo ""
 echo "Copying over Latina Essential font..."
 cp -RfXv $DOT/bin/fonts/Latina-Essential ~/Library/Fonts/
+
+echo ""
+echo "Copying over MesloLGS font..."
+cp -RfXv $DOT/bin/fonts/MesloLGS ~/Library/Fonts/
 
 brew cleanup

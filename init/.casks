@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-RED='\033[0;31m' # Red Color
-YELLOW='\033[1;33m' # Yellow Color
-NC='\033[0m' # No Color
+# Red Color
+RED='\033[0;31m'
+# Yellow Color
+YELLOW='\033[1;33m'
+# No Color
+NC='\033[0m'
 
+# Install all casks
 function cask() {
   if brew info "${@}" | grep "Not installed" > /dev/null; then
     brew install "${@}" --cask
@@ -16,8 +20,6 @@ cask 1password
 cask aerial
 cask alfred
 cask apparency
-cask betterzipql
-cask between
 cask camo-studio
 cask cardhop
 cask cleanmymac
@@ -62,6 +64,7 @@ cask the-unarchiver
 cask tower
 cask tyke
 cask visual-studio-code
+cask warp
 cask webpquicklook
 cask whatsapp
 cask zoom

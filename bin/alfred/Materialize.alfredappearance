@@ -1,7 +1,7 @@
 {
   "alfredtheme" : {
     "result" : {
-      "textSpacing" : 5,
+      "textSpacing" : 7,
       "subtext" : {
         "size" : 10,
         "colorSelected" : "#B0BEC6FF",
@@ -9,42 +9,45 @@
         "color" : "#ECEFF235"
       },
       "shortcut" : {
-        "size" : 20,
-        "colorSelected" : "#00BCD3FF",
+        "size" : 24,
+        "colorSelected" : "#179FB0FF",
         "font" : "Avenir",
         "color" : "#00BCD3FF"
       },
       "backgroundSelected" : "#ECEFF23F",
       "text" : {
-        "size" : 20,
+        "size" : 22,
         "colorSelected" : "#FEFFFFFF",
         "font" : "Roboto",
         "color" : "#5D7D87BF"
       },
-      "iconPaddingHorizontal" : 5,
+      "iconPaddingHorizontal" : 15,
+      "roundness" : 0,
       "paddingVertical" : 8,
-      "iconSize" : 40
+      "iconSize" : 50
     },
     "search" : {
-      "paddingVertical" : 0,
-      "background" : "#26323800",
+      "backgroundSelected" : "#179FB0FF",
+      "paddingHorizontal" : 8,
       "spacing" : 10,
       "text" : {
-        "size" : 50,
-        "colorSelected" : "#000000FF",
+        "size" : 45,
+        "colorSelected" : "#0D2935FF",
         "font" : "Roboto",
         "color" : "#ECEFF2FF"
       },
-      "backgroundSelected" : "#B2D7FFFF"
+      "background" : "#0D2935FF",
+      "roundness" : 0,
+      "paddingVertical" : 7
     },
     "window" : {
-      "color" : "#263239FF",
-      "paddingHorizontal" : 10,
-      "width" : 560,
+      "color" : "#0D2935FF",
+      "paddingHorizontal" : 0,
+      "width" : 700,
       "borderPadding" : 10,
       "borderColor" : "#26323900",
       "blur" : 40,
-      "roundness" : 3,
+      "roundness" : 5,
       "paddingVertical" : 10
     },
     "credit" : "Frances Coronel",
@@ -56,6 +59,6 @@
       "color" : "#ECEFF226",
       "thickness" : 2
     },
-    "name" : "Materialize"
+    "name" : "Materialize 6.0"
   }
 }

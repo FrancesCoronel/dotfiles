@@ -14,9 +14,6 @@ echo ""
 echo "Downloading asciinema to record terminal sessions"
 curl -sL https://asciinema.org/install | sh
 
-# change git commit editor to nano
-# git config --global core.editor nano
-
 # change git commit editor to VS Code
 echo ""
 echo "Changing default editor to code"
@@ -50,23 +47,16 @@ echo "Setting Materialize.terminal as the default theme."
 defaults write com.apple.terminal "Default Window Settings" -string "Materialize.terminal"
 defaults write com.apple.terminal "Startup Window Settings" -string "Materialize.terminal"
 
-# Link .zshrc
 echo ""
-echo "Install FVCproductions zsh-theme"
-cp -RfXv "$DOT/bin/shell/zsh/fvcproductions.zsh-theme" "$HOME/.oh-my-zsh/themes/fvcproductions.zsh-theme"
-cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc" && source $HOME/.zshrc
-
-echo ""
-echo "Install Refined zsh-theme"
-cp -RfXv "$DOT/bin/shell/zsh/refined.zsh-theme" "$HOME/.oh-my-zsh/themes/refined.zsh-theme"
-cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc" && source $HOME/.zshrc
+echo "Install ZSH config"
+cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
 
 echo ""
 echo "Install Powerlevel config"
-# cp -RfXv "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-p10k configure
+cp -RfXv "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+# p10k configure
 
 # setup zsh plugins
 
@@ -80,12 +70,24 @@ brew install zsh-syntax-highlighting
 echo "zsh-auto-suggestions"
 brew install zsh-autosuggestions
 
+echo "zsh-wakatime"
+python3 -m pip install --upgrade setuptools
+python3 -m pip install --upgrade pip
+pip install wakatime
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/wbingli/zsh-wakatime.git
+
+echo ""
+echo "Finalize ZSH Plugins"
 echo "source ~/.zshrc"
 source ~/.zshrc
 
 echo ""
-echo "Adding on zsh env file"
-cp -RfXv "$DOT/bin/shell/.zshenv" "$HOME/.zshenv" && source $HOME/.zshenv
+echo "Setting up zsh profile"
+cp -RfXv "$DOT/bin/shell/.zprofile" "$HOME/.zprofile"
+
+echo "Setting up zsh environment"
+cp -RfXv "$DOT/bin/shell/.zshenv" "$HOME/.zshenv"
+source $HOME/.zshenv
 
 echo ""
 echo "Set ZSH as default"

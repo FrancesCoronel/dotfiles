@@ -21,7 +21,7 @@
 >
 > Background photo from [Unsplash](https://unsplash.com/).
 
-![Showcase](https://i.imgur.com/ErIiC3v.png)
+![Showcase](https://i.imgur.com/CSfpCwp.png)
 
 - [Installation](#installation)
 - [Customizations](#customizations)
@@ -35,9 +35,10 @@
     - [Hyper](#hyper)
     - [iTerm 2](#iterm-2)
     - [Terminal](#terminal)
+    - [Warp (Primary)](#warp-primary)
   - [Tracking](#tracking)
   - [Visual Studio Code Editor](#visual-studio-code-editor)
-    - [Open with Terminal](#open-with-terminal)
+    - [Code Command in Path](#code-command-in-path)
     - [Visual Studio Code Extensions](#visual-studio-code-extensions)
 - [Theming](#theming)
 - [Usage](#usage)
@@ -52,12 +53,12 @@ The `sudo` command is necessary for Homebrew to be installed and for some others
 
 ```bash
 # Download latest version from Github
-curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/8.0.zip
+curl -L -O https://github.com/FrancesCoronel/dotfiles/archive/9.0.zip
 
 # Unzip the file and move to root
-unzip 8.0.zip
+unzip 9.0.zip
 mv dotfiles-8.0 .dotfiles
-rm 8.0.zip
+rm 9.0.zip
 
 # Run bootstrap!
 sh ~/.dotfiles/bootstrap.sh
@@ -99,10 +100,12 @@ I use the [Irvue](https://leonspok.com/irvue/landing/) app to automatically gene
 
 ### Fonts
 
-- [Roboto](https://fonts.google.com/specimen/Roboto)
-- [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
 - [Hack](https://github.com/source-foundry/Hack)
 - [Input](http://input.fontbureau.com/)
+- [Latina Essential](https://www.behance.net/gallery/51912641/Latina-Essential-Free?locale=en_US)
+- [MesloLGS](https://github.com/andreberg/Meslo-Font)
+- [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
+- [Roboto](https://fonts.google.com/specimen/Roboto)
 
 ### Homebrew
 
@@ -110,8 +113,8 @@ These are listed in `bootstrap.sh`.
 
 - [asciinema](https://asciinema.org/)
 - [duti](http://duti.org/)
-- [git](https://git-scm.com/)
 - [git-lfs](https://git-lfs.github.com/)
+- [git](https://git-scm.com/)
 - [howdoi](https://github.com/gleitz/howdoi)
 - [hugo](https://gohugo.io/)
 - [libav](https://www.libav.org/)
@@ -124,7 +127,6 @@ These are listed in `bootstrap.sh`.
 - [yarn](https://yarnpkg.com/en/)
 - [youtube-dl](https://rg3.github.io/youtube-dl/)
 - [zsh](http://www.zsh.org/)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ### Screensaver
 
@@ -152,7 +154,7 @@ mv ~Dropbox/Code/dotfiles/bin/shell/hyper/hyper.config.js ~/.hyper.js
 
 #### iTerm 2
 
-Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/bin/shell/iterm`.
+Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/bin/shell/iterm` under `General > Preferences`.
 
 ![iTerm 2](https://i.imgur.com/8XcQqsh.png)
 
@@ -161,6 +163,12 @@ Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/bin/shell/iterm`.
 Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/bin/shell/terminal/Materialize.terminal`.
 
 ![Terminal](https://i.imgur.com/kaqt9BC.png)
+
+#### Warp (Primary)
+
+Don't have to do anything here except sign in after you install it.
+
+![Warp](https://i.imgur.com/EGSii5Y.png)
 
 ### Tracking
 
@@ -177,9 +185,9 @@ api_key = MY_API_KEY_GOES_HERE
 
 I use Settings Sync to manage everything related to VS Code.
 
-#### Open with Terminal
+#### Code Command in Path
 
-Use `Shell Command: Install 'code' command in PATH`.
+Manually use `Shell Command: Install 'code' command in PATH`.
 
 ![Visual Studio Code](https://i.imgur.com/NBiUCtM.png)
 
@@ -197,18 +205,16 @@ The command below lists all extensions.
 
 Accents are as follows in accordance to [Sublime Text 3 Material Theme](https://github.com/equinusocio/material-theme).
 
-![Lime](https://img.shields.io/badge/Lime-%237CB342-lightgrey.svg?colorB=7CB342) ![Purple](https://img.shields.io/badge/Purple-%23AB47BC-lightgrey.svg?colorB=AB47BC) ![Red](https://img.shields.io/badge/Red-%23E57373-lightgrey.svg?colorB=E57373) ![Red Orange](https://img.shields.io/badge/Red_Orange-%23F74A50-lightgrey.svg?colorB=F74A50) ![Orange](https://img.shields.io/badge/Orange-%23FF7042-lightgrey.svg?colorB=FF7042) ![Yellow](https://img.shields.io/badge/Yellow-%23FFA000-lightgrey.svg?colorB=FFA000) ![Indigo](https://img.shields.io/badge/Indigo-%235C6BC0-lightgrey.svg?colorB=5C6BC0) ![Pink](https://img.shields.io/badge/Pink-%23FF4081-lightgrey.svg?colorB=FF4081) ![Blue](https://img.shields.io/badge/Blue-%232979FF-lightgrey.svg?colorB=2979FF) ![Cyan](https://img.shields.io/badge/Cyan-%2300BCD4-lightgrey.svg?colorB=00BCD4)
-
-- Lime — `#7CB342`
-- Purple — `#AB47BC`
-- Red — `#E57373`
-- Red orange — `#F74A50`
-- Orange — `#FF7042`
-- Yellow — `#FFA000`
-- Indigo — `#5C6BC0`
-- Pink — `#FF4081`
-- Blue — `#2979FF`
-- Cyan — `#00BCD4`
+![Blue](https://img.shields.io/badge/Blue-%232979FF-lightgrey.svg?colorB=2979FF)
+![Cyan](https://img.shields.io/badge/Cyan-%2300BCD4-lightgrey.svg?colorB=00BCD4)
+![Indigo](https://img.shields.io/badge/Indigo-%235C6BC0-lightgrey.svg?colorB=5C6BC0)
+![Lime](https://img.shields.io/badge/Lime-%237CB342-lightgrey.svg?colorB=7CB342)
+![Orange](https://img.shields.io/badge/Orange-%23FF7042-lightgrey.svg?colorB=FF7042)
+![Pink](https://img.shields.io/badge/Pink-%23FF4081-lightgrey.svg?colorB=FF4081)
+![Purple](https://img.shields.io/badge/Purple-%23AB47BC-lightgrey.svg?colorB=AB47BC)
+![Red Orange](https://img.shields.io/badge/Red_Orange-%23F74A50-lightgrey.svg?colorB=F74A50)
+![Red](https://img.shields.io/badge/Red-%23E57373-lightgrey.svg?colorB=E57373)
+![Yellow](https://img.shields.io/badge/Yellow-%23FFA000-lightgrey.svg?colorB=FFA000)
 
 ## Usage
 
@@ -218,7 +224,7 @@ If you decide to utilize these configurations, please make sure to give me some 
 
 I'm very open to contributions so please feel free to
 
-1. 🍴 [Fork this repo](https://github.com/FrancesCoronel/dotfiles#fork-destination-box)
+1. 🍴 [Fork this repo](https://github.com/FrancesCoronel/dotfiles/fork)
 2. 🔨 Follow the [contributing guidelines](CONTRIBUTING.md)
 3. 👥 Add yourself as a contributor under the Kudos section
 4. 🔧 [Make a pull request](https://github.com/FrancesCoronel/dotfiles/compare)
@@ -238,15 +244,15 @@ More details can be found at this project's [code of conduct](CODE_OF_CONDUCT.md
 
 ### Kudos
 
+- [@agarrharr](https://github.com/agarrharr)
+- [@cowboy](https://github.com/cowboy/dotfiles/)
+- [@equinusocio](https://github.com/equinusocio)
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
 - [@necolas](https://github.com/necolas/dotfiles)
-- [@cowboy](https://github.com/cowboy/dotfiles/)
-- [@ptb](https://github.com/ptb/Mac-OS-X-Lion-Setup)
 - [@pongstr](https://twitter.com/pongstr)
+- [@ptb](https://github.com/ptb/Mac-OS-X-Lion-Setup)
 - [@sindresorhus](https://github.com/sindresorhus)
-- [@equinusocio](https://github.com/equinusocio)
-- [@agarrharr](https://github.com/agarrharr)
-- [GitHub - `awesome-macOS`](https://github.com/iCHAIT/awesome-macOS)
 - [GitHub - `awesome-mac`](https://github.com/jaywcjlove/awesome-mac)
 - [Github - `awesome-macos-screensaver`](https://github.com/agarrharr/awesome-macos-screensaver)
+- [GitHub - `awesome-macOS`](https://github.com/iCHAIT/awesome-macOS)
 - [Shields.io - README Badges](http://shields.io/)

@@ -22,7 +22,7 @@ duti -s com.microsoft.VSCode .md editor
 duti -s com.microsoft.VSCode .txt editor
 duti -s com.microsoft.VSCode .cpp editor
 duti -s com.microsoft.VSCode .css editor
-duti -s com.microsoft.VSCode public.html editor
+duti -s com.microsoft.VSCode .html editor
 duti -s com.microsoft.VSCode .js editor
 duti -s com.microsoft.VSCode .m editor
 duti -s com.microsoft.VSCode .mm editor
@@ -105,7 +105,6 @@ echo "Set the size of icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
 
-
 # INPUT
 
 echo "Increasing sound quality for Bluetooth headphones/headsets"
@@ -136,15 +135,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-echo ""
-echo "Setting scroll gesture with the Ctrl (^) modifier key to zoom"
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-
-echo ""
-echo "Setting to follow the keyboard focus while zoomed in"
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
 # SCREEN
 
 echo "Enabling subpixel font rendering on non-Apple LCDs"
@@ -153,7 +143,6 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 echo ""
 echo "Enable HiDPI display modes (requires restart)"
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
 
 # FINDER
 
@@ -219,7 +208,6 @@ echo ""
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-
 # DOCK
 
 echo ""
@@ -241,10 +229,6 @@ defaults write com.apple.dock expose-animation-duration -float 0.3
 echo ""
 echo "Reset Launchpad, but keep the desktop wallpaper intact"
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
-
-echo ""
-echo "Adding iOS Simulator to Launchpad"
-ln -sf /Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app /Applications/iOS\ Simulator.app
 
 # SAFARI
 

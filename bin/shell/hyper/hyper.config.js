@@ -6,7 +6,7 @@ module.exports = {
   config: {
     // hyper-spotify config
     hyperSpotify: {
-      position: "bottom" // or 'bottom'
+      position: "bottom", // or 'bottom'
     },
     // Choose either "stable" for receiving highly polished,
     // or "canary" for less polished but more frequent updates
@@ -37,8 +37,7 @@ module.exports = {
     borderColor: "",
 
     // custom css to embed in the main window
-    css:
-      "li.tab_tab.tab_active, .tab_tab.tab_active { border-bottom-width: 2px !important; border-bottom-color: #42A5F5 !important; } .tabs-nav { font-size: 20px !important; };",
+    css: "li.tab_tab.tab_active, .tab_tab.tab_active { border-bottom-width: 2px !important; border-bottom-color: #42A5F5 !important; } .tabs-nav { font-size: 20px !important; };",
 
     // custom css to embed in the terminal window
     termCSS: "",
@@ -74,7 +73,7 @@ module.exports = {
       lightBlue: "#42A5F5",
       lightMagenta: "#D81B60",
       lightCyan: "#00ACC1",
-      lightWhite: "#F5F5F5"
+      lightWhite: "#F5F5F5",
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -102,7 +101,7 @@ module.exports = {
     bell: "SOUND",
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: false,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -125,7 +124,7 @@ module.exports = {
     `hypercwd`,
     // `hyper-one-light`,
     `hyper-sync-settings`,
-    `hyperterm-paste`
+    `hyperterm-paste`,
   ],
 
   // in development, you can create a directory under
@@ -136,5 +135,5 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
-  }
+  },
 };

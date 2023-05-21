@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# bash_aliases
-
 # Home Folders
 alias home="cd ~ && clear"
 alias apps="cd /Applications/"

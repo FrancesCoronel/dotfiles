@@ -34,6 +34,7 @@ Numerous always-ignore extensions
 
 # OS or Editor folders
 .DS_Store
+*.DS_Store
 ._*
 Thumbs.db
 .cache
