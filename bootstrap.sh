@@ -95,7 +95,7 @@ install_formula () {
 echo ""
 echo "${LGREEN}Installing hushlogin...${NC}"
 echo "Disabling the system copyright notice, the date and time of the last login."
-echo "More info at @mathiasbynens/dotfiles http://goo.gl/wZBM80."
+echo "More info at https://github.com/FrancesCoronel/dotfiles/blob/master/init/.hushlogin"
 echo ""
 yes | cp -rf "$DOTFILE/init/.hushlogin" $HOME/.hushlogin
 touch .hushlogin
@@ -109,7 +109,7 @@ if check brew; then
   echo "${YELLOW}Awesome! Homebrew is installed! Now updating...${NC}"
   echo ""
   brew upgrade
-  brew update --all
+  brew update
 fi
 
 if ! check brew; then
