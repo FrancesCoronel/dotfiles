@@ -57,6 +57,7 @@ echo "Install Powerlevel config"
 brew install powerlevel10k
 echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 cp "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/$USER/.zprofile
 source ~/.zshrc
 # p10k configure
 
