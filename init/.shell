@@ -4,11 +4,11 @@ DOT="$HOME/.dotfiles"
 
 echo ""
 echo "Initializing .bash_aliases"
-cp -RfXv $DOT/bin/shell/.bash_aliases $HOME/.bash_aliases
+cp "$DOT/bin/shell/.bash_aliases" "$HOME/.bash_aliases"
 
 echo ""
 echo "Initializing .bash_profile"
-cp -RfXv $DOT/bin/shell/.bash_profile $HOME/.bash_profile
+cp "$DOT/bin/shell/.bash_profile" "$HOME/.bash_profile"
 
 echo ""
 echo "Downloading asciinema to record terminal sessions"
@@ -49,7 +49,7 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Materialize
 
 echo ""
 echo "Install ZSH config"
-cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
+cp "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
 
 echo ""
 echo "Install Powerlevel config"
@@ -83,10 +83,10 @@ source ~/.zshrc
 
 echo ""
 echo "Setting up zsh profile"
-cp -RfXv "$DOT/bin/shell/.zprofile" "$HOME/.zprofile"
+cp "$DOT/bin/shell/.zprofile" "$HOME/.zprofile"
 
 echo "Setting up zsh environment"
-cp -RfXv "$DOT/bin/shell/.zshenv" "$HOME/.zshenv"
+cp "$DOT/bin/shell/.zshenv" "$HOME/.zshenv"
 source $HOME/.zshenv
 
 echo ""
