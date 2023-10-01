@@ -54,7 +54,7 @@ cp -RfXv "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
 echo ""
 echo "Install Powerlevel config"
 brew install romkatv/powerlevel10k/powerlevel10k
-cp -RfXv "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+cp "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 # p10k configure
 
