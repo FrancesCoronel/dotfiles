@@ -53,7 +53,7 @@ cp "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
 
 echo ""
 echo "Install Powerlevel config"
-brew install romkatv/powerlevel10k/powerlevel10k
+brew install powerlevel10k
 cp "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 # p10k configure
