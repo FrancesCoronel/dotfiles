@@ -50,12 +50,14 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Materialize
 echo ""
 echo "Install ZSH config"
 cp "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
+eval $(/opt/homebrew/bin/brew shellenv)
 
 echo ""
 echo "Install Powerlevel config"
 brew install powerlevel10k
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 cp "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
-source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zshrc
 # p10k configure
 
 # setup zsh plugins
