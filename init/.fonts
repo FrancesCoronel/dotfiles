@@ -11,6 +11,11 @@ echo "Installing Roboto Mono font... "
 brew install font-roboto-mono --cask
 
 echo ""
+echo "Installing Nerd Fonts"
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+
+echo ""
 echo "Installing Hack font... "
 brew install font-hack --cask
 
