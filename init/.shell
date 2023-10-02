@@ -69,14 +69,16 @@ echo "Installing ZSH Plugins"
 
 echo "zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 echo "zsh-auto-suggestions"
 brew install zsh-autosuggestions
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions 
 
 echo "zsh-wakatime"
 python3 -m pip install --upgrade setuptools
 python3 -m pip install --upgrade pip
-pip install wakatime
+pip3 install wakatime
 cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/wbingli/zsh-wakatime.git
 
 echo ""
