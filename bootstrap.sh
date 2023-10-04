@@ -57,6 +57,7 @@ install_formula () {
 
   brew install asciinema
   brew install duti
+  brew install gh
   brew install git
   brew install git-lfs
   brew install howdoi
