@@ -1,8 +1,3 @@
-## Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 ## Exports
 
 # Update path
@@ -81,3 +76,4 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
