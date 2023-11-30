@@ -5,7 +5,7 @@ echo "Asking for the administrator password upfront"
 sudo -v
 
 echo ""
-echo "Keep-alive: update existing `sudo` time stamp until `.osx` has finished"
+echo "Keep-alive: update existing sudo time stamp until .osx has finished"
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo ""
@@ -22,7 +22,6 @@ duti -s com.microsoft.VSCode .md editor
 duti -s com.microsoft.VSCode .txt editor
 duti -s com.microsoft.VSCode .cpp editor
 duti -s com.microsoft.VSCode .css editor
-duti -s com.microsoft.VSCode .html editor
 duti -s com.microsoft.VSCode .js editor
 duti -s com.microsoft.VSCode .m editor
 duti -s com.microsoft.VSCode .mm editor
@@ -226,51 +225,8 @@ echo ""
 echo "Speed up Mission Control animations"
 defaults write com.apple.dock expose-animation-duration -float 0.3
 
-echo ""
-echo "Reset Launchpad, but keep the desktop wallpaper intact"
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
-
 # SAFARI
-
-echo ""
-echo "Show Safari’s bookmarks bar by default"
-defaults write com.apple.Safari ShowFavoritesBar -bool true
-
-echo ""
-echo "Set Safari’s home page to about:blank for faster loading"
-defaults write com.apple.Safari HomePage -string "about:blank"
-
-echo ""
-echo "Prevent Safari from opening ‘safe’ files automatically after downloading"
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-
-echo ""
-echo "Hide Safari’s sidebar in Top Sites"
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-
-echo ""
-echo "Disable Safari’s thumbnail cache for History and Top Sites"
-defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-
-echo ""
-echo "Enable Safari’s debug menu"
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-
-echo ""
-echo "Make Safari’s search banners default to Contains instead of Starts With"
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 echo ""
 echo "Add a context menu item for showing the Web Inspector in web views"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-echo ""
-echo "Enable the Develop menu and the Web Inspector in Safari"
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-echo ""
-echo "Enable Safari Continuous Spellchecking and Disabled Auto-correction"
-defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
-defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
