@@ -56,7 +56,7 @@ echo ""
 echo "Install Powerlevel config"
 brew install powerlevel10k
 cp "${DOTFILES}/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
-cp "${DOTFILES}/bin/shell/zsh/.zprofile" "/Users/$USER/.zprofile"
+cp "${DOTFILES}/bin/shell/.zprofile" "/Users/$USER/.zprofile"
 source ~/.zshrc
 # p10k configure
 
@@ -96,6 +96,10 @@ source $HOME/.zshenv
 echo ""
 echo "Set ZSH as default"
 chsh -s $(which zsh)
+
+echo ""
+echo "Set up P10K"
+p10k configure
 
 sleep 1
 killall Terminal
