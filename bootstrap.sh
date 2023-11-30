@@ -20,6 +20,12 @@ WHITE='\033[1;37m'
 
 NC='\033[0m' # No Color
 
+# Dotfiles directory
+
+DOTFILES="$HOME/.dotfiles"
+
+# Intro message
+
 echo "${CYAN}
  ******** **      **   ******
 /**///// /**     /**  **////**
@@ -50,8 +56,6 @@ check () { type -t "${@}" > /dev/null 2>&1; }
 
 # function to install Homebrew Formulas
 install_formula () {
-  DOTFILE="$HOME/.dotfiles"
-
   echo ""
   echo "${LGREEN}Installing Homebrew Packages...${NC}"
 
@@ -77,11 +81,18 @@ install_formula () {
   echo "${LGREEN}Cleaning up Homebrew installation...${NC}"
   brew cleanup
 
-  yes | cp -rf $DOTFILE/bin/shell/.bashrc $HOME/.bashrc
-  yes | cp -rf $DOTFILE/bin/shell/.bash_alias $HOME/.bash_alias
-  yes | cp -rf $DOTFILE/bin/shell/.bash_profile $HOME/.bash_profile
+  yes | cp -rf ${DOTFILES}/bin/shell/.bashrc $HOME/.bashrc
+  yes | cp -rf ${DOTFILES}/bin/shell/.bash_aliases $HOME/.bash_aliases
+  yes | cp -rf ${DOTFILES}/bin/shell/.bash_profile $HOME/.bash_profile
 
   echo "${LGREEN}Installing Caskroom, Caskroom versions, Caskroom Fonts and Brew Services${NC}"
+
+  # restart terminal to apply changes
+  echo "✔ ✔ ✔ ✔ ✔
+  ${LGREEN}Bootstrapping complete!
+  ✔ ✔ ✔ ✔ ✔{$NC}"
+  echo "Quitting terminal now...${NC}"
+
   brew tap homebrew/cask
   brew tap homebrew/services
   brew tap homebrew/cask-versions
@@ -90,6 +101,12 @@ install_formula () {
   # Make /Applications the default location of installed Homebrew casks
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+  killall Terminal
+}
+
+# no problem
+no_homebrew () {
+  echo "${CYAN}Okay no problem, you can move on to the next step now.${NC}"
 }
 
 # install Hushlogin
@@ -98,7 +115,7 @@ echo "${LGREEN}Installing hushlogin...${NC}"
 echo "Disabling the system copyright notice, the date and time of the last login."
 echo "More info at https://github.com/FrancesCoronel/dotfiles/blob/master/init/.hushlogin"
 echo ""
-yes | cp -rf "$DOTFILE/init/.hushlogin" $HOME/.hushlogin
+yes | cp -rf "${DOTFILES}/init/.hushlogin" $HOME/.hushlogin
 touch .hushlogin
 
 # install Homebrew
@@ -128,13 +145,7 @@ while true; do
   echo "${NC}"
   case $answer in
     [y/Y]* ) install_formula; break;;
-    [n/N]* ) break;;
+    [n/N]* ) no_homebrew; break;;
     * ) echo "${RED}Please answer Y or N.${NC}";;
   esac
 done
-
-# restart terminal to apply changes
-echo ""
-echo "${LGREEN}Bootstrapping complete!"
-echo "Quitting terminal now...${NC}"
-killall Terminal
