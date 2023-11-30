@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-DOT="$HOME/.dotfiles"
+DOTFILES="$HOME/.dotfiles"
 
 echo ""
 echo "Initializing .bash_aliases"
-cp "$DOT/bin/shell/.bash_aliases" "$HOME/.bash_aliases"
+cp "${DOTFILES}/bin/shell/.bash_aliases" "$HOME/.bash_aliases"
 
 echo ""
 echo "Initializing .bash_profile"
-cp "$DOT/bin/shell/.bash_profile" "$HOME/.bash_profile"
+cp "${DOTFILES}/bin/shell/.bash_profile" "$HOME/.bash_profile"
 
 echo ""
 echo "Downloading asciinema to record terminal sessions"
@@ -38,7 +38,7 @@ xcode-select --install
 # Open Terminal Settings
 echo ""
 echo "Install Materialize Theme for Terminal"
-open "$DOT/bin/shell/terminal/Materialize.terminal"
+open "${DOTFILES}/bin/shell/terminal/Materialize.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 
 # Set Terminal Custom Theme
@@ -49,15 +49,14 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Materialize
 
 echo ""
 echo "Install ZSH config"
-cp "$DOT/bin/shell/.zshrc" "$HOME/.zshrc"
+cp "${DOTFILES}/bin/shell/.zshrc" "$HOME/.zshrc"
 eval $(/opt/homebrew/bin/brew shellenv)
 
 echo ""
 echo "Install Powerlevel config"
 brew install powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-cp "$DOT/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
-echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/$USER/.zprofile
+cp "${DOTFILES}/bin/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+cp "${DOTFILES}/bin/shell/zsh/.zprofile" "/Users/$USER/.zprofile"
 source ~/.zshrc
 # p10k configure
 
@@ -88,10 +87,10 @@ source ~/.zshrc
 
 echo ""
 echo "Setting up zsh profile"
-cp "$DOT/bin/shell/.zprofile" "$HOME/.zprofile"
+cp "${DOTFILES}/bin/shell/.zprofile" "$HOME/.zprofile"
 
 echo "Setting up zsh environment"
-cp "$DOT/bin/shell/.zshenv" "$HOME/.zshenv"
+cp "${DOTFILES}/bin/shell/.zshenv" "$HOME/.zshenv"
 source $HOME/.zshenv
 
 echo ""
