@@ -7,7 +7,7 @@ on:
 
 jobs:
   triage:
-    uses: FrancesCoronel/workflows/.github/workflows/community-triage.yml@main
+    uses: FrancesCoronel/workflows/.github/workflows/community-triage.yml@v1
     permissions:
       pull-requests: write
       issues: write

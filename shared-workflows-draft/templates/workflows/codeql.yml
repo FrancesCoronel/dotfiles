@@ -10,7 +10,7 @@ on:
 
 jobs:
   codeql:
-    uses: FrancesCoronel/workflows/.github/workflows/codeql.yml@main
+    uses: FrancesCoronel/workflows/.github/workflows/codeql.yml@v1
     permissions:
       contents: read
       security-events: write

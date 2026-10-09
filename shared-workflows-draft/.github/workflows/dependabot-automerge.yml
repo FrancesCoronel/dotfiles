@@ -25,7 +25,7 @@ jobs:
       pull-requests: write
     steps:
       - id: meta
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -53,6 +53,8 @@ jobs:
           PREV: ${{ steps.meta.outputs.previous-version }}
           NEW: ${{ steps.meta.outputs.new-version }}
         run: |
+          # Runs again on every rebase, so only comment the first time
+          if gh pr view "$PR" --json labels -q '.labels[].name' | grep -qx major-update; then exit 0; fi
           gh label create "major-update" --color B60205 --description "Major version bump, needs manual review" --force -R "$GITHUB_REPOSITORY"
           gh pr edit "$PR" --add-label "major-update"
           gh pr comment "$PR" --body "⚠️ Major bump ($DEPS $PREV → $NEW). CI passed, but this one waits for a human: check the changelog for breaking changes before merging."

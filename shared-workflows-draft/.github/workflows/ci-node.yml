@@ -1,14 +1,19 @@
 # Reusable CI for Node projects. Detects npm / pnpm / yarn and runs whichever
-# of lint, typecheck, test and build the repo defines in package.json.
+# of lint, typecheck, test and build the repo defines in package.json, then
+# audits production dependencies.
 name: CI (Node)
 
 on:
   workflow_call:
     inputs:
       node-version:
-        description: Node version
+        description: Node version. Empty means use .nvmrc / .node-version if present, else 24
         type: string
-        default: "22"
+        default: ""
+      pnpm-version:
+        description: pnpm version. Empty means read packageManager from package.json
+        type: string
+        default: ""
       working-directory:
         type: string
         default: "."
@@ -17,7 +22,7 @@ on:
         type: boolean
         default: true
       audit:
-        description: Fail on high/critical vulns in production deps
+        description: Fail on high/critical vulns in production deps (npm and pnpm)
         type: boolean
         default: true
 
@@ -37,19 +42,30 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Detect package manager
+      - name: Detect package manager and Node version
         id: pm
+        env:
+          NODE_INPUT: ${{ inputs.node-version }}
         run: |
+          # pnpm wins over a stray package-lock.json
           if [ -f pnpm-lock.yaml ]; then echo "pm=pnpm" >> "$GITHUB_OUTPUT"
           elif [ -f yarn.lock ]; then echo "pm=yarn" >> "$GITHUB_OUTPUT"
           else echo "pm=npm" >> "$GITHUB_OUTPUT"; fi
+          if [ -n "$NODE_INPUT" ]; then echo "node=$NODE_INPUT" >> "$GITHUB_OUTPUT"
+          elif [ -f .nvmrc ]; then echo "node-file=${{ inputs.working-directory }}/.nvmrc" >> "$GITHUB_OUTPUT"
+          elif [ -f .node-version ]; then echo "node-file=${{ inputs.working-directory }}/.node-version" >> "$GITHUB_OUTPUT"
+          else echo "node=24" >> "$GITHUB_OUTPUT"; fi
 
       - if: steps.pm.outputs.pm == 'pnpm'
         uses: pnpm/action-setup@v6
+        with:
+          version: ${{ inputs.pnpm-version }}
+          package_json_file: ${{ inputs.working-directory }}/package.json
 
       - uses: actions/setup-node@v7
         with:
-          node-version: ${{ inputs.node-version }}
+          node-version: ${{ steps.pm.outputs.node }}
+          node-version-file: ${{ steps.pm.outputs.node-file }}
           cache: ${{ steps.pm.outputs.pm }}
           cache-dependency-path: ${{ inputs.working-directory }}/${{ steps.pm.outputs.pm == 'pnpm' && 'pnpm-lock.yaml' || steps.pm.outputs.pm == 'yarn' && 'yarn.lock' || 'package-lock.json' }}
 
@@ -76,5 +92,9 @@ jobs:
           echo "done"
 
       - name: Audit production dependencies
-        if: inputs.audit && steps.pm.outputs.pm == 'npm'
-        run: npm audit --omit=dev --audit-level=high
+        if: inputs.audit && steps.pm.outputs.pm != 'yarn'
+        env:
+          PM: ${{ steps.pm.outputs.pm }}
+        run: |
+          if [ "$PM" = pnpm ]; then pnpm audit --prod --audit-level high
+          else npm audit --omit=dev --audit-level=high; fi
