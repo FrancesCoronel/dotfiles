@@ -17,6 +17,14 @@ on:
       working-directory:
         type: string
         default: "."
+      typecheck:
+        description: Run the typecheck script, or tsc --noEmit when there is a tsconfig.json
+        type: boolean
+        default: true
+      extra-scripts:
+        description: Space-separated package.json scripts to run after the standard ones, e.g. "lint:md"
+        type: string
+        default: ""
       run-build:
         description: Run the build script if present
         type: boolean
@@ -81,14 +89,20 @@ jobs:
         env:
           PM: ${{ steps.pm.outputs.pm }}
           RUN_BUILD: ${{ inputs.run-build }}
+          TYPECHECK: ${{ inputs.typecheck }}
+          EXTRA: ${{ inputs.extra-scripts }}
         run: |
+          set -e
           has() { node -e "process.exit(require('./package.json').scripts?.['$1'] ? 0 : 1)"; }
           run() { echo "::group::$1"; $PM run "$1"; echo "::endgroup::"; }
-          has lint && run lint
-          if has typecheck; then run typecheck
-          elif [ -f tsconfig.json ]; then echo "::group::tsc --noEmit"; npx --no-install tsc --noEmit; echo "::endgroup::"; fi
-          has test && run test
-          [ "$RUN_BUILD" = "true" ] && has build && run build
+          if has lint; then run lint; fi
+          if [ "$TYPECHECK" = "true" ]; then
+            if has typecheck; then run typecheck
+            elif [ -f tsconfig.json ]; then echo "::group::tsc --noEmit"; npx --no-install tsc --noEmit; echo "::endgroup::"; fi
+          fi
+          if has test; then run test; fi
+          if [ "$RUN_BUILD" = "true" ] && has build; then run build; fi
+          for s in $EXTRA; do run "$s"; done
           echo "done"
 
       - name: Audit production dependencies

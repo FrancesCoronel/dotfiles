@@ -7,6 +7,10 @@ on:
         description: JSON array, e.g. '["javascript-typescript","actions"]'
         type: string
         default: '["javascript-typescript","actions"]'
+      queries:
+        description: Extra query suites, e.g. security-and-quality
+        type: string
+        default: ""
 
 jobs:
   analyze:
@@ -28,6 +32,7 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           build-mode: none
+          queries: ${{ inputs.queries }}
       - uses: github/codeql-action/analyze@v4
         with:
           category: /language:${{ matrix.language }}

@@ -1,4 +1,4 @@
-# Copy into <repo>/.github/workflows/pr.yml for Node repos
+# Copy into <repo>/.github/workflows/pr.yml for docs and awesome-list repos
 name: PR
 
 on:
@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   ci:
-    uses: FrancesCoronel/workflows/.github/workflows/ci-node.yml@v1
+    uses: FrancesCoronel/workflows/.github/workflows/ci-markdown.yml@v1
 
   dependabot:
     needs: ci

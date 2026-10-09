@@ -9,6 +9,7 @@ Each repo keeps a tiny caller file. The real logic lives here, so a fix in this 
 | Workflow | What it does |
 | --- | --- |
 | [`ci-node.yml`](.github/workflows/ci-node.yml) | Detects npm, pnpm or yarn, installs from the lockfile, then runs whichever of `lint`, `typecheck` (or `tsc --noEmit`), `test` and `build` the repo has. Audits production deps for high and critical vulns (npm and pnpm). |
+| [`ci-markdown.yml`](.github/workflows/ci-markdown.yml) | For docs and awesome-list repos. Runs markdownlint, then checks links with lychee. On PRs it only checks the files the PR touches, so a new link gets verified without old rot blocking it. |
 | [`dependabot-automerge.yml`](.github/workflows/dependabot-automerge.yml) | Runs only after CI passes. Squash-merges Dependabot patch and minor bumps. Major bumps get a `major-update` label and a comment, then wait for a human. |
 | [`codeql.yml`](.github/workflows/codeql.yml) | CodeQL security scanning, with languages as an input. |
 | [`community-triage.yml`](.github/workflows/community-triage.yml) | Labels PRs from outside contributors as `community` so they get a careful review and never get auto-merged. |
@@ -16,7 +17,8 @@ Each repo keeps a tiny caller file. The real logic lives here, so a fix in this 
 ## Add to a repo
 
 1. Copy the files from [`templates/`](templates) into the repo's `.github/` folder:
-   - `templates/workflows/pr.yml` → `.github/workflows/pr.yml` (CI + Dependabot auto-merge)
+   - `templates/workflows/pr.yml` → `.github/workflows/pr.yml` (Node CI + Dependabot auto-merge)
+   - or `templates/workflows/pr-markdown.yml` → `.github/workflows/pr.yml` (Markdown CI + Dependabot auto-merge)
    - `templates/workflows/codeql.yml` → `.github/workflows/codeql.yml`
    - `templates/workflows/community.yml` → `.github/workflows/community.yml`
    - `templates/dependabot.yml` → `.github/dependabot.yml`
@@ -48,8 +50,19 @@ jobs:
 | `node-version` | `""` | Empty uses `.nvmrc` or `.node-version` if present, else Node 24 |
 | `pnpm-version` | `""` | Empty reads `packageManager` from `package.json` |
 | `working-directory` | `.` | For monorepos or apps in a subfolder |
+| `typecheck` | `true` | Set `false` while a repo has known type errors |
+| `extra-scripts` | `""` | More scripts to run, e.g. `lint:md` |
 | `run-build` | `true` | Set `false` if the build needs secrets that Dependabot PRs can't read |
 | `audit` | `true` | `npm audit --omit=dev` or `pnpm audit --prod`, failing on high and critical |
+
+**`ci-markdown.yml`**
+
+| Input | Default | |
+| --- | --- | --- |
+| `lint` | `true` | markdownlint-cli2 |
+| `lint-globs` | `**/*.md` | One glob per line |
+| `links` | `true` | lychee link check |
+| `lychee-args` | `""` | e.g. `--exclude linkedin.com` |
 
 **`dependabot-automerge.yml`**
 
@@ -63,6 +76,7 @@ jobs:
 | Input | Default |
 | --- | --- |
 | `languages` | `'["javascript-typescript","actions"]'` |
+| `queries` | `""` (e.g. `security-and-quality`) |
 
 ## Good to know
 

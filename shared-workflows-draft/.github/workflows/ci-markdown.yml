@@ -1,0 +1,75 @@
+# Reusable CI for docs and awesome-list repos. Lints Markdown and checks links.
+# On pull requests only the Markdown files the PR touches are link-checked, so
+# an old dead link elsewhere never blocks a new contribution.
+name: CI (Markdown)
+
+on:
+  workflow_call:
+    inputs:
+      lint:
+        description: Run markdownlint-cli2
+        type: boolean
+        default: true
+      lint-globs:
+        description: Files for markdownlint, one glob per line
+        type: string
+        default: "**/*.md"
+      links:
+        description: Check links with lychee
+        type: boolean
+        default: true
+      lychee-args:
+        description: Extra lychee arguments
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: markdownlint
+        if: inputs.lint
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          globs: ${{ inputs.lint-globs }}
+
+      - name: Pick files to link-check
+        id: files
+        if: inputs.links
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if [ -n "$BASE" ]; then
+            files=$(git diff --name-only --diff-filter=AM "$BASE"...HEAD -- '*.md' | tr '\n' ' ')
+          else
+            files=$(git ls-files '*.md' | tr '\n' ' ')
+          fi
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Checking: ${files:-nothing}"
+
+      - name: Check links
+        if: inputs.links && steps.files.outputs.files != ''
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --timeout 30
+            --max-retries 3
+            --retry-wait-time 5
+            --exclude "mailto:"
+            --accept 200,202,206,403,415,429
+            ${{ inputs.lychee-args }}
+            ${{ steps.files.outputs.files }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
