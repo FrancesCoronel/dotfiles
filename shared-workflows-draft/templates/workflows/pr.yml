@@ -1,0 +1,22 @@
+# Copy into <repo>/.github/workflows/pr.yml
+name: PR
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    uses: FrancesCoronel/workflows/.github/workflows/ci-node.yml@main
+
+  dependabot:
+    needs: ci
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
+    uses: FrancesCoronel/workflows/.github/workflows/dependabot-automerge.yml@main
+    permissions:
+      contents: write
+      pull-requests: write

@@ -1,0 +1,25 @@
+# Labels PRs from people outside the repo so they never blend in with your own
+# work, and asks for the basics up front. Never checks out PR code, so it is
+# safe to run on pull_request_target.
+name: Community PR triage
+
+on:
+  workflow_call:
+
+jobs:
+  triage:
+    runs-on: ubuntu-24.04
+    if: >-
+      github.event.pull_request.user.type != 'Bot' &&
+      contains(fromJSON('["FIRST_TIME_CONTRIBUTOR","FIRST_TIMER","CONTRIBUTOR","NONE"]'), github.event.pull_request.author_association)
+    permissions:
+      pull-requests: write
+      issues: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.html_url }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh label create "community" --color 0E8A16 --description "External contribution, needs careful review" --force -R "$REPO"
+          gh pr edit "$PR" --add-label "community"

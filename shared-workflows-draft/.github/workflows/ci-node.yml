@@ -1,0 +1,80 @@
+# Reusable CI for Node projects. Detects npm / pnpm / yarn and runs whichever
+# of lint, typecheck, test and build the repo defines in package.json.
+name: CI (Node)
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node version
+        type: string
+        default: "22"
+      working-directory:
+        type: string
+        default: "."
+      run-build:
+        description: Run the build script if present
+        type: boolean
+        default: true
+      audit:
+        description: Fail on high/critical vulns in production deps
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Detect package manager
+        id: pm
+        run: |
+          if [ -f pnpm-lock.yaml ]; then echo "pm=pnpm" >> "$GITHUB_OUTPUT"
+          elif [ -f yarn.lock ]; then echo "pm=yarn" >> "$GITHUB_OUTPUT"
+          else echo "pm=npm" >> "$GITHUB_OUTPUT"; fi
+
+      - if: steps.pm.outputs.pm == 'pnpm'
+        uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: ${{ steps.pm.outputs.pm }}
+          cache-dependency-path: ${{ inputs.working-directory }}/${{ steps.pm.outputs.pm == 'pnpm' && 'pnpm-lock.yaml' || steps.pm.outputs.pm == 'yarn' && 'yarn.lock' || 'package-lock.json' }}
+
+      - name: Install
+        run: |
+          case "${{ steps.pm.outputs.pm }}" in
+            pnpm) pnpm install --frozen-lockfile ;;
+            yarn) yarn install --frozen-lockfile ;;
+            npm)  npm ci ;;
+          esac
+
+      - name: Lint, typecheck, test, build
+        env:
+          PM: ${{ steps.pm.outputs.pm }}
+          RUN_BUILD: ${{ inputs.run-build }}
+        run: |
+          has() { node -e "process.exit(require('./package.json').scripts?.['$1'] ? 0 : 1)"; }
+          run() { echo "::group::$1"; $PM run "$1"; echo "::endgroup::"; }
+          has lint && run lint
+          if has typecheck; then run typecheck
+          elif [ -f tsconfig.json ]; then echo "::group::tsc --noEmit"; npx --no-install tsc --noEmit; echo "::endgroup::"; fi
+          has test && run test
+          [ "$RUN_BUILD" = "true" ] && has build && run build
+          echo "done"
+
+      - name: Audit production dependencies
+        if: inputs.audit && steps.pm.outputs.pm == 'npm'
+        run: npm audit --omit=dev --audit-level=high

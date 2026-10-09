@@ -1,0 +1,17 @@
+# Copy into <repo>/.github/workflows/codeql.yml
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+
+jobs:
+  codeql:
+    uses: FrancesCoronel/workflows/.github/workflows/codeql.yml@main
+    permissions:
+      contents: read
+      security-events: write
+      actions: read

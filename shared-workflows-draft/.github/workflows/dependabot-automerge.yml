@@ -1,0 +1,58 @@
+# Reusable Dependabot auto-merge. Call it with `needs: <your ci job>` so it
+# only runs after CI passes. Patch and minor bumps (and any security fix that
+# isn't a major) are squash-merged. Major bumps get a label and a comment and
+# wait for a human.
+name: Dependabot auto-merge
+
+on:
+  workflow_call:
+    inputs:
+      merge-method:
+        type: string
+        default: squash
+      allow-major:
+        description: Also auto-merge major version bumps
+        type: boolean
+        default: false
+
+jobs:
+  automerge:
+    name: automerge
+    runs-on: ubuntu-24.04
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - id: meta
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge patch and minor bumps
+        if: >-
+          steps.meta.outputs.update-type == 'version-update:semver-patch' ||
+          steps.meta.outputs.update-type == 'version-update:semver-minor' ||
+          (inputs.allow-major && steps.meta.outputs.update-type == 'version-update:semver-major')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.html_url }}
+          METHOD: ${{ inputs.merge-method }}
+        run: |
+          # --auto waits for any required checks (branch protection). Repos
+          # without protection can't enable auto-merge, so merge directly:
+          # CI already passed because this job `needs` it.
+          gh pr merge "$PR" --"$METHOD" --auto || gh pr merge "$PR" --"$METHOD"
+
+      - name: Flag major bumps for review
+        if: steps.meta.outputs.update-type == 'version-update:semver-major' && !inputs.allow-major
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.html_url }}
+          DEPS: ${{ steps.meta.outputs.dependency-names }}
+          PREV: ${{ steps.meta.outputs.previous-version }}
+          NEW: ${{ steps.meta.outputs.new-version }}
+        run: |
+          gh label create "major-update" --color B60205 --description "Major version bump, needs manual review" --force -R "$GITHUB_REPOSITORY"
+          gh pr edit "$PR" --add-label "major-update"
+          gh pr comment "$PR" --body "⚠️ Major bump ($DEPS $PREV → $NEW). CI passed, but this one waits for a human: check the changelog for breaking changes before merging."
