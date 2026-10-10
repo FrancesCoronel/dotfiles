@@ -1,0 +1,3 @@
+# Dotfiles source files that only exist on the machine being set up,
+# so ShellCheck can't follow them.
+disable=SC1090,SC1091
