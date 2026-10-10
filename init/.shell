@@ -50,7 +50,7 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Materialize
 echo ""
 echo "Install ZSH config"
 cp "${DOTFILES}/bin/shell/.zshrc" "$HOME/.zshrc"
-eval $(/opt/homebrew/bin/brew shellenv)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo ""
 echo "Install Powerlevel config"
@@ -91,11 +91,11 @@ cp "${DOTFILES}/bin/shell/.zprofile" "$HOME/.zprofile"
 
 echo "Setting up zsh environment"
 cp "${DOTFILES}/bin/shell/.zshenv" "$HOME/.zshenv"
-source $HOME/.zshenv
+source "$HOME/.zshenv"
 
 echo ""
 echo "Set ZSH as default"
-chsh -s $(which zsh)
+chsh -s "$(which zsh)"
 
 echo ""
 echo "Set up P10K"
