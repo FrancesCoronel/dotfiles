@@ -14,10 +14,10 @@ concurrency:
 
 jobs:
   ci:
-    uses: FrancesCoronel/workflows/.github/workflows/ci-shell.yml@claude/quality-gates
+    uses: FrancesCoronel/workflows/.github/workflows/ci-shell.yml@v1
 
   security:
-    uses: FrancesCoronel/workflows/.github/workflows/security.yml@claude/quality-gates
+    uses: FrancesCoronel/workflows/.github/workflows/security.yml@v1
 
   dependabot:
     needs: [ci, security]
