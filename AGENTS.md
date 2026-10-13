@@ -16,12 +16,14 @@ Frances's macOS setup: shell configs, Homebrew casks, fonts, terminal themes and
 |---|---|
 | `bootstrap.sh` | Entry point: Homebrew, core formulae, bash files |
 | `init/.casks`, `.fonts`, `.npm`, `.osx`, `.shell`, `.gituser` | Install steps, run one at a time with `sh ~/.dotfiles/init/<name>` (see README) |
-| `bin/shell/` | Shell dotfiles copied into `$HOME` (`.zshrc`, `.bashrc`, ...), plus `zsh/.p10k.zsh` and terminal themes for Hyper, iTerm and Terminal |
-| `bin/fonts/` | Font files installed by `init/.fonts` |
-| `bin/alfred/`, `bin/tower/` | App themes |
-| `.github/.gitconfig`, `.github/.gitignore` | Global Git config and ignore file (not GitHub settings, despite the folder) |
+| `config/shell/` | Shell dotfiles copied into `$HOME` (`.zshrc`, `.bashrc`, ...), plus `zsh/.p10k.zsh` and terminal themes for Hyper, iTerm and Terminal |
+| `config/fonts/` | Font files installed by `init/.fonts` |
+| `config/alfred/`, `config/tower/` | App themes |
+| `git/.gitconfig` | Global Git config, copied to `~/.gitconfig` by option 3 of `init/.gituser` |
+| `git/gitignore_global` | Global ignore patterns, kept for reference; no script installs it |
+| `.github/` | GitHub settings only: workflows, Dependabot, community files |
 
-Despite the name, nothing in `bin/` is an executable. If you move a file, update every script that copies it (search `bootstrap.sh` and `init/` for the path).
+If you move a file, update every script that copies it (search `bootstrap.sh` and `init/` for the path).
 
 ## Making changes
 

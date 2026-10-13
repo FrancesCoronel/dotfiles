@@ -147,20 +147,20 @@ Once the theme has loaded, you might want to replace the shell's startup command
 Copy Hyper configuration file to the root folder.
 
 ```bash
-mv ~Dropbox/Code/dotfiles/bin/shell/hyper/hyper.config.js ~/.hyper.js
+mv ~Dropbox/Code/dotfiles/config/shell/hyper/hyper.config.js ~/.hyper.js
 ```
 
 ![Hyper](https://i.imgur.com/Qvej6BG.png)
 
 #### iTerm 2
 
-Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/bin/shell/iterm` under `General > Preferences`.
+Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/config/shell/iterm` under `General > Preferences`.
 
 ![iTerm 2](https://i.imgur.com/8XcQqsh.png)
 
 #### Terminal
 
-Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/bin/shell/terminal/Materialize.terminal`.
+Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/config/shell/terminal/Materialize.terminal`.
 
 ![Terminal](https://i.imgur.com/kaqt9BC.png)
 
