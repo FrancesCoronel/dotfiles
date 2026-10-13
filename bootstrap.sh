@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# The full color palette is kept for reuse, so not every color is used.
+# shellcheck disable=SC2034
 
 BLACK='\033[0;30m'
 RED='\033[0;31m'
@@ -81,9 +83,9 @@ install_formula () {
   echo "${LGREEN}Cleaning up Homebrew installation...${NC}"
   brew cleanup
 
-  yes | cp -rf ${DOTFILES}/bin/shell/.bashrc $HOME/.bashrc
-  yes | cp -rf ${DOTFILES}/bin/shell/.bash_aliases $HOME/.bash_aliases
-  yes | cp -rf ${DOTFILES}/bin/shell/.bash_profile $HOME/.bash_profile
+  cp -rf "${DOTFILES}/bin/shell/.bashrc" "$HOME/.bashrc"
+  cp -rf "${DOTFILES}/bin/shell/.bash_aliases" "$HOME/.bash_aliases"
+  cp -rf "${DOTFILES}/bin/shell/.bash_profile" "$HOME/.bash_profile"
 
   echo "${LGREEN}Installing Caskroom, Caskroom versions, Caskroom Fonts and Brew Services${NC}"
 
@@ -115,7 +117,7 @@ echo "${LGREEN}Installing hushlogin...${NC}"
 echo "Disabling the system copyright notice, the date and time of the last login."
 echo "More info at https://github.com/FrancesCoronel/dotfiles/blob/master/init/.hushlogin"
 echo ""
-yes | cp -rf "${DOTFILES}/init/.hushlogin" $HOME/.hushlogin
+cp -rf "${DOTFILES}/init/.hushlogin" "$HOME/.hushlogin"
 touch .hushlogin
 
 # install Homebrew
@@ -141,7 +143,7 @@ fi
 
 # install Homebrew Formulas
 while true; do
-  read -p "Would you like to install Homebrew formulas? [y/n]" answer
+  read -r -p "Would you like to install Homebrew formulas? [y/n]" answer
   echo "${NC}"
   case $answer in
     [y/Y]* ) install_formula; break;;
