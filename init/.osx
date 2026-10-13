@@ -10,11 +10,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo ""
 echo "Setting your computer name (as done via System Preferences → Sharing)"
-read -p ">  What would you like it to be? " COMPUTER_NAME
-sudo scutil --set ComputerName $COMPUTER_NAME
-sudo scutil --set HostName $COMPUTER_NAME
-sudo scutil --set LocalHostName $COMPUTER_NAME
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
+read -r -p ">  What would you like it to be? " COMPUTER_NAME
+sudo scutil --set ComputerName "$COMPUTER_NAME"
+sudo scutil --set HostName "$COMPUTER_NAME"
+sudo scutil --set LocalHostName "$COMPUTER_NAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 echo ""
 echo "Setting up duti open file preferences..."
@@ -197,7 +197,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 echo ""
 echo "Expand the following File Info panes:"
-echo "“General”, “Open with”, and “Sharing & Permissions”"
+echo '“General”, “Open with”, and “Sharing & Permissions”'
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
         General -bool true \
         OpenWith -bool true \
