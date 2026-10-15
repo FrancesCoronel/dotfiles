@@ -45,12 +45,12 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
-bin/shell/.DS_Store
-bin/subl/User/WakaTime.sublime-settings
+config/shell/.DS_Store
+config/subl/User/WakaTime.sublime-settings
 01524fae79697630d0454ba3fabd9414.info
-bin/subl/User/Package Control.system-ca-bundle
+config/subl/User/Package Control.system-ca-bundle
 Package Control.system-ca-bundle
-bin/screensaver/.DS_Store
+config/screensaver/.DS_Store
 Package Control.user-ca-bundle
 
 # Alfred Workflow - Spotify
