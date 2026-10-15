@@ -25,10 +25,10 @@ brew install font-input --cask
 
 echo ""
 echo "Copying over Latina Essential font..."
-cp -RfXv $DOT/bin/fonts/Latina-Essential ~/Library/Fonts/
+cp -RfXv "$DOT"/bin/fonts/Latina-Essential ~/Library/Fonts/
 
 echo ""
 echo "Copying over MesloLGS font..."
-cp -RfXv $DOT/bin/fonts/MesloLGS ~/Library/Fonts/
+cp -RfXv "$DOT"/bin/fonts/MesloLGS ~/Library/Fonts/
 
 brew cleanup

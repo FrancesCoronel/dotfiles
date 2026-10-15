@@ -28,4 +28,4 @@ node_modules=(
 )
 
 # install Node Packages
-npm install -g  ${node_modules[@]}
+npm install -g "${node_modules[@]}"
