@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+DOT="$HOME/.dotfiles"
 SSHCONFIG="$HOME/.ssh/config"
 
 # Configure nano as default editor
@@ -27,7 +28,7 @@ echo ""
 
 function setdefaultgitconfig () {
   echo "Copying over existing Git config"
-  cp -RfXv "$DOT/bin/.github/.gitconfig" "$HOME/.gitconfig"
+  cp -RfXv "$DOT/git/.gitconfig" "$HOME/.gitconfig"
   echo "Okay all good"
 }
 

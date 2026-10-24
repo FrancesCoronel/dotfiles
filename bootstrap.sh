@@ -83,9 +83,9 @@ install_formula () {
   echo "${LGREEN}Cleaning up Homebrew installation...${NC}"
   brew cleanup
 
-  cp -rf "${DOTFILES}/bin/shell/.bashrc" "$HOME/.bashrc"
-  cp -rf "${DOTFILES}/bin/shell/.bash_aliases" "$HOME/.bash_aliases"
-  cp -rf "${DOTFILES}/bin/shell/.bash_profile" "$HOME/.bash_profile"
+  cp -rf "${DOTFILES}/config/shell/.bashrc" "$HOME/.bashrc"
+  cp -rf "${DOTFILES}/config/shell/.bash_aliases" "$HOME/.bash_aliases"
+  cp -rf "${DOTFILES}/config/shell/.bash_profile" "$HOME/.bash_profile"
 
   echo "${LGREEN}Installing Caskroom, Caskroom versions, Caskroom Fonts and Brew Services${NC}"
 
