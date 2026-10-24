@@ -1,0 +1,14 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[{*.sh,*.bash,bootstrap.sh,init/.*,config/shell/.*,config/shell/zsh/*}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+# App-exported themes and plists: leave them as the apps write them.
+[{*.alfredappearance,*.towertheme,*.terminal,*.itermcolors,*.plist}]
+insert_final_newline = unset

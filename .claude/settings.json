@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(shellcheck *)",
+      "Bash(zsh -n *)"
+    ],
+    "deny": [
+      "Bash(./bootstrap.sh*)",
+      "Bash(bash bootstrap.sh*)",
+      "Bash(sh bootstrap.sh*)",
+      "Bash(bash init/*)",
+      "Bash(sh init/*)",
+      "Bash(sh ~/.dotfiles/*)",
+      "Bash(bash ~/.dotfiles/*)",
+      "Bash(sudo *)",
+      "Bash(defaults write*)",
+      "Bash(brew *)",
+      "Bash(chsh*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/guard-installers.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/shellcheck-edited.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
