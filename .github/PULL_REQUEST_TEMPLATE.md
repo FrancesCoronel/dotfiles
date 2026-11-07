@@ -10,7 +10,6 @@
 - [ ] I didn't run `bootstrap.sh` or `init/` scripts to test this on a machine I care about
 - [ ] If I moved or renamed a file, I updated every script that copies it and the README install steps
 - [ ] No secrets, tokens, SSH keys or machine-specific paths
-- [ ] If I used AI tools, I reviewed every change myself and I can explain it
 
 ### Credits
 
