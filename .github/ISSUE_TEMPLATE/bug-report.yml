@@ -1,0 +1,24 @@
+name: Report a problem
+description: A script failed, a cask or font is gone, or a setting doesn't apply 🛠️
+title: "Problem: "
+labels: ["bug"]
+body:
+  - type: input
+    id: script
+    attributes:
+      label: Which script or file?
+      placeholder: init/.casks
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Paste the error output if there is one.
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and chip
+      placeholder: macOS 26.1 on Apple silicon
