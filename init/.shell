@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Homebrew asks to confirm every install that pulls in dependencies; skip that
+export HOMEBREW_NO_ASK=1
+
 DOTFILES="$HOME/.dotfiles"
 
 echo ""
@@ -9,10 +12,6 @@ cp "${DOTFILES}/config/shell/.bash_aliases" "$HOME/.bash_aliases"
 echo ""
 echo "Initializing .bash_profile"
 cp "${DOTFILES}/config/shell/.bash_profile" "$HOME/.bash_profile"
-
-echo ""
-echo "Downloading asciinema to record terminal sessions"
-curl -sL https://asciinema.org/install | sh
 
 # change git commit editor to VS Code
 echo ""
@@ -29,11 +28,12 @@ echo ""
 echo "Installing Oh My Zsh"
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "Installing oh-my-zsh"
-  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  # --unattended: don't switch into zsh halfway through this script
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 # Install Xcode Command Line
-xcode-select --install
+xcode-select -p > /dev/null 2>&1 || xcode-select --install
 
 # Open Terminal Settings
 echo ""
@@ -57,8 +57,6 @@ echo "Install Powerlevel config"
 brew install powerlevel10k
 cp "${DOTFILES}/config/shell/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 cp "${DOTFILES}/config/shell/.zprofile" "/Users/$USER/.zprofile"
-source ~/.zshrc
-# p10k configure
 
 # setup zsh plugins
 
@@ -68,22 +66,15 @@ echo "Installing ZSH Plugins"
 
 echo "zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
-cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+[ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ] || git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 
 echo "zsh-auto-suggestions"
 brew install zsh-autosuggestions
-cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions 
+[ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ] || git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 
 echo "zsh-wakatime"
-python3 -m pip install --upgrade setuptools
-python3 -m pip install --upgrade pip
-pip3 install wakatime
-cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/wbingli/zsh-wakatime.git
-
-echo ""
-echo "Finalize ZSH Plugins"
-echo "source ~/.zshrc"
-source ~/.zshrc
+brew install wakatime-cli
+[ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-wakatime" ] || git clone https://github.com/wbingli/zsh-wakatime.git "$HOME/.oh-my-zsh/custom/plugins/zsh-wakatime"
 
 echo ""
 echo "Setting up zsh profile"
@@ -91,15 +82,15 @@ cp "${DOTFILES}/config/shell/.zprofile" "$HOME/.zprofile"
 
 echo "Setting up zsh environment"
 cp "${DOTFILES}/config/shell/.zshenv" "$HOME/.zshenv"
-source "$HOME/.zshenv"
 
 echo ""
 echo "Set ZSH as default"
-chsh -s "$(which zsh)"
-
-echo ""
-echo "Set up P10K"
-p10k configure
+ZSH_PATH="$(which zsh)"
+# chsh only accepts shells listed in /etc/shells, and Homebrew's zsh isn't
+if ! grep -qx "$ZSH_PATH" /etc/shells; then
+  echo "$ZSH_PATH" | sudo tee -a /etc/shells > /dev/null
+fi
+chsh -s "$ZSH_PATH"
 
 sleep 1
 killall Terminal

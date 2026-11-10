@@ -117,7 +117,7 @@ These are listed in `bootstrap.sh`.
 - [git](https://git-scm.com/)
 - [howdoi](https://github.com/gleitz/howdoi)
 - [hugo](https://gohugo.io/)
-- [libav](https://www.libav.org/)
+- [ffmpeg](https://ffmpeg.org/)
 - [nginx](https://www.nginx.com/)
 - [node](https://nodejs.org)
 - [now](https://zeit.co/now)
@@ -125,7 +125,7 @@ These are listed in `bootstrap.sh`.
 - [pandoc](https://pandoc.org/index.html)
 - [python](https://www.python.org/)
 - [yarn](https://yarnpkg.com/en/)
-- [youtube-dl](https://rg3.github.io/youtube-dl/)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [zsh](http://www.zsh.org/)
 
 ### Screensaver
@@ -147,20 +147,20 @@ Once the theme has loaded, you might want to replace the shell's startup command
 Copy Hyper configuration file to the root folder.
 
 ```bash
-mv ~Dropbox/Code/dotfiles/config/shell/hyper/hyper.config.js ~/.hyper.js
+mv ~/.dotfiles/config/shell/hyper/hyper.config.js ~/.hyper.js
 ```
 
 ![Hyper](https://i.imgur.com/Qvej6BG.png)
 
 #### iTerm 2
 
-Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/config/shell/iterm` under `General > Preferences`.
+Set up sync folder in Preferences to `~/.dotfiles/config/shell/iterm` under `General > Preferences`.
 
 ![iTerm 2](https://i.imgur.com/8XcQqsh.png)
 
 #### Terminal
 
-Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/config/shell/terminal/Materialize.terminal`.
+Import `Materialize.terminal` profile from `~/.dotfiles/config/shell/terminal/Materialize.terminal`.
 
 ![Terminal](https://i.imgur.com/kaqt9BC.png)
 

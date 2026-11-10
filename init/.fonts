@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Homebrew asks to confirm every install that pulls in dependencies; skip that
+export HOMEBREW_NO_ASK=1
+
 DOT="$HOME/.dotfiles"
 
 echo ""
@@ -12,7 +15,6 @@ brew install font-roboto-mono --cask
 
 echo ""
 echo "Installing Nerd Fonts"
-brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 
 echo ""

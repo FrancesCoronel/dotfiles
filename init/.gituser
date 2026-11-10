@@ -11,11 +11,13 @@ echo ""
 echo "Adding config file for ssh-keys"
 mkdir -p "$HOME/.ssh/"
 
-cat >> "$SSHCONFIG" <<EOM
+if ! grep -q "^Host github.com" "$SSHCONFIG" 2> /dev/null; then
+  cat >> "$SSHCONFIG" <<EOM
 Host github.com
   Hostname github.com
   IdentityFile $HOME/.ssh/github_rsa
 EOM
+fi
 
 echo "Please select which task you would like to perform"
 echo ""
@@ -52,17 +54,19 @@ function github_sshkey () {
   ssh-keygen -t rsa -C "$GITHUB_EMAIL" -f "$HOME/.ssh/github_rsa" -P "$PASSPHRASE"
   ssh-add "$HOME/.ssh/github_rsa" && pbcopy < "$HOME/.ssh/github_rsa.pub"
 
-  GITHUB_KEY=$(pbpaste)
-  GITHUB_PAYLOAD="{ \"title\": \"$GITHUB_TITLE\", \"key\": \"$GITHUB_KEY\" }"
-
+  # GitHub no longer accepts a password over its API, so sign in with the
+  # GitHub CLI (installed by bootstrap.sh) and let it upload the key
+  echo ""
   echo "Login to your github account"
-  read -r -p "Github Username: " GH_USERNAME
-  echo -n "Github Password: "
-  read -r -s GH_PASSWORD
+  if gh auth status -h github.com > /dev/null 2>&1; then
+    gh auth refresh -h github.com -s admin:public_key
+  else
+    gh auth login -h github.com -p ssh --skip-ssh-key -w -s admin:public_key
+  fi
 
   echo ""
   echo "Saving SSH-Key to Github: "
-  curl --user "$GH_USERNAME:$GH_PASSWORD" -X POST --data "$GITHUB_PAYLOAD" https://api.github.com/user/keys -#o /dev/null
+  gh ssh-key add "$HOME/.ssh/github_rsa.pub" --title "$GITHUB_TITLE"
   echo "Done!"
 
   echo ""

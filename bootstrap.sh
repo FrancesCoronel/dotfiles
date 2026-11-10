@@ -2,6 +2,9 @@
 # The full color palette is kept for reuse, so not every color is used.
 # shellcheck disable=SC2034
 
+# Homebrew asks to confirm every install that pulls in dependencies; skip that
+export HOMEBREW_NO_ASK=1
+
 BLACK='\033[0;30m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -51,10 +54,20 @@ echo "${LGREEN}To run this, you must download & install the latest Xcode and Com
 echo "    > https://developer.apple.com/xcode/"
 echo "    > https://developer.apple.com/downloads/"
 
-xcode-select --install
+xcode-select -p > /dev/null 2>&1 || xcode-select --install
 
 # function to check if a package exists
 check () { type -t "${@}" > /dev/null 2>&1; }
+
+# Homebrew lives in /opt/homebrew on Apple Silicon and /usr/local on Intel,
+# and /opt/homebrew is not on the PATH of a new Mac
+load_brew () {
+  if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [ -x /usr/local/bin/brew ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
+}
 
 # function to install Homebrew Formulas
 install_formula () {
@@ -68,14 +81,14 @@ install_formula () {
   brew install git-lfs
   brew install howdoi
   brew install hugo
-  brew install libav
+  brew install ffmpeg
   brew install nginx
   brew install node
   brew install openssl
   brew install pandoc
   brew install python
   brew install yarn
-  brew install youtube-dl
+  brew install yt-dlp
   brew install zsh
 
   # cleanup
@@ -87,18 +100,11 @@ install_formula () {
   cp -rf "${DOTFILES}/config/shell/.bash_aliases" "$HOME/.bash_aliases"
   cp -rf "${DOTFILES}/config/shell/.bash_profile" "$HOME/.bash_profile"
 
-  echo "${LGREEN}Installing Caskroom, Caskroom versions, Caskroom Fonts and Brew Services${NC}"
-
   # restart terminal to apply changes
   echo "✔ ✔ ✔ ✔ ✔
   ${LGREEN}Bootstrapping complete!
-  ✔ ✔ ✔ ✔ ✔{$NC}"
+  ✔ ✔ ✔ ✔ ✔${NC}"
   echo "Quitting terminal now...${NC}"
-
-  brew tap homebrew/cask
-  brew tap homebrew/services
-  brew tap homebrew/cask-versions
-  brew tap homebrew/cask-fonts
 
   # Make /Applications the default location of installed Homebrew casks
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -124,6 +130,8 @@ touch .hushlogin
 echo ""
 echo "${LGREEN}Checking if Homebrew is installed...${NC}"
 
+load_brew
+
 if check brew; then
   echo ""
   echo "${YELLOW}Awesome! Homebrew is installed! Now updating...${NC}"
@@ -135,11 +143,15 @@ fi
 if ! check brew; then
   echo "${LGREEN}Downloading and install homebrew${NC}"
   echo ""
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  load_brew
 
   # run Brew doctor before anything else
   brew doctor
 fi
+
+# put Homebrew on the PATH of new terminals, so the init scripts can find it
+cp -f "${DOTFILES}/config/shell/.zprofile" "$HOME/.zprofile"
 
 # install Homebrew Formulas
 while true; do

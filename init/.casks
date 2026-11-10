@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Homebrew asks to confirm every install that pulls in dependencies; skip that
+export HOMEBREW_NO_ASK=1
+
 # Yellow Color
 YELLOW='\033[1;33m'
 # No Color
@@ -17,51 +20,49 @@ function cask() {
 cask 1password
 cask aerial
 cask alfred
+cask bartender
 cask camo-studio
 cask cardhop
+cask chatgpt
 cask cleanmymac
 cask discord
-cask dropbox
 cask fantastical
 cask figma
-cask flux
+cask flux-app
 cask gifox
 cask github
 cask gitify
 cask google-chrome
 cask google-drive
 cask gpg-suite-no-mail
-cask grammarly
+cask grammarly-desktop
+cask granola
 cask image2icon
 cask imageoptim
+cask imazing
 cask iterm2
 cask kaleidoscope
 cask keycastr
+cask linear
 cask loom
 cask notion
+cask obsidian
 cask provisionql
-cask qlcolorcode
-cask qlimagesize
 cask qlmarkdown
-cask qlprettypatch
-cask qlstephen
-cask qlvideo
-cask quicklook-csv
-cask quicklook-json
-cask quicklook-pat
-cask quicklookapk
-cask quicklookase
+cask raycast
 cask readdle-spark
 cask rocket
 cask slack
+cask spotify
 cask suspicious-package
 cask the-unarchiver
+cask todoist-app
 cask tower
-cask tyke
 cask visual-studio-code
+cask vlc
 cask warp
-cask webpquicklook
 cask whatsapp
+cask wispr-flow
 cask zoom
 
 echo ""
