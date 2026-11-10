@@ -15,7 +15,7 @@
 
 # Dotfiles
 
-[![GitHub Issues](https://img.shields.io/github/issues/FrancesCoronel/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/FrancesCoronel/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/pulls) [![MIT License](https://img.shields.io/github/license/FrancesCoronel/dotfiles.svg?style=flat-square)](http://badges.mit-license.org)
+[![GitHub Issues](https://img.shields.io/github/issues/FrancesCoronel/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/FrancesCoronel/dotfiles.svg?style=flat-square)](https://github.com/FrancesCoronel/dotfiles/pulls) [![MIT License](https://img.shields.io/github/license/FrancesCoronel/dotfiles.svg?style=flat-square)](https://badges.mit-license.org)
 
 > This sets up my dev environment to be very Material Design friendly.
 >
@@ -126,7 +126,7 @@ These are listed in `bootstrap.sh`.
 - [python](https://www.python.org/)
 - [yarn](https://yarnpkg.com/en/)
 - [youtube-dl](https://rg3.github.io/youtube-dl/)
-- [zsh](http://www.zsh.org/)
+- [zsh](https://www.zsh.org/)
 
 ### Screensaver
 
@@ -225,18 +225,18 @@ If you decide to utilize these configurations, please make sure to give me some 
 I'm very open to contributions so please feel free to
 
 1. 🍴 [Fork this repo](https://github.com/FrancesCoronel/dotfiles/fork)
-2. 🔨 Follow the [contributing guidelines](CONTRIBUTING.md)
+2. 🔨 Follow the [contributing guidelines](.github/CONTRIBUTING.md)
 3. 👥 Add yourself as a contributor under the Kudos section
 4. 🔧 [Make a pull request](https://github.com/FrancesCoronel/dotfiles/compare)
 5. 🎉 Get your pull request approved - success!
 
-Or just [create an issue](https://github.com/FrancesCoronel/dotfiles/issues) - any little bit of help counts! 😊
+Or just [create an issue](https://github.com/FrancesCoronel/dotfiles/issues/new/choose) - any little bit of help counts! 😊
 
 ### Code of Conduct
 
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-More details can be found at this project's [code of conduct](CODE_OF_CONDUCT.md).
+More details can be found at this project's [code of conduct](.github/CODE_OF_CONDUCT.md).
 
 ## Credits
 
@@ -255,4 +255,4 @@ More details can be found at this project's [code of conduct](CODE_OF_CONDUCT.md
 - [GitHub - `awesome-mac`](https://github.com/jaywcjlove/awesome-mac)
 - [Github - `awesome-macos-screensaver`](https://github.com/agarrharr/awesome-macos-screensaver)
 - [GitHub - `awesome-macOS`](https://github.com/iCHAIT/awesome-macOS)
-- [Shields.io - README Badges](http://shields.io/)
+- [Shields.io - README Badges](https://shields.io/)
