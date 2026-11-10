@@ -76,6 +76,7 @@ install_formula () {
 
   brew install asciinema
   brew install duti
+  brew install eza
   brew install gh
   brew install git
   brew install git-lfs
@@ -87,6 +88,7 @@ install_formula () {
   brew install openssl
   brew install pandoc
   brew install python
+  brew install starship
   brew install yarn
   brew install yt-dlp
   brew install zsh

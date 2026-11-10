@@ -60,6 +60,9 @@ plugins=(git macos ruby zsh-wakatime zsh-syntax-highlighting zsh-autosuggestions
 # Make /Applications the default location of apps
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# Colorful file listings with icons, when eza is installed
+command -v eza > /dev/null && alias ls="eza --icons --group-directories-first"
+
 # Show all files when changing directory
 function cd() {
     new_directory="$*";

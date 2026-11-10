@@ -113,6 +113,7 @@ These are listed in `bootstrap.sh`.
 
 - [asciinema](https://asciinema.org/)
 - [duti](http://duti.org/)
+- [eza](https://eza.rocks/)
 - [git-lfs](https://git-lfs.github.com/)
 - [git](https://git-scm.com/)
 - [howdoi](https://github.com/gleitz/howdoi)
@@ -124,6 +125,7 @@ These are listed in `bootstrap.sh`.
 - [openssl](https://www.openssl.org/)
 - [pandoc](https://pandoc.org/index.html)
 - [python](https://www.python.org/)
+- [starship](https://starship.rs/)
 - [yarn](https://yarnpkg.com/en/)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [zsh](https://www.zsh.org/)

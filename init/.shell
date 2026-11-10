@@ -53,8 +53,7 @@ cp "${DOTFILES}/config/shell/.zshrc" "$HOME/.zshrc"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo ""
-echo "Install Starship prompt and config"
-brew install starship
+echo "Install Starship prompt config"
 mkdir -p "$HOME/.config"
 cp "${DOTFILES}/config/shell/starship.toml" "$HOME/.config/starship.toml"
 cp "${DOTFILES}/config/shell/.zprofile" "/Users/$USER/.zprofile"
