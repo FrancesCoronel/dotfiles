@@ -69,12 +69,10 @@ function cd() {
     builtin cd "${new_directory}" && ls -a
 }
 
-# p10k configuration
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # Finalizing
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source $ZSH/oh-my-zsh.sh
-source "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme"
+
+# Starship prompt
+command -v starship > /dev/null && eval "$(starship init zsh)"

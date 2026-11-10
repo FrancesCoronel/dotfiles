@@ -78,7 +78,7 @@ sh ~/.dotfiles/init/.osx
 # Installs fonts for coding and docs
 sh ~/.dotfiles/init/.fonts
 
-# Setups git configuration settings
+# Sets up git: author name and email, GitHub sign-in over HTTPS, git config
 sh ~/.dotfiles/init/.gituser
 ```
 
@@ -136,7 +136,7 @@ I use the lovely [Aerial screensaver](https://github.com/JohnCoates/Aerial) whic
 
 ### Shells
 
-I'm using the oh-my-zsh [pure](https://github.com/sindresorhus/pure) theme.
+I use oh-my-zsh with the [Starship](https://starship.rs/) prompt, configured in `config/shell/starship.toml`.
 
 Once the theme has loaded, you might want to replace the shell's startup command in `Preferences` under `Profiles > Shell Tab`:
 

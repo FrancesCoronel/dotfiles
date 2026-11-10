@@ -1,0 +1,27 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Two-line prompt: context on the first line, input on the second
+add_newline = true
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = 'bold cyan'
+
+[git_branch]
+style = 'bold purple'
+
+[git_status]
+style = 'bold yellow'
+
+[cmd_duration]
+min_time = 2000
+style = 'yellow'
+
+# Only the tools used day to day; everything else stays quiet
+[package]
+disabled = true
