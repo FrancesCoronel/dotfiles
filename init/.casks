@@ -43,7 +43,6 @@ cask spotify
 cask suspicious-package
 cask the-unarchiver
 cask todoist-app
-cask tower
 cask visual-studio-code
 cask vlc
 cask warp
