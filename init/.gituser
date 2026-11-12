@@ -3,26 +3,13 @@
 DOT="$HOME/.dotfiles"
 SSHCONFIG="$HOME/.ssh/config"
 
-# Configure nano as default editor
-git config --global core.editor nano
-
-# Add SSH Config file
-echo ""
-echo "Adding config file for ssh-keys"
-mkdir -p "$HOME/.ssh/"
-
-cat >> "$SSHCONFIG" <<EOM
-Host github.com
-  Hostname github.com
-  IdentityFile $HOME/.ssh/github_rsa
-EOM
-
 echo "Please select which task you would like to perform"
 echo ""
 echo "[1] Configure Global Git Settings"
-echo "[2] Generate Github SSH Key"
+echo "[2] Sign in to GitHub over HTTPS (GitHub CLI)"
 echo "[3] Copy over existing Git config"
 echo "[4] All of the above"
+echo "[5] Generate Github SSH Key (optional, only for SSH remotes)"
 echo "[Q/q] Quit"
 echo ""
 
@@ -36,6 +23,7 @@ function gitconfig () {
   read -r -p "Please enter your Git Author Name: " GIT_AUTHOR_NAME
   git config --global user.name "$GIT_AUTHOR_NAME"
 
+  # Commit emails are public on public repositories
   read -r -p "Please enter your Git Author Email: " GIT_AUTHOR_EMAIL
   git config --global user.email "$GIT_AUTHOR_EMAIL"
 
@@ -43,8 +31,30 @@ function gitconfig () {
   git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 }
 
+# Sign in with the GitHub CLI (installed by bootstrap.sh) and let git use it
+# for HTTPS remotes, so no SSH key or stored password is needed
+function github_https () {
+  echo ""
+  echo "Login to your github account"
+  if ! gh auth status -h github.com > /dev/null 2>&1; then
+    gh auth login -h github.com -p https -w
+  fi
+  gh auth setup-git
+  echo "Done!"
+}
+
 function github_sshkey () {
   echo ""
+  echo "Adding config file for ssh-keys"
+  mkdir -p "$HOME/.ssh/"
+  if ! grep -q "^Host github.com" "$SSHCONFIG" 2> /dev/null; then
+    cat >> "$SSHCONFIG" <<EOM
+Host github.com
+  Hostname github.com
+  IdentityFile $HOME/.ssh/github_rsa
+EOM
+  fi
+
   read -r -p "Please enter your github email: " GITHUB_EMAIL
   read -r -p "Please add a title to your key: " GITHUB_TITLE
   echo -n "Please enter a new Passphrase:  "
@@ -52,17 +62,19 @@ function github_sshkey () {
   ssh-keygen -t rsa -C "$GITHUB_EMAIL" -f "$HOME/.ssh/github_rsa" -P "$PASSPHRASE"
   ssh-add "$HOME/.ssh/github_rsa" && pbcopy < "$HOME/.ssh/github_rsa.pub"
 
-  GITHUB_KEY=$(pbpaste)
-  GITHUB_PAYLOAD="{ \"title\": \"$GITHUB_TITLE\", \"key\": \"$GITHUB_KEY\" }"
-
+  # GitHub no longer accepts a password over its API, so sign in with the
+  # GitHub CLI (installed by bootstrap.sh) and let it upload the key
+  echo ""
   echo "Login to your github account"
-  read -r -p "Github Username: " GH_USERNAME
-  echo -n "Github Password: "
-  read -r -s GH_PASSWORD
+  if gh auth status -h github.com > /dev/null 2>&1; then
+    gh auth refresh -h github.com -s admin:public_key
+  else
+    gh auth login -h github.com -p ssh --skip-ssh-key -w -s admin:public_key
+  fi
 
   echo ""
   echo "Saving SSH-Key to Github: "
-  curl --user "$GH_USERNAME:$GH_PASSWORD" -X POST --data "$GITHUB_PAYLOAD" https://api.github.com/user/keys -#o /dev/null
+  gh ssh-key add "$HOME/.ssh/github_rsa.pub" --title "$GITHUB_TITLE"
   echo "Done!"
 
   echo ""
@@ -70,12 +82,13 @@ function github_sshkey () {
   ssh -T git@github.com
 }
 
+# The copied config replaces ~/.gitconfig, so it goes first
 function exec_all () {
   setdefaultgitconfig;
   sleep 5
   gitconfig;
   sleep 5
-  github_sshkey;
+  github_https;
   sleep 5
 }
 
@@ -83,9 +96,10 @@ while true; do
   read -r -p "Select an answer and press return " ANSWER
   case $ANSWER in
     [1]*) gitconfig; break;;
-    [2]*) github_sshkey; break;;
+    [2]*) github_https; break;;
     [3]*) setdefaultgitconfig; break;;
     [4]*) exec_all; break;;
+    [5]*) github_sshkey; break;;
     [Q/q]*) exit;;
     *) echo "Please select from the options above"
   esac

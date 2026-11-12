@@ -78,7 +78,7 @@ sh ~/.dotfiles/init/.osx
 # Installs fonts for coding and docs
 sh ~/.dotfiles/init/.fonts
 
-# Setups git configuration settings
+# Sets up git: author name and email, GitHub sign-in over HTTPS, git config
 sh ~/.dotfiles/init/.gituser
 ```
 
@@ -113,19 +113,21 @@ These are listed in `bootstrap.sh`.
 
 - [asciinema](https://asciinema.org/)
 - [duti](http://duti.org/)
+- [eza](https://eza.rocks/)
 - [git-lfs](https://git-lfs.github.com/)
 - [git](https://git-scm.com/)
 - [howdoi](https://github.com/gleitz/howdoi)
 - [hugo](https://gohugo.io/)
-- [libav](https://www.libav.org/)
+- [ffmpeg](https://ffmpeg.org/)
 - [nginx](https://www.nginx.com/)
 - [node](https://nodejs.org)
 - [now](https://zeit.co/now)
 - [openssl](https://www.openssl.org/)
 - [pandoc](https://pandoc.org/index.html)
 - [python](https://www.python.org/)
+- [starship](https://starship.rs/)
 - [yarn](https://yarnpkg.com/en/)
-- [youtube-dl](https://rg3.github.io/youtube-dl/)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [zsh](https://www.zsh.org/)
 
 ### Screensaver
@@ -136,7 +138,7 @@ I use the lovely [Aerial screensaver](https://github.com/JohnCoates/Aerial) whic
 
 ### Shells
 
-I'm using the oh-my-zsh [pure](https://github.com/sindresorhus/pure) theme.
+I use oh-my-zsh with the [Starship](https://starship.rs/) prompt, configured in `config/shell/starship.toml`.
 
 Once the theme has loaded, you might want to replace the shell's startup command in `Preferences` under `Profiles > Shell Tab`:
 
@@ -147,20 +149,20 @@ Once the theme has loaded, you might want to replace the shell's startup command
 Copy Hyper configuration file to the root folder.
 
 ```bash
-mv ~Dropbox/Code/dotfiles/config/shell/hyper/hyper.config.js ~/.hyper.js
+mv ~/.dotfiles/config/shell/hyper/hyper.config.js ~/.hyper.js
 ```
 
 ![Hyper](https://i.imgur.com/Qvej6BG.png)
 
 #### iTerm 2
 
-Set up sync folder in Preferences to `~/Dropbox/Code/dotfiles/config/shell/iterm` under `General > Preferences`.
+Set up sync folder in Preferences to `~/.dotfiles/config/shell/iterm` under `General > Preferences`.
 
 ![iTerm 2](https://i.imgur.com/8XcQqsh.png)
 
 #### Terminal
 
-Import `Materialize.terminal` profile from `~/Dropbox/Code/dotfiles/config/shell/terminal/Materialize.terminal`.
+Import `Materialize.terminal` profile from `~/.dotfiles/config/shell/terminal/Materialize.terminal`.
 
 ![Terminal](https://i.imgur.com/kaqt9BC.png)
 

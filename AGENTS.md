@@ -18,7 +18,7 @@ Locally, `.claude/settings.json` denies these commands and `.claude/hooks/guard-
 |---|---|
 | `bootstrap.sh` | Entry point: Homebrew, core formulae, bash files |
 | `init/.casks`, `.fonts`, `.npm`, `.osx`, `.shell`, `.gituser` | Install steps, run one at a time with `sh ~/.dotfiles/init/<name>` (see README) |
-| `config/shell/` | Shell dotfiles copied into `$HOME` (`.zshrc`, `.bashrc`, ...), plus `zsh/.p10k.zsh` and terminal themes for Hyper, iTerm and Terminal |
+| `config/shell/` | Shell dotfiles copied into `$HOME` (`.zshrc`, `.bashrc`, ...), plus `starship.toml` (the prompt config) and terminal themes for Hyper, iTerm and Terminal |
 | `config/fonts/` | Font files installed by `init/.fonts` |
 | `config/alfred/`, `config/tower/` | App themes |
 | `git/.gitconfig` | Global Git config, copied to `~/.gitconfig` by option 3 of `init/.gituser` |
@@ -45,6 +45,6 @@ git ls-files -z | while IFS= read -r -d '' f; do
 done | xargs -0 shellcheck --severity style
 ```
 
-CI doesn't lint the zsh files (`config/shell/.zshrc`, `.zprofile`, `.zshenv`, `zsh/.p10k.zsh`). Check any you change with `zsh -n <file>`.
+CI doesn't lint the zsh files (`config/shell/.zshrc`, `.zprofile`, `.zshenv`). Check any you change with `zsh -n <file>`.
 
 Locally, `.claude/hooks/shellcheck-edited.sh` runs ShellCheck (or `zsh -n`) on each file Claude edits and reports problems back in the same turn.

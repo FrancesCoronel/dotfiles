@@ -7,9 +7,20 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Homebrew (/opt/homebrew on Apple Silicon, /usr/local on Intel).
+# .zprofile sets this up for login shells; this covers the others.
+if [ -z "$HOMEBREW_PREFIX" ]; then
+  if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [ -x /usr/local/bin/brew ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
+fi
+
+# nvm, installed with Homebrew
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 
 # Fix invalid input issue
 export LC_CTYPE=C
@@ -31,7 +42,6 @@ alias home="cd $HOME && clear"
 alias apps="cd $HOME/Applications/"
 alias music="cd $HOME/Music/"
 alias movies="cd $HOME/Movies/"
-alias dropbox="cd $HOME/Dropbox/"
 alias pictures="cd $HOME/Pictures/"
 
 # Set to this to use case-sensitive completion
@@ -47,14 +57,11 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git macos ruby zsh-wakatime zsh-syntax-highlighting zsh-autosuggestions)
 
-# Homebrew
-export PATH=/usr/local/bin:$PATH
-
-# npm
-export PATH=/usr/local/share/npm/bin:$PATH
-
 # Make /Applications the default location of apps
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Colorful file listings with icons, when eza is installed
+command -v eza > /dev/null && alias ls="eza --icons --group-directories-first"
 
 # Show all files when changing directory
 function cd() {
@@ -65,12 +72,10 @@ function cd() {
     builtin cd "${new_directory}" && ls -a
 }
 
-# p10k configuration
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # Finalizing
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# Starship prompt
+command -v starship > /dev/null && eval "$(starship init zsh)"
